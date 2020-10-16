@@ -186,9 +186,7 @@
                         <li class="article-grid-item article-grid-item-3">
                             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?=the_title()?>" class="article-grid-thumb" />
                             <a href="<?=get_permalink()?>" class="article-grid-permalink">
-                                <span class="category-name"><?php $category = get_the_category();
-                                echo $category[0]->name; ?></span>
-                                <h4 class="article-grid-title"><?=mb_strimwidth(get_the_title(), 0, 47, '...')?></h4>
+                                <h4 class="article-grid-title"><?=mb_strimwidth(get_the_title(), 0, 44, '...')?></h4>
                             </a>
                         </li>
                         <?php

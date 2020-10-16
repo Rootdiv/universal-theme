@@ -441,7 +441,7 @@ body {
 
 .article-grid-item-1 .article-grid-title {
   width: 50%;
-  font-family: Roboto-Slab;
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
@@ -575,7 +575,7 @@ body {
 }
 
 .article-grid-item-2 .article-grid-title {
-  font-family: Roboto-Slab;
+  font-family: 'Roboto Slab', sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 25px;
@@ -666,14 +666,14 @@ body {
 
 .article-grid-item-3 .article-grid-thumb {
   position: absolute;
-  height: 76%;
+  height: 330px;
   top: 0;
 }
 
 .article-grid-item-3 .article-grid-title {
   position: absolute;
   bottom: 0;
-  font-family: Roboto-Slab;
+  font-family: 'Roboto Slab', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -699,7 +699,7 @@ body {
 .article-grid-item-default .article-grid-title {
   padding: 0;
   margin: 0;
-  font-family: Roboto Slab;
+  font-family: 'Roboto Slab', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
