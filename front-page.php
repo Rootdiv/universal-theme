@@ -16,7 +16,7 @@
                         setup_postdata( $post );
                         ?>
                         <!-- Выводим записи -->
-                <img src="<?php the_post_thumbnail_url(); ?>" alt="<?=the_title()?>" class="post-thumb" />
+                <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title()?>" class="post-thumb" />
                 <?php $author_id = get_the_author_meta('ID'); ?>
                 <a href="<?=get_author_posts_url($author_id)?>" class="author">
                     <img src="<?=get_avatar_url($author_id)?>" alt="<?=get_the_author()?>" class="avatar" />
@@ -149,7 +149,7 @@
                     //Выводим второй пост
                     case '2': ?>
                         <li class="article-grid-item article-grid-item-2">
-                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?=the_title()?>" class="article-grid-thumb" />
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title()?>" class="article-grid-thumb" />
                             <a href="<?=get_permalink()?>" class="article-grid-permalink">
                                 <span class="tag"><?php $posttags = get_the_tags();
                                 if($posttags) echo $posttags[3]->name . ' '; ?></span>
@@ -184,9 +184,9 @@
                     //Выводим третий пост
                     case '3': ?>
                         <li class="article-grid-item article-grid-item-3">
-                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?=the_title()?>" class="article-grid-thumb" />
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title()?>" class="article-grid-thumb" />
                             <a href="<?=get_permalink()?>" class="article-grid-permalink">
-                                <h4 class="article-grid-title"><?=mb_strimwidth(get_the_title(), 0, 44, '...')?></h4>
+                                <h4 class="article-grid-title"><?php the_title()?></h4>
                             </a>
                         </li>
                         <?php
