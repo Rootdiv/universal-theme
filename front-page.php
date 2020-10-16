@@ -94,7 +94,7 @@
             <a class="article-permalink" href="<?=get_the_permalink()?>">
                 <h4 class="article-title"><?=mb_strimwidth(get_the_title(), 0, 50, '...')?></h4>
             </a>
-            <img width="65" height="65" src="<?=get_the_post_thumbnail_url(null, 'thumbnail')?>" alt="<?php the_title() ?>">
+            <img width="65" height="65" src="<?=get_the_post_thumbnail_url(null, 'thumbnail')?>" alt="<?php the_title()?>">
         </li>
         <?php }
         } else {
@@ -126,7 +126,7 @@
                     case '1': ?>
                         <li class="article-grid-item article-grid-item-1">
                             <a href="<?=get_permalink()?>" class="article-grid-permalink">
-                                <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="article-grid-thumb" />
+                                <img src="<?php the_post_thumbnail_url(); ?>" alt="<?=the_title()?>" class="article-grid-thumb" />
                                 <span class="category-name"><?php $category = get_the_category();
                                 echo $category[0]->name; ?></span>
                                 <h4 class="article-grid-title"><?=mb_strimwidth(get_the_title(), 0, 50, '...')?></h4>
@@ -149,10 +149,10 @@
                     //Выводим второй пост
                     case '2': ?>
                         <li class="article-grid-item article-grid-item-2">
-                            <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="article-grid-thumb" />
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?=the_title()?>" class="article-grid-thumb" />
                             <a href="<?=get_permalink()?>" class="article-grid-permalink">
                                 <span class="tag"><?php $posttags = get_the_tags();
-                                if($posttags) echo $posttags[0]->name . ' '; ?></span>
+                                if($posttags) echo $posttags[3]->name . ' '; ?></span>
                                 <span class="category-name"><?php $category = get_the_category();
                                 echo $category[0]->name; ?></span>
                                 <h4 class="article-grid-title"><?=mb_strimwidth(get_the_title(), 0, 50, '...')?></h4>
@@ -184,7 +184,7 @@
                     //Выводим третий пост
                     case '3': ?>
                         <li class="article-grid-item article-grid-item-3">
-                            <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="article-grid-thumb" />
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?=the_title()?>" class="article-grid-thumb" />
                             <a href="<?=get_permalink()?>" class="article-grid-permalink">
                                 <span class="category-name"><?php $category = get_the_category();
                                 echo $category[0]->name; ?></span>
