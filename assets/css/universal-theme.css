@@ -665,6 +665,9 @@ body {
 
 .article-grid-item-3 .article-grid-thumb {
   height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 .article-grid-item-3 .article-grid-title {
