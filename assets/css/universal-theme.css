@@ -376,6 +376,18 @@ body {
   line-height: 20px;
 }
 
+.main-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .article-grid {
   max-width: 850px;
   margin: 30px 0;
@@ -723,4 +735,61 @@ body {
 
 .article-grid-item-default .date {
   color: #939699;
+}
+
+.sidebar-front-page {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.widget-downloader {
+  background: #3BBDC4 url("../images/file.svg") no-repeat top 24px right 22px;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 25px;
+  padding-bottom: 55px;
+  position: relative;
+}
+
+.widget-downloader .widget-title {
+  margin-top: 0;
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.widget-downloader .widget-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  border-top: 1px solid rgba(255, 255, 255, 0.75);
+  color: #ffffff;
+  font-family: 'Lato Black', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.widget-downloader .widget-link-icon {
+  margin-right: 10px;
+}
+
+.widget-downloader .description {
+  color: #C1F4F5;
+  font-size: 14px;
+  line-height: 20px;
 }

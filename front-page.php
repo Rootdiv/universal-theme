@@ -104,7 +104,8 @@
         ?>
     </ul>
     <!-- /.article-list -->
-    <ul class="article-grid">
+    <div class="main-grid">
+        <ul class="article-grid">
         <?php		
         global $post;
         //Формируем запрос в БД
@@ -210,5 +211,9 @@
         wp_reset_postdata(); // Сбрасываем $post
         ?>
     </ul>
+    <!-- /.article-grid -->
+    <!-- Подключаем сайдбар -->
+    <?php get_sidebar() ?>
+    </div>
 </div>
 <!-- /.container -->
