@@ -127,7 +127,7 @@
                     case '1': ?>
                         <li class="article-grid-item article-grid-item-1">
                             <a href="<?=get_permalink()?>" class="article-grid-permalink">
-                                <img src="<?php the_post_thumbnail_url(); ?>" alt="<?=the_title()?>" class="article-grid-thumb" />
+                                <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title()?>" class="article-grid-thumb" />
                                 <span class="category-name"><?php $category = get_the_category();
                                 echo $category[0]->name; ?></span>
                                 <h4 class="article-grid-title"><?=mb_strimwidth(get_the_title(), 0, 50, '...')?></h4>
@@ -135,7 +135,7 @@
                                 <div class="article-grid-info">
                                     <div class="author">
                                         <?php $author_id = get_the_author_meta('ID'); ?>
-                                        <img src="<?=get_avatar_url($author_id)?>" alt="<?=get_the_author()?>" class="author-avatar" />
+                                        <img src="<?=get_avatar_url($author_id)?>" alt="<?php the_author()?>" class="author-avatar" />
                                         <span class="author-name"><strong><?=get_the_author()?></strong>: <?php the_author_meta('description') ?></span>
                                     </div>
                                     <div class="comments">
@@ -160,7 +160,7 @@
                                 <div class="article-grid-info">
                                     <div class="author">
                                         <?php $author_id = get_the_author_meta('ID'); ?>
-                                        <img src="<?=get_avatar_url($author_id)?>" alt="<?=get_the_author()?>" class="author-avatar" />
+                                        <img src="<?=get_avatar_url($author_id)?>" alt="<?php the_author()?>" class="author-avatar" />
                                         <div class="author-info">
                                             <span class="author-name"><?=get_the_author()?></span>
                                             <span class="date"><?php the_time('j F') ?></span>
