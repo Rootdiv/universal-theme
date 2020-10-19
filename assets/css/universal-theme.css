@@ -656,6 +656,7 @@ body {
 .widget {
   background-color: #ffffff;
   border-radius: 10px;
+  margin: 0 0 30px;
 }
 
 .widget-title {
@@ -722,17 +723,16 @@ body {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding: 25px;
-  padding-bottom: 35px;
+  padding: 10%;
 }
 
 .widget .tag-cloud-link {
-  margin-right: 10px;
-  margin-bottom: 15px;
+  margin-right: 4%;
+  margin-bottom: 7%;
   line-height: 20px;
   color: #262D33;
   text-decoration: none;
-  padding: 5px 15px;
+  padding: 2% 5%;
   border: 1px solid #D9DADB;
   border-radius: 5px;
 }
