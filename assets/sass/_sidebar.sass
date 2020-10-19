@@ -3,6 +3,15 @@
         margin-left: 30px
         margin-top: 30px
 .widget
+    background-color: #ffffff
+    border-radius: 10px
+    &-title
+        padding: 20px 25px
+        border-bottom: 1px solid #D9DADB
+        font-size: 14px
+        line-height: 20px
+        font-family: 'Lato Black', sans-serif
+        text-transform: uppercase
     &-downloader
         background: #3BBDC4 url('../images/file.svg') no-repeat top 24px right 22px
         border-radius: 10px
@@ -12,12 +21,15 @@
         position: relative
         .widget
             &-title
-                margin-top: 0
+                margin: 0
                 font-family: 'Roboto Slab', sans-serif
                 font-style: normal
                 font-weight: bold
                 font-size: 16px
                 line-height: 25px
+                border: none
+                padding: 0
+                text-transform: none
             &-link
                 position: absolute
                 bottom: 0
@@ -41,3 +53,52 @@
             color: #C1F4F5
             font-size: 14px
             line-height: 20px
+    .tagcloud
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        flex-wrap: wrap
+        padding: 25px
+        padding-bottom: 35px
+    .tag-cloud-link
+        margin-right: 10px
+        margin-bottom: 15px
+        line-height: 20px
+        color: #262D33
+        text-decoration: none
+        padding: 5px 15px
+        border: 1px solid #D9DADB
+        border-radius: 5px
+    &-social
+        text-align: center
+        .widget-title
+            margin: 0
+            padding: 30px 25px
+            font-family: 'Roboto Slab', sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 20px
+            line-height: 25px
+            border: none
+            text-transform: none
+        &-link
+            padding-top: 5px
+            padding-bottom: 40px
+            text-align: center
+            a
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                width: 50px
+                height: 50px
+                border-radius: 50%
+                &:not(:last-child)
+                    margin-right: 10px
+            &-fb
+                background-color: #4267B2
+            &-inst
+                background-color: #000000
+            &-vk
+                background-color: #2787F5
+            &-twit
+                background-color: #1DA1F2
