@@ -202,19 +202,6 @@ body {
   position: relative;
 }
 
-.hero .left .more {
-  display: inline-block;
-  color: #ffffff;
-  padding: 10px 20px;
-  padding-right: 50px;
-  border-radius: 20px;
-  background: #4592FF;
-  text-decoration: none;
-  background-image: url("../images/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center right 20px;
-}
-
 .hero .right {
   flex-basis: 25%;
 }
@@ -271,6 +258,23 @@ body {
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 8px;
+}
+
+.more {
+  display: inline-block;
+  color: #ffffff;
+  padding: 10px 20px;
+  padding-right: 50px;
+  border-radius: 20px;
+  background: #4592FF;
+  text-decoration: none;
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center right 20px;
+}
+
+.more:hover, .more:visited {
+  color: #ffffff;
 }
 
 .article-list {
@@ -334,10 +338,9 @@ body {
 
 .article-grid {
   max-width: 850px;
-  margin: 30px 0;
+  margin: 30px 0 60px;
   padding: 0;
   list-style: none;
-  display: grid;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(min-content, max-content) repeat(2, 1fr);
@@ -690,7 +693,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding: 10%;
+  padding: 5% 10%;
 }
 
 .widget .tag-cloud-link {
@@ -710,7 +713,7 @@ body {
 
 .widget-social .widget-title {
   margin: 0;
-  padding: 30px 25px;
+  padding: 15px 25px;
   font-family: 'Roboto Slab', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -753,4 +756,124 @@ body {
 
 .widget-social-link-twit {
   background-color: #1DA1F2;
+}
+
+.widget-social-link-yt {
+  background-color: #FF0000;
+}
+
+.investigation {
+  padding: 50px 0 55px;
+  text-align: center;
+}
+
+.investigation-title {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  max-width: 946px;
+  color: #ffffff;
+  margin: 0 auto 25px;
+}
+
+.main-post-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.article-post {
+  width: 848px;
+  margin: 60px 0;
+  padding: 0 25px;
+  list-style: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.article-post-permalink {
+  text-decoration: none;
+  color: #262D33;
+}
+
+.article-post-permalink:hover {
+  color: #262D33;
+}
+
+.article-post-permalink:visited {
+  color: #262D33;
+}
+
+.article-post-item {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #D9DADB;
+  padding: 25px 0;
+}
+
+.article-post-item:last-child {
+  border: none;
+}
+
+.article-post-half {
+  width: 54%;
+}
+
+.article-post-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 336px;
+  height: 100%;
+  object-fit: cover;
+  padding: 25px 0;
+}
+
+.article-post-title {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.article-post-excerpt {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 22px;
+}
+
+.article-post-info {
+  margin: 0 0 0 auto;
+}
+
+.article-post-info .category-name {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.article-post-info .article-info {
+  display: flex;
+  align-items: center;
+  color: #939699;
+}
+
+.article-post-info .article-info .date, .article-post-info .article-info .comments, .article-post-info .article-info .likes {
+  display: flex;
+  align-items: center;
+}
+
+.article-post-info .article-info .date:not(:last-child), .article-post-info .article-info .comments:not(:last-child), .article-post-info .article-info .likes:not(:last-child) {
+  margin-right: 12px;
+}
+
+.article-post-info .article-info .date-counter, .article-post-info .article-info .comments-counter, .article-post-info .article-info .likes-counter {
+  margin-left: 5px;
 }

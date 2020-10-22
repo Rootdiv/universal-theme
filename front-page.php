@@ -112,6 +112,7 @@
         $query = new WP_Query( [
             //Получаем 7 постов
             'posts_per_page' => 7,
+            'category__not_in' => 30,
         ] );
         //Проверяем есть ли посты    
         if ( $query->have_posts() ) {
@@ -146,14 +147,14 @@
                             </a>
                         </li>
                         <?php
-                        break;
+                    break;
                     //Выводим второй пост
                     case '2': ?>
                         <li class="article-grid-item article-grid-item-2">
                             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title()?>" class="article-grid-thumb" />
                             <a href="<?=get_permalink()?>" class="article-grid-permalink">
                                 <span class="tag"><?php $posttags = get_the_tags();
-                                if($posttags) echo $posttags[3]->name . ' '; ?></span>
+                                if($posttags) echo $posttags[0]->name . ' '; ?></span>
                                 <span class="category-name"><?php $category = get_the_category();
                                 echo $category[0]->name; ?></span>
                                 <h4 class="article-grid-title"><?=mb_strimwidth(get_the_title(), 0, 50, '...')?></h4>
@@ -170,7 +171,7 @@
                                                 <span class="comments-counter"><?php comments_number('0', '1', '%') ?></span>
                                             </div>
                                             <div class="likes">
-                                                <img src="<?=get_template_directory_uri() . '/assets/images/heart.svg';?>"
+                                                <img src="<?=get_template_directory_uri() . '/assets/images/heart-white.svg';?>"
                                                 alt="icon: like" class="likes-icon">
                                                 <span class="likes-counter"><?php comments_number('0', '1', '%') ?></span>
                                             </div>
@@ -181,7 +182,7 @@
                             </a>
                         </li>
                         <?php
-                        break;
+                    break;
                     //Выводим третий пост
                     case '3': ?>
                         <li class="article-grid-item article-grid-item-3">
@@ -191,7 +192,7 @@
                             </a>
                         </li>
                         <?php
-                        break;
+                    break;
                     //Выводим остальные посты
                     default: ?>
                         <li class="article-grid-item article-grid-item-default">
@@ -201,8 +202,8 @@
                                 <span class="date"><?php the_time('j F') ?></span>
                             </a>
                         </li>
-                        <?php
-                        break;
+                    <?php
+                    break;
                 }
             }
         } else {
@@ -215,5 +216,90 @@
     <!-- Подключаем сайдбар -->
     <?php get_sidebar() ?>
     </div>
+</div>
+<!-- /.container -->
+<?php		
+global $post;
+//Пост с большим фоном
+$query = new WP_Query( [
+	'posts_per_page' => 1,
+	'category_name' => 'investigation',
+] );
+
+if ( $query->have_posts() ) {
+	while ( $query->have_posts() ) {
+		$query->the_post();
+		?>
+		<section class="investigation"
+         style="background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35)),url('<?=get_the_post_thumbnail_url()?>') no-repeat center center">
+            <div class="container">
+                <h2 class="investigation-title"><?php the_title() ?></h2>
+                <a href="<?= get_the_permalink() ?>" class="more">Читать статью</a>
+            </div>
+        </section>
+        <!-- /.investigation -->
+		<?php 
+	}
+} else {
+	?> <p>Постов нет</p> <?php
+}
+
+wp_reset_postdata(); // Сбрасываем $post
+?>
+<div class="container">
+    <div class="main-post-list">
+        <ul class="article-post">
+        <?php		
+        global $post;
+        //Формируем запрос в БД
+        $query = new WP_Query( [
+            //Получаем 6 постов
+            'posts_per_page' => 6,
+        ] );
+        //Проверяем есть ли посты    
+        if ( $query->have_posts() ) {
+            //Создаём переменную-счётчик постов
+            $cnt = 0;
+            //Пока посты есть, выводим их
+            while ( $query->have_posts() ) {
+                $query->the_post();
+                //Увеличиваем счётчик постов
+                $cnt++;
+                ?>
+                <li class="article-post-item">
+                    <a href="<?=get_permalink()?>" class="article-post-permalink">
+                        <div class="article-post-half">
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title()?>" class="article-post-thumb" />
+                        </div>
+                        <div class="article-post-half article-post-info">
+                            <span class="category-name"><?php $category = get_the_category();
+                            echo $category[0]->name; ?></span>
+                            <h4 class="article-post-title"><?=mb_strimwidth(get_the_title(), 0, 50, '...')?></h4>
+                            <p class="article-post-excerpt"><?=mb_strimwidth(get_the_excerpt(), 0, 150, '...')?></p>
+                            <div class="article-info">
+                                <span class="date"><?php the_time('j F') ?></span>
+                                <div class="comments">
+                                    <img src="<?=get_template_directory_uri() . '/assets/images/comment.svg';?>"
+                                        alt="icon: comment" class="comments-icon">
+                                    <span class="comments-counter"><?php comments_number('0', '1', '%') ?></span>
+                                </div>
+                                <div class="likes">
+                                    <img src="<?=get_template_directory_uri() . '/assets/images/heart.svg';?>"
+                                        alt="icon: like" class="likes-icon">
+                                    <span class="likes-counter"><?php comments_number('0', '1', '%') ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <?php
+            }
+        } else {
+            ?> <p>Постов нет</p> <?php
+        }
+        wp_reset_postdata(); // Сбрасываем $post
+        ?>
+    </ul>
+    <!-- /.article-post -->
 </div>
 <!-- /.container -->

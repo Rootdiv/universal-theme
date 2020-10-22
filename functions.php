@@ -216,6 +216,7 @@ class Social_Widget extends WP_Widget {
         $instagram = $instance['instagram'];
         $vkontakte = $instance['vkontakte'];
         $twitter = $instance['twitter'];
+        $youtube = $instance['youtube'];
 
 		echo $args['before_widget'];
 		if ( ! empty( $title ) ) {
@@ -242,6 +243,11 @@ class Social_Widget extends WP_Widget {
             <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/twitter.svg" alt="Twitter" />
             </a>';
         }
+        if ( ! empty( $youtube ) ) {
+            echo '<a class="widget-social-link-yt" href="' . $youtube . '" tagert="_blank">
+            <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/youtube.svg" alt="Youtube" />
+            </a>';
+        }
         echo '</div>';
 		echo $args['after_widget'];
 	}
@@ -253,10 +259,11 @@ class Social_Widget extends WP_Widget {
 	 */
 	function form( $instance ) {
         $title = @ $instance['title'] ?: 'Наши соцсети';
-        $facebook = @ $instance['facebook'] ?: 'https://www.facebook.com/';
-        $instagram = @ $instance['instagram'] ?: 'https://www.instagram.com/';
-        $vkontakte = @ $instance['vkontakte'] ?: 'https://vk.com/';
-        $twitter = @ $instance['twitter'] ?: 'https://twitter.com/';
+        $facebook = @ $instance['facebook'] ?: '';
+        $instagram = @ $instance['instagram'] ?: '';
+        $vkontakte = @ $instance['vkontakte'] ?: '';
+        $twitter = @ $instance['twitter'] ?: '';
+        $youtube = @ $instance['youtube'] ?: '';
 
 		?>
 		<p>
@@ -278,6 +285,10 @@ class Social_Widget extends WP_Widget {
         <p>
 			<label for="<?php echo $this->get_field_id( 'twitter' ); ?>"><?php _e( 'Twitter:' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'twitter' ); ?>" name="<?php echo $this->get_field_name( 'twitter' ); ?>" type="text" value="<?php echo esc_attr( $twitter ); ?>">
+        </p>
+        <p>
+			<label for="<?php echo $this->get_field_id( 'youtube' ); ?>"><?php _e( 'Youtube:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'youtube' ); ?>" name="<?php echo $this->get_field_name( 'youtube' ); ?>" type="text" value="<?php echo esc_attr( $youtube ); ?>">
 		</p>
 		<?php 
 	}
@@ -299,6 +310,7 @@ class Social_Widget extends WP_Widget {
         $instance['instagram'] = ( ! empty( $new_instance['instagram'] ) ) ? strip_tags( $new_instance['instagram'] ) : '';
         $instance['vkontakte'] = ( ! empty( $new_instance['vkontakte'] ) ) ? strip_tags( $new_instance['vkontakte'] ) : '';
         $instance['twitter'] = ( ! empty( $new_instance['twitter'] ) ) ? strip_tags( $new_instance['twitter'] ) : '';
+        $instance['youtube'] = ( ! empty( $new_instance['youtube'] ) ) ? strip_tags( $new_instance['youtube'] ) : '';
 
 		return $instance;
 	}
