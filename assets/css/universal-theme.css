@@ -713,7 +713,7 @@ body {
 
 .widget-social .widget-title {
   margin: 0;
-  padding: 15px 25px;
+  padding: 25px;
   font-family: 'Roboto Slab', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -724,8 +724,8 @@ body {
 }
 
 .widget-social-link {
-  padding-top: 5px;
-  padding-bottom: 40px;
+  padding-top: 15px;
+  padding-bottom: 45px;
   text-align: center;
 }
 
