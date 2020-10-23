@@ -26,7 +26,15 @@
                     </div>
                 </a>
                 <div class="post-text">
-                    <?php the_category(); ?>
+                    <?php
+                        foreach(get_the_category() as $category){
+                            printf(
+                                '<a href="%s" class="category-link">%s</a>',
+                                esc_url( get_category_link($category)),
+                                esc_html( $category -> name ),
+                            );
+                        }
+                    ?>
                     <h2 class="post-title"><?=mb_strimwidth(get_the_title(), 0, 60, '...')?></h2>
                     <a href="<?=get_the_permalink()?>" class="more">Читать далее</a>
                 </div>
@@ -56,7 +64,16 @@
                             ?>
                             <!-- Выводим записи -->
                     <li class="post">
-                        <?php the_category(); ?>
+                        <?php
+                            foreach(get_the_category() as $category){
+                                printf(
+                                    '<a href="%s" class="category-link %s">%s</a>',
+                                    esc_url( get_category_link($category)),
+                                    esc_html( $category -> slug ),
+                                    esc_html( $category -> name ),
+                                );
+                            }
+                        ?>
                         <a class="post-permalink" href="<?=get_the_permalink()?>">
                             <h4 class="post-title"><?=mb_strimwidth(get_the_title(), 0, 60, '...')?></h4>
                         </a>
@@ -272,8 +289,13 @@ wp_reset_postdata(); // Сбрасываем $post
                             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title()?>" class="article-post-thumb" />
                         </div>
                         <div class="article-post-half article-post-info">
-                            <span class="category-name"><?php $category = get_the_category();
-                            echo $category[0]->name; ?></span>
+                            <?php foreach(get_the_category() as $category){
+                                printf(
+                                    '<span class="category-name %s">%s</span>',
+                                    esc_html( $category -> slug ),
+                                    esc_html( $category -> name ),
+                                );
+                            }?>
                             <h4 class="article-post-title"><?=mb_strimwidth(get_the_title(), 0, 50, '...')?></h4>
                             <p class="article-post-excerpt"><?=mb_strimwidth(get_the_excerpt(), 0, 150, '...')?></p>
                             <div class="article-info">

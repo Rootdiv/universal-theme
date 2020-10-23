@@ -173,20 +173,6 @@ body {
   border-radius: 50%;
 }
 
-.hero .left .post-categories {
-  padding: 0;
-  margin: 0;
-}
-
-.hero .left .post-categories a {
-  color: #4592FF;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 12px;
-  line-height: 15px;
-  text-decoration: none;
-}
-
 .hero .left .post-title {
   font-size: 40px;
   line-height: 50px;
@@ -275,6 +261,51 @@ body {
 
 .more:hover, .more:visited {
   color: #ffffff;
+}
+
+.category-link {
+  color: #4592FF;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+}
+
+.category-link:visited {
+  color: #4592FF;
+}
+
+.category-link.javascript {
+  color: #6E99AE;
+}
+
+.category-link.javascript:visited {
+  color: #6E99AE;
+}
+
+.category-link.css {
+  color: #3BBDC4;
+}
+
+.category-link.css:visited {
+  color: #3BBDC4;
+}
+
+.category-link.html {
+  color: #AC8EE3;
+}
+
+.category-link.html:visited {
+  color: #AC8EE3;
+}
+
+.category-link.web-design {
+  color: #FFA34D;
+}
+
+.category-link.web-design:visited {
+  color: #FFA34D;
 }
 
 .article-list {
@@ -853,12 +884,6 @@ body {
   margin: 0 0 0 auto;
 }
 
-.article-post-info .category-name {
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-}
-
 .article-post-info .article-info {
   display: flex;
   align-items: center;
@@ -876,4 +901,43 @@ body {
 
 .article-post-info .article-info .date-counter, .article-post-info .article-info .comments-counter, .article-post-info .article-info .likes-counter {
   margin-left: 5px;
+}
+
+.article-post .category-name {
+  font-family: 'Lato Black', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.article-post .category-name.news {
+  color: #4592FF;
+}
+
+.article-post .category-name.news:visited {
+  color: #4592FF;
+}
+
+.article-post .category-name.opinions {
+  color: #3BBDC4;
+}
+
+.article-post .category-name.opinions:visited {
+  color: #3BBDC4;
+}
+
+.article-post .category-name.hot {
+  color: #FF4F52;
+}
+
+.article-post .category-name.hot:visited {
+  color: #FF4F52;
+}
+
+.article-post .category-name.collections {
+  color: #AC8EE3;
+}
+
+.article-post .category-name.collections:visited {
+  color: #AC8EE3;
 }
