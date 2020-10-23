@@ -230,8 +230,8 @@
         ?>
     </ul>
     <!-- /.article-grid -->
-    <!-- Подключаем сайдбар -->
-    <?php get_sidebar() ?>
+    <!-- Подключаем верхний сайдбар -->
+    <?php get_sidebar('home-top') ?>
     </div>
 </div>
 <!-- /.container -->
@@ -323,5 +323,7 @@ wp_reset_postdata(); // Сбрасываем $post
         ?>
     </ul>
     <!-- /.article-post -->
+    <!-- Подключаем верхний сайдбар -->
+    <?php get_sidebar('home-bottom') ?>
 </div>
 <!-- /.container -->
