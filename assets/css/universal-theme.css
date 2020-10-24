@@ -259,7 +259,7 @@ body {
   background-position: center right 20px;
 }
 
-.more:hover, .more:visited {
+.more:hover, .more:visited, .more:focus {
   color: #ffffff;
 }
 
@@ -272,7 +272,7 @@ body {
   text-decoration: none;
 }
 
-.category-link:visited {
+.category-link:visited, .category-link:focus {
   color: #4592FF;
 }
 
@@ -280,7 +280,7 @@ body {
   color: #6E99AE;
 }
 
-.category-link.javascript:visited {
+.category-link.javascript:visited, .category-link.javascript:focus {
   color: #6E99AE;
 }
 
@@ -288,7 +288,7 @@ body {
   color: #3BBDC4;
 }
 
-.category-link.css:visited {
+.category-link.css:visited, .category-link.css:focus {
   color: #3BBDC4;
 }
 
@@ -296,7 +296,7 @@ body {
   color: #AC8EE3;
 }
 
-.category-link.html:visited {
+.category-link.html:visited, .category-link.html:focus {
   color: #AC8EE3;
 }
 
@@ -304,7 +304,7 @@ body {
   color: #FFA34D;
 }
 
-.category-link.web-design:visited {
+.category-link.web-design:visited, .category-link.web-design:focus {
   color: #FFA34D;
 }
 
