@@ -74,7 +74,7 @@ body {
   padding: 10px 25px;
 }
 
-.search-form input::placeholder {
+.search-form::placeholder {
   color: #939699;
 }
 
@@ -350,7 +350,7 @@ body {
   color: #ffffff;
 }
 
-.article-permalink:visited {
+.article-permalink:hover:visited {
   color: #ffffff;
 }
 
@@ -589,7 +589,7 @@ body {
   margin-right: 7px;
 }
 
-.article-grid-item-2 .date-counter, .article-grid-item-2 .comments-counter, .article-grid-item-2 .likes-counter {
+.article-grid-item-2 .date:not(:last-child)-counter, .article-grid-item-2 .comments:not(:last-child)-counter, .article-grid-item-2 .likes:not(:last-child)-counter {
   margin-left: 5px;
 }
 

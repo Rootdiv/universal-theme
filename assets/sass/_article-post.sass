@@ -17,68 +17,68 @@
       color: #262D33
       &:hover
         color: #262D33
+      &:visited
+        color: #262D33
+    &-item
+      position: relative
+      width: 100%
+      border-bottom: 1px solid #D9DADB
+      padding: 25px 0
+    &-item:last-child
+      border: none
+    &-half
+      width: 54%
+    &-thumb
+      position: absolute
+      top: 0
+      left: 0
+      width: 336px
+      height: 100%
+      object-fit: cover
+      padding: 25px 0
+    &-title
+      font-family: 'Roboto Slab'
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 25px
+      margin-top: 15px
+      margin-bottom: 10px
+    &-excerpt
+      font-size: 14px
+      line-height: 20px
+      margin-bottom: 22px
+    &-info
+      margin: 0 0 0 auto
+      .article-info
+        display: flex
+        align-items: center
+        color: #939699
+        .date, .comments, .likes
+          display: flex
+          align-items: center
+          &:not(:last-child)
+            margin-right: 12px
+          &-counter
+            margin-left: 5px
+    .category-name
+      font-family: 'Lato Black', sans-serif
+      font-size: 12px
+      line-height: 15px
+      text-transform: uppercase
+      &.news
+        color: #4592FF
         &:visited
-          color: #262D33
-        &-item
-          position: relative
-          width: 100%
-          border-bottom: 1px solid #D9DADB
-          padding: 25px 0
-        &-item:last-child
-          border: none
-        &-half
-          width: 54%
-        &-thumb
-          position: absolute
-          top: 0
-          left: 0
-          width: 336px
-          height: 100%
-          object-fit: cover
-          padding: 25px 0
-        &-title
-          font-family: 'Roboto Slab'
-          font-style: normal
-          font-weight: bold
-          font-size: 20px
-          line-height: 25px
-          margin-top: 15px
-          margin-bottom: 10px
-        &-excerpt
-          font-size: 14px
-          line-height: 20px
-          margin-bottom: 22px
-        &-info
-          margin: 0 0 0 auto
-          .article-info
-            display: flex
-            align-items: center
-            color: #939699
-            .date, .comments, .likes
-              display: flex
-              align-items: center
-              &:not(:last-child)
-                margin-right: 12px
-                &-counter
-                  margin-left: 5px
-        .category-name
-          font-family: 'Lato Black', sans-serif
-          font-size: 12px
-          line-height: 15px
-          text-transform: uppercase
-          &.news
-            color: #4592FF
-            &:visited
-              color: #4592FF
-            &.opinions
-              color: #3BBDC4
-              &:visited
-                color: #3BBDC4
-            &.hot
-              color: #FF4F52
-              &:visited
-                color: #FF4F52
-            &.collections
-              color: #AC8EE3
-              &:visited
-                color: #AC8EE3
+          color: #4592FF
+      &.opinions
+        color: #3BBDC4
+        &:visited
+          color: #3BBDC4
+      &.hot
+        color: #FF4F52
+        &:visited
+          color: #FF4F52
+      &.collections
+        color: #AC8EE3
+        &:visited
+          color: #AC8EE3
