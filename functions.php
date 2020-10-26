@@ -97,8 +97,8 @@ class Downloader_Widget extends WP_Widget {
       echo '<a class="widget-link" href="' . $link . '" tagert="_blank">
       <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/download.svg" alt="download" />
       Скачать</a>';
-		}
-		echo $args['after_widget'];
+    }
+    echo $args['after_widget'];
 	}
 
 	/**
@@ -107,9 +107,9 @@ class Downloader_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function form( $instance ) {
-        $title = @ $instance['title'] ?: 'Полезные файлы';
-        $description = @ $instance['description'] ?: 'Описание';
-        $link = @ $instance['link'] ?: 'https://rootdiv.ru';
+    $title = @ $instance['title'] ?: 'Полезные файлы';
+    $description = @ $instance['description'] ?: 'Описание';
+    $link = @ $instance['link'] ?: 'https://rootdiv.ru';
 
 		?>
 		<p>
@@ -138,7 +138,7 @@ class Downloader_Widget extends WP_Widget {
 	 * @return array данные которые будут сохранены
 	 */
 	function update( $new_instance, $old_instance ) {
-		$instance = array();
+    $instance = array();
     $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
     $instance['description'] = ( ! empty( $new_instance['description'] ) ) ? strip_tags( $new_instance['description'] ) : '';
     $instance['link'] = ( ! empty( $new_instance['link'] ) ) ? strip_tags( $new_instance['link'] ) : '';
@@ -297,7 +297,7 @@ class Social_Widget extends WP_Widget {
 	 * @return array данные которые будут сохранены
 	 */
 	function update( $new_instance, $old_instance ) {
-		$instance = array();
+    $instance = array();
     $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
     $instance['facebook'] = ( ! empty( $new_instance['facebook'] ) ) ? strip_tags( $new_instance['facebook'] ) : '';
     $instance['instagram'] = ( ! empty( $new_instance['instagram'] ) ) ? strip_tags( $new_instance['instagram'] ) : '';
@@ -370,8 +370,8 @@ class Recent_Post_Widget extends WP_Widget {
 	function widget( $args, $instance ) {
     $title = $instance['title'];
     $count = $instance['count'];
-
-		echo $args['before_widget'];
+    
+    echo $args['before_widget'];
       if ( ! empty( $count ) ) {
         if ( ! empty( $title ) ) {
           echo $args['before_title'] . $title . $args['after_title'];
@@ -383,14 +383,14 @@ class Recent_Post_Widget extends WP_Widget {
             setup_postdata($post);
             ?>
             <a href="<?php the_permalink() ?>" class="recent-post-link">
-                <img class="recent-post-thumb" src="<?=get_the_post_thumbnail_url(null, 'thumbnail')?>" alt="<?php the_title(); ?>">
-                <div class="recent-post-info">
-                  <h4 class="recent-post-title"><?=mb_strimwidth(get_the_title(), 0, 35, '...')?></h4>
-                  <span class="recent-post-time">
-                    <?php $time_diff = human_time_diff( get_post_time('U'), current_time('timestamp') );
-                    echo "$time_diff назад";?>
-                  </span>
-                </div>
+              <img class="recent-post-thumb" src="<?=get_the_post_thumbnail_url(null, 'thumbnail')?>" alt="<?php the_title(); ?>">
+              <div class="recent-post-info">
+                <h4 class="recent-post-title"><?=mb_strimwidth(get_the_title(), 0, 35, '...')?></h4>
+                <span class="recent-post-time">
+                  <?php $time_diff = human_time_diff( get_post_time('U'), current_time('timestamp') );
+                  echo "$time_diff назад";?>
+                </span>
+              </div>
             </a>
             <?php
           }
@@ -432,7 +432,7 @@ class Recent_Post_Widget extends WP_Widget {
 	 * @return array данные которые будут сохранены
 	 */
 	function update( $new_instance, $old_instance ) {
-		$instance = array();
+    $instance = array();
     $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
     $instance['count'] = ( ! empty( $new_instance['count'] ) ) ? strip_tags( $new_instance['count'] ) : '';
 
