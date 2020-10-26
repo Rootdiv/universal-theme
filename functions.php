@@ -1,27 +1,27 @@
 <?php
 //Добавление расширенных возможностей
 if ( ! function_exists( 'universal_theme_setup' ) ) :
-    function universal_theme_setup() {
-        //Добавление тега title
-        add_theme_support( 'title-tag' );
+  function universal_theme_setup() {
+    //Добавление тега title
+    add_theme_support( 'title-tag' );
 
-        //Добавление миниатюр
-        add_theme_support( 'post-thumbnails', array( 'post' ) );
+    //Добавление миниатюр
+    add_theme_support( 'post-thumbnails', array( 'post' ) );
 
-        //Добавление пользовательского логотипа
-        add_theme_support( 'custom-logo', [
-            'width'       => 163,
-            'flex-height' => true,
-            'header-text' => 'Universal',
-            'unlink-homepage-logo' => false, // WP 5.5
-        ] );
+    //Добавление пользовательского логотипа
+    add_theme_support( 'custom-logo', [
+      'width'       => 163,
+      'flex-height' => true,
+      'header-text' => 'Universal',
+      'unlink-homepage-logo' => false, // WP 5.5
+    ] );
 
-        //Регистрация меню
-        register_nav_menus( [
-            'header_menu' => 'Menu in header',
-            'footer_menu' => 'Menu in footer'
-	    ] );
-    }
+    //Регистрация меню
+    register_nav_menus( [
+      'header_menu' => 'Menu in header',
+      'footer_menu' => 'Menu in footer'
+    ] );
+  }
 endif;
 add_action( 'after_setup_theme', 'universal_theme_setup' );
 
@@ -41,7 +41,7 @@ function universal_theme_widgets_init() {
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)
-    );
+  );
 
     register_sidebar(
 		array(
@@ -53,7 +53,7 @@ function universal_theme_widgets_init() {
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)
-    );
+  );
 }
 add_action( 'widgets_init', 'universal_theme_widgets_init' );
 
@@ -86,21 +86,17 @@ class Downloader_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function widget( $args, $instance ) {
-        $title = $instance['title'];
-        $description = $instance['description'];
-        $link = $instance['link'];
+    $title = $instance['title'];
+    $description = $instance['description'];
+    $link = $instance['link'];
 
 		echo $args['before_widget'];
-		if ( ! empty( $title ) ) {
-			echo $args['before_title'] . $title . $args['after_title'];
-        }
-        if ( ! empty( $description ) ) {
-			echo '<p class="description" >' . $description . '</p>';
-        }
-        if ( ! empty( $link ) ) {
-            echo '<a class="widget-link" href="' . $link . '" tagert="_blank">
-            <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/download.svg" alt="download" />
-            Скачать</a>';
+		if ( ! empty( $title ) ) echo $args['before_title'] . $title . $args['after_title'];
+    if ( ! empty( $description ) ) echo '<p class="description" >' . $description . '</p>';
+    if ( ! empty( $link ) ) {
+      echo '<a class="widget-link" href="' . $link . '" tagert="_blank">
+      <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/download.svg" alt="download" />
+      Скачать</a>';
 		}
 		echo $args['after_widget'];
 	}
@@ -120,11 +116,11 @@ class Downloader_Widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
-        <p>
+    <p>
 			<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Описание:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>" type="text" value="<?php echo esc_attr( $description ); ?>">
 		</p>
-        <p>
+    <p>
 			<label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Ссылка:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo esc_attr( $link ); ?>">
 		</p>
@@ -143,9 +139,9 @@ class Downloader_Widget extends WP_Widget {
 	 */
 	function update( $new_instance, $old_instance ) {
 		$instance = array();
-        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-        $instance['description'] = ( ! empty( $new_instance['description'] ) ) ? strip_tags( $new_instance['description'] ) : '';
-        $instance['link'] = ( ! empty( $new_instance['link'] ) ) ? strip_tags( $new_instance['link'] ) : '';
+    $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+    $instance['description'] = ( ! empty( $new_instance['description'] ) ) ? strip_tags( $new_instance['description'] ) : '';
+    $instance['link'] = ( ! empty( $new_instance['link'] ) ) ? strip_tags( $new_instance['link'] ) : '';
 
 		return $instance;
 	}
@@ -172,7 +168,6 @@ class Downloader_Widget extends WP_Widget {
 		</style>
 		<?php
 	}
-
 } 
 // конец класса Downloader_Widget
 
@@ -211,44 +206,42 @@ class Social_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function widget( $args, $instance ) {
-        $title = $instance['title'];
-        $facebook = $instance['facebook'];
-        $instagram = $instance['instagram'];
-        $vkontakte = $instance['vkontakte'];
-        $twitter = $instance['twitter'];
-        $youtube = $instance['youtube'];
+    $title = $instance['title'];
+    $facebook = $instance['facebook'];
+    $instagram = $instance['instagram'];
+    $vkontakte = $instance['vkontakte'];
+    $twitter = $instance['twitter'];
+    $youtube = $instance['youtube'];
 
 		echo $args['before_widget'];
-		if ( ! empty( $title ) ) {
-			echo $args['before_title'] . $title . $args['after_title'];
-        }
-        echo '<div class="widget-social-link">';
-        if ( ! empty( $facebook ) ) {
-            echo '<a class="widget-social-link-fb" href="' . $facebook . '" tagert="_blank">
-            <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/facebook.svg" alt="Facebook" />
-            </a>';
-        }
-        if ( ! empty( $instagram ) ) {
-            echo '<a class="widget-social-link-inst" href="' . $instagram . '" tagert="_blank">
-            <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/instagram.svg" alt="Instagram" />
-            </a>';
-        }
-        if ( ! empty( $vkontakte ) ) {
-            echo '<a class="widget-social-link-vk" href="' . $vkontakte . '" tagert="_blank">
-            <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/vk.svg" alt="ВКонтакте" />
-            </a>';
-        }
-        if ( ! empty( $twitter ) ) {
-            echo '<a class="widget-social-link-twit" href="' . $twitter . '" tagert="_blank">
-            <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/twitter.svg" alt="Twitter" />
-            </a>';
-        }
-        if ( ! empty( $youtube ) ) {
-            echo '<a class="widget-social-link-yt" href="' . $youtube . '" tagert="_blank">
-            <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/youtube.svg" alt="Youtube" />
-            </a>';
-        }
-        echo '</div>';
+		if ( ! empty( $title ) ) echo $args['before_title'] . $title . $args['after_title'];
+    echo '<div class="widget-social-link">';
+    if ( ! empty( $facebook ) ) {
+      echo '<a class="widget-social-link-fb" href="' . $facebook . '" tagert="_blank">
+      <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/facebook.svg" alt="Facebook" />
+      </a>';
+    }
+    if ( ! empty( $instagram ) ) {
+      echo '<a class="widget-social-link-inst" href="' . $instagram . '" tagert="_blank">
+      <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/instagram.svg" alt="Instagram" />
+      </a>';
+    }
+    if ( ! empty( $vkontakte ) ) {
+      echo '<a class="widget-social-link-vk" href="' . $vkontakte . '" tagert="_blank">
+      <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/vk.svg" alt="ВКонтакте" />
+      </a>';
+    }
+    if ( ! empty( $twitter ) ) {
+      echo '<a class="widget-social-link-twit" href="' . $twitter . '" tagert="_blank">
+      <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/twitter.svg" alt="Twitter" />
+      </a>';
+    }
+    if ( ! empty( $youtube ) ) {
+      echo '<a class="widget-social-link-yt" href="' . $youtube . '" tagert="_blank">
+      <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/social-network/youtube.svg" alt="Youtube" />
+      </a>';
+    }
+    echo '</div>';
 		echo $args['after_widget'];
 	}
 
@@ -258,35 +251,35 @@ class Social_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function form( $instance ) {
-        $title = @ $instance['title'] ?: 'Наши соцсети';
-        $facebook = @ $instance['facebook'] ?: '';
-        $instagram = @ $instance['instagram'] ?: '';
-        $vkontakte = @ $instance['vkontakte'] ?: '';
-        $twitter = @ $instance['twitter'] ?: '';
-        $youtube = @ $instance['youtube'] ?: '';
+    $title = @ $instance['title'] ?: 'Наши соцсети';
+    $facebook = @ $instance['facebook'] ?: '';
+    $instagram = @ $instance['instagram'] ?: '';
+    $vkontakte = @ $instance['vkontakte'] ?: '';
+    $twitter = @ $instance['twitter'] ?: '';
+    $youtube = @ $instance['youtube'] ?: '';
 
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
-        <p>
+    <p>
 			<label for="<?php echo $this->get_field_id( 'facebook' ); ?>"><?php _e( 'Facebook:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'facebook' ); ?>" name="<?php echo $this->get_field_name( 'facebook' ); ?>" type="text" value="<?php echo esc_attr( $facebook ); ?>">
 		</p>
-        <p>
+    <p>
 			<label for="<?php echo $this->get_field_id( 'instagram' ); ?>"><?php _e( 'Instagram:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'instagram' ); ?>" name="<?php echo $this->get_field_name( 'instagram' ); ?>" type="text" value="<?php echo esc_attr( $instagram ); ?>">
 		</p>
-        <p>
+    <p>
 			<label for="<?php echo $this->get_field_id( 'vkontakte' ); ?>"><?php _e( 'ВКонтакте:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'vkontakte' ); ?>" name="<?php echo $this->get_field_name( 'vkontakte' ); ?>" type="text" value="<?php echo esc_attr( $vkontakte ); ?>">
 		</p>
-        <p>
+    <p>
 			<label for="<?php echo $this->get_field_id( 'twitter' ); ?>"><?php _e( 'Twitter:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'twitter' ); ?>" name="<?php echo $this->get_field_name( 'twitter' ); ?>" type="text" value="<?php echo esc_attr( $twitter ); ?>">
-        </p>
-        <p>
+    </p>
+    <p>
 			<label for="<?php echo $this->get_field_id( 'youtube' ); ?>"><?php _e( 'Youtube:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'youtube' ); ?>" name="<?php echo $this->get_field_name( 'youtube' ); ?>" type="text" value="<?php echo esc_attr( $youtube ); ?>">
 		</p>
@@ -305,12 +298,12 @@ class Social_Widget extends WP_Widget {
 	 */
 	function update( $new_instance, $old_instance ) {
 		$instance = array();
-        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-        $instance['facebook'] = ( ! empty( $new_instance['facebook'] ) ) ? strip_tags( $new_instance['facebook'] ) : '';
-        $instance['instagram'] = ( ! empty( $new_instance['instagram'] ) ) ? strip_tags( $new_instance['instagram'] ) : '';
-        $instance['vkontakte'] = ( ! empty( $new_instance['vkontakte'] ) ) ? strip_tags( $new_instance['vkontakte'] ) : '';
-        $instance['twitter'] = ( ! empty( $new_instance['twitter'] ) ) ? strip_tags( $new_instance['twitter'] ) : '';
-        $instance['youtube'] = ( ! empty( $new_instance['youtube'] ) ) ? strip_tags( $new_instance['youtube'] ) : '';
+    $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+    $instance['facebook'] = ( ! empty( $new_instance['facebook'] ) ) ? strip_tags( $new_instance['facebook'] ) : '';
+    $instance['instagram'] = ( ! empty( $new_instance['instagram'] ) ) ? strip_tags( $new_instance['instagram'] ) : '';
+    $instance['vkontakte'] = ( ! empty( $new_instance['vkontakte'] ) ) ? strip_tags( $new_instance['vkontakte'] ) : '';
+    $instance['twitter'] = ( ! empty( $new_instance['twitter'] ) ) ? strip_tags( $new_instance['twitter'] ) : '';
+    $instance['youtube'] = ( ! empty( $new_instance['youtube'] ) ) ? strip_tags( $new_instance['youtube'] ) : '';
 
 		return $instance;
 	}
@@ -337,7 +330,6 @@ class Social_Widget extends WP_Widget {
 		</style>
 		<?php
 	}
-
 } 
 // конец класса Social_Widget
 
@@ -376,35 +368,35 @@ class Recent_Post_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function widget( $args, $instance ) {
-        $title = $instance['title'];
-        $count = $instance['count'];
+    $title = $instance['title'];
+    $count = $instance['count'];
 
 		echo $args['before_widget'];
-        if ( ! empty( $count ) ) {
-			if ( ! empty( $title ) ) {
-			    echo $args['before_title'] . $title . $args['after_title'];
-            }
-            echo '<div class="widget-recent-posts-wrapper">';
-            global $post;
-            $postslist = get_posts( array( 'posts_per_page' => $count, 'order'=> 'ASC', 'orderby' => 'title' ) );
-            foreach ( $postslist as $post ){
-                setup_postdata($post);
-                ?>
-                <a href="<?php the_permalink() ?>" class="recent-post-link">
-                    <img class="recent-post-thumb" src="<?=get_the_post_thumbnail_url(null, 'thumbnail')?>" alt="<?php the_title(); ?>">
-                    <div class="recent-post-info">
-                        <h4 class="recent-post-title"><?=mb_strimwidth(get_the_title(), 0, 35, '...')?></h4>
-                        <span class="recent-post-time">
-                            <?php $time_diff = human_time_diff( get_post_time('U'), current_time('timestamp') );
-                            echo "$time_diff назад";?>
-                        </span>
-                    </div>
-                </a>
-                <?php
-            }
-            wp_reset_postdata();
-            echo '</div>';
+      if ( ! empty( $count ) ) {
+        if ( ! empty( $title ) ) {
+          echo $args['before_title'] . $title . $args['after_title'];
         }
+        echo '<div class="widget-recent-posts-wrapper">';
+          global $post;
+          $postslist = get_posts( array( 'posts_per_page' => $count, 'order'=> 'ASC', 'orderby' => 'title' ) );
+          foreach ( $postslist as $post ){
+            setup_postdata($post);
+            ?>
+            <a href="<?php the_permalink() ?>" class="recent-post-link">
+                <img class="recent-post-thumb" src="<?=get_the_post_thumbnail_url(null, 'thumbnail')?>" alt="<?php the_title(); ?>">
+                <div class="recent-post-info">
+                  <h4 class="recent-post-title"><?=mb_strimwidth(get_the_title(), 0, 35, '...')?></h4>
+                  <span class="recent-post-time">
+                    <?php $time_diff = human_time_diff( get_post_time('U'), current_time('timestamp') );
+                    echo "$time_diff назад";?>
+                  </span>
+                </div>
+            </a>
+            <?php
+          }
+          wp_reset_postdata();
+        echo '</div>';
+      }
 		echo $args['after_widget'];
 	}
 
@@ -414,15 +406,15 @@ class Recent_Post_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function form( $instance ) {
-        $title = @ $instance['title'] ?: 'Недавно опубликовано';
-        $count = @ $instance['count'] ?: '7';
+    $title = @ $instance['title'] ?: 'Недавно опубликовано';
+    $count = @ $instance['count'] ?: '7';
 
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
-        <p>
+    <p>
 			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Количество постов:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" type="text" value="<?php echo esc_attr( $count ); ?>">
 		</p>
@@ -441,8 +433,8 @@ class Recent_Post_Widget extends WP_Widget {
 	 */
 	function update( $new_instance, $old_instance ) {
 		$instance = array();
-        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-        $instance['count'] = ( ! empty( $new_instance['count'] ) ) ? strip_tags( $new_instance['count'] ) : '';
+    $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+    $instance['count'] = ( ! empty( $new_instance['count'] ) ) ? strip_tags( $new_instance['count'] ) : '';
 
 		return $instance;
 	}
@@ -469,7 +461,6 @@ class Recent_Post_Widget extends WP_Widget {
 		</style>
 		<?php
 	}
-
 } 
 // конец класса Recent_Post_Widget
 
@@ -481,21 +472,21 @@ add_action( 'widgets_init', 'register_recent_post_widget' );
 
 //Подключение стилей и скриптов
 function enqueue_universal_style() {
-    wp_enqueue_style( 'style', get_stylesheet_uri() );
-    wp_enqueue_style( 'universal-theme', get_template_directory_uri() . '/assets/css/universal-theme.css', 'style', time() );
-    wp_enqueue_style( 'Roboto-Slab', 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+  wp_enqueue_style( 'style', get_stylesheet_uri() );
+  wp_enqueue_style( 'universal-theme', get_template_directory_uri() . '/assets/css/universal-theme.css', 'style', time() );
+  wp_enqueue_style( 'Roboto-Slab', 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_universal_style' );
 
 #Изменяем настройки облака тегов
 add_action( 'widget_tag_cloud_args', 'edit_widget_tag_cloud_args' );
 function edit_widget_tag_cloud_args($args){
-    $args['unit'] = 'px';
+  $args['unit'] = 'px';
 	$args['smallest'] = 14;
-    $args['largest'] = 14;
-    $args['number'] = 12;
-    $args['orderby'] = 'count';
-    return $args;
+  $args['largest'] = 14;
+  $args['number'] = 12;
+  $args['orderby'] = 'count';
+  return $args;
 }
 
 #Отключаем создание миниатюр файлов для указанных размеров
@@ -503,9 +494,9 @@ add_filter( 'intermediate_image_sizes', 'delete_intermediate_image_sizes' );
 function delete_intermediate_image_sizes( $sizes ){
 	//размеры которые нужно удалить
 	return array_diff( $sizes, [
-        'medium',
+    'medium',
 		'medium_large',
-        'large',
+    'large',
 		'1536x1536',
 		'2048x2048',
 	] );

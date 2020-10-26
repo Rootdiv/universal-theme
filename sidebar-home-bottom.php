@@ -13,5 +13,5 @@ if ( ! is_active_sidebar( 'article-sidebar' ) ) {
 ?>
 
 <aside id="secondary" class="sidebar-front-page">
-	<?php dynamic_sidebar( 'article-sidebar' ); ?>
+  <?php dynamic_sidebar( 'article-sidebar' ); ?>
 </aside><!-- #secondary -->

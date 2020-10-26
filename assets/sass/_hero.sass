@@ -1,150 +1,150 @@
 .home
-    background-color: #E5E5E5
+  background-color: #E5E5E5
 .fron-page-header
-    padding-top: 30px
-    background-color: #262D33
-    position: relative
-    height: 475px
+  padding-top: 30px
+  background-color: #262D33
+  position: relative
+  height: 475px
 .hero
-    background-color: #ffffff
-    display: flex
-    overflow: hidden
-    border-radius: 10px
-    min-height: 570px
+  background-color: #ffffff
+  display: flex
+  overflow: hidden
+  border-radius: 10px
+  min-height: 570px
+  position: relative
+  z-index: 1
+  .left
+    flex-basis: 75%
     position: relative
-    z-index: 1
-    .left
-        flex-basis: 75%
-        position: relative
-        padding: 55px 55px 100px 55px
-        display: flex
-        flex-direction: column
-        justify-content: space-between
-        &::before
-            content: ''
-            position: absolute
-            z-index: 1
-            width: 100%
-            height: 100%
-            left: 0
-            top: 0
-            background-color: rgba(#40303D, 0.35)
-        .post-thumb
-            position: absolute
-            left: 0
-            top: 0
-            bottom: 0
-            right: 0
-            height: 100%
-            object-fit: cover
-            z-index: 0
+    padding: 55px 55px 100px 55px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &::before
+      content: ''
+      position: absolute
+      z-index: 1
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      background-color: rgba(#40303D, 0.35)
+      .post-thumb
+        position: absolute
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        height: 100%
+        object-fit: cover
+        z-index: 0
         .author
-            position: relative
-            z-index: 2
-            display: flex
-            align-items: center
-            text-decoration: none
-            &-bio
-                margin-left: 10px
+          position: relative
+          z-index: 2
+          display: flex
+          align-items: center
+          text-decoration: none
+          &-bio
+            margin-left: 10px
             &-name
-                display: block
-                font-size: 14px
-                line-height: 20px
-                color: rgba(#ffffff, 0.85)
+              display: block
+              font-size: 14px
+              line-height: 20px
+              color: rgba(#ffffff, 0.85)
             &-rank
-                color: rgba(#ffffff, 0.4)
+              color: rgba(#ffffff, 0.4)
         .avatar
-            width: 45px
-            height: 45px
-            border-radius: 50%
+          width: 45px
+          height: 45px
+          border-radius: 50%
         .post
-            &-title
-                font-size: 40px
-                line-height: 50px
-                color: #ffffff
-                font-family: 'Roboto Slab', serif
-                margin-top: 20px
-                margin-bottom: 50px
-                max-width: 590px
-            &-text
-                z-index: 2
-                position: relative
-    .right
-        flex-basis: 25%
-        .recommend
-            margin-left: 25px
-            margin-bottom: 20px
+          &-title
+            font-size: 40px
+            line-height: 50px
+            color: #ffffff
+            font-family: 'Roboto Slab', serif
             margin-top: 20px
-            font-weight: 900
-            font-size: 14px
-            line-height: 20px
-            text-transform: uppercase
+            margin-bottom: 50px
+            max-width: 590px
+            &-text
+              z-index: 2
+              position: relative
+    .right
+      flex-basis: 25%
+      .recommend
+        margin-left: 25px
+        margin-bottom: 20px
+        margin-top: 20px
+        font-weight: 900
+        font-size: 14px
+        line-height: 20px
+        text-transform: uppercase
         .posts
-            &-list
-                padding: 0
-                margin: 0
-                list-style: none
-        .post
-            padding: 17px 25px 19px 25px
+          &-list
+            padding: 0
             margin: 0
-            border-top: 1px solid #D9DADB
-            min-height: 100px
-            &:hover
-                background-color: #F5F5F5
+            list-style: none
+        .post
+          padding: 17px 25px 19px 25px
+          margin: 0
+          border-top: 1px solid #D9DADB
+          min-height: 100px
+          &:hover
+            background-color: #F5F5F5
             &-categories
-                padding: 0
-                margin: 0
-                list-style: none
-                a
-                    font-weight: 900
-                    font-size: 12px
-                    line-height: 15px
-                    text-transform: uppercase
+              padding: 0
+              margin: 0
+              list-style: none
+              a
+                font-weight: 900
+                font-size: 12px
+                line-height: 15px
+                text-transform: uppercase
             &-permalink
-                text-decoration: none
-                color: #4B5157
+              text-decoration: none
+              color: #4B5157
             &-title
-                min-height: 40px
-                font-size: 14px
-                line-height: 20px
-                font-weight: 400
-                margin-bottom: 0
-                margin-top: 8px
+              min-height: 40px
+              font-size: 14px
+              line-height: 20px
+              font-weight: 400
+              margin-bottom: 0
+              margin-top: 8px
 .more
-    display: inline-block
+  display: inline-block
+  color: #ffffff
+  padding: 10px 20px
+  padding-right: 50px
+  border-radius: 20px
+  background: #4592FF
+  text-decoration: none
+  background-image: url('../images/arrow.svg')
+  background-repeat: no-repeat
+  background-position: center right 20px
+  &:hover, &:visited, &:focus
     color: #ffffff
-    padding: 10px 20px
-    padding-right: 50px
-    border-radius: 20px
-    background: #4592FF
-    text-decoration: none
-    background-image: url('../images/arrow.svg')
-    background-repeat: no-repeat
-    background-position: center right 20px
-    &:hover, &:visited, &:focus
-        color: #ffffff
 .category-link
+  color: #4592FF
+  text-transform: uppercase
+  font-weight: 900
+  font-size: 12px
+  line-height: 15px
+  text-decoration: none
+  &:visited, &:focus
     color: #4592FF
-    text-transform: uppercase
-    font-weight: 900
-    font-size: 12px
-    line-height: 15px
-    text-decoration: none
-    &:visited, &:focus
-        color: #4592FF
     &.javascript
+      color: #6E99AE
+      &:visited, &:focus
         color: #6E99AE
-        &:visited, &:focus
-            color: #6E99AE
     &.css
+      color: #3BBDC4
+      &:visited, &:focus
         color: #3BBDC4
-        &:visited, &:focus
-            color: #3BBDC4
     &.html
+      color: #AC8EE3
+      &:visited, &:focus
         color: #AC8EE3
-        &:visited, &:focus
-            color: #AC8EE3
     &.web-design
+      color: #FFA34D
+      &:visited, &:focus
         color: #FFA34D
-        &:visited, &:focus
-            color: #FFA34D
