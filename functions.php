@@ -224,27 +224,37 @@ class Social_Widget extends WP_Widget {
     echo '<div class="widget-social-link">';
     if ( ! empty( $facebook ) ) {
       echo '<a class="widget-social-link-fb" href="' . $facebook . '" tagert="_blank">
-      <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/facebook.svg" alt="Facebook" />
+        <svg width="20" height="20" fill="#ffffff" class="widget-link-icon">
+          <use xlink:href="'.get_template_directory_uri().'/assets/images/sprite.svg#facebook"></use>
+        </svg>
       </a>';
     }
     if ( ! empty( $instagram ) ) {
       echo '<a class="widget-social-link-inst" href="' . $instagram . '" tagert="_blank">
-      <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/instagram.svg" alt="Instagram" />
+        <svg width="20" height="20" fill="#ffffff" class="widget-link-icon">
+          <use xlink:href="'.get_template_directory_uri().'/assets/images/sprite.svg#instagram"></use>
+        </svg>
       </a>';
     }
     if ( ! empty( $vkontakte ) ) {
       echo '<a class="widget-social-link-vk" href="' . $vkontakte . '" tagert="_blank">
-      <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/vk.svg" alt="ВКонтакте" />
+        <svg width="20" height="20" fill="#ffffff" class="widget-link-icon">
+          <use xlink:href="'.get_template_directory_uri().'/assets/images/sprite.svg#vk"></use>
+        </svg>
       </a>';
     }
     if ( ! empty( $twitter ) ) {
       echo '<a class="widget-social-link-twit" href="' . $twitter . '" tagert="_blank">
-      <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/twitter.svg" alt="Twitter" />
+        <svg width="20" height="20" fill="#ffffff" class="widget-link-icon">
+          <use xlink:href="'.get_template_directory_uri().'/assets/images/sprite.svg#twitter"></use>
+        </svg>
       </a>';
     }
     if ( ! empty( $youtube ) ) {
       echo '<a class="widget-social-link-yt" href="' . $youtube . '" tagert="_blank">
-      <img class="widget-link-icon" src="'. get_template_directory_uri() .'/assets/images/youtube.svg" alt="Youtube" />
+        <svg width="20" height="20" fill="#ffffff" class="widget-link-icon">
+          <use xlink:href="'.get_template_directory_uri().'/assets/images/sprite.svg#youtube"></use>
+        </svg>
       </a>';
     }
     echo '</div>';

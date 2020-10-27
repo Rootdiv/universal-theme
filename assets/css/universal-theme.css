@@ -811,8 +811,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding: 25px;
-  padding-bottom: 35px;
+  padding: 5% 10%;
 }
 
 .widget .tag-cloud-link {
@@ -1036,7 +1035,8 @@ body {
 }
 
 .digest .date:not(:last-child), .digest .comments:not(:last-child), .digest .likes:not(:last-child) {
-  margin-right: 12px;
+  margin-right: 10px;
+  margin-left: 4px;
 }
 
 .digest .date-counter, .digest .comments-counter, .digest .likes-counter {
