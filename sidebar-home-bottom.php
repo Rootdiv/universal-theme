@@ -8,7 +8,7 @@
  */
 
 if ( ! is_active_sidebar( 'article-sidebar' ) ) {
-	return;
+ return;
 }
 ?>
 

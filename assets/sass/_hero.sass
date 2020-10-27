@@ -118,9 +118,12 @@
   border-radius: 20px
   background: #4592FF
   text-decoration: none
-  background-image: url('../images/arrow.svg')
-  background-repeat: no-repeat
-  background-position: center right 20px
+  position: relative
+  &-icon
+    position: absolute
+    top: 7px
+    right: 20px
+    fill: white
   &:hover, &:visited, &:focus
     color: #ffffff
 .category-link

@@ -18,12 +18,18 @@ body
     font-family: 'Lato Black', sans-serif
     text-transform: uppercase
   &-downloader
-    background: #3BBDC4 url('../images/file.svg') no-repeat top 24px right 22px
+    background: #3BBDC4
     border-radius: 10px
     color: #ffffff
     padding: 25px
     padding-bottom: 45px
     position: relative
+    &-icon
+      position: absolute
+      top: 24px
+      right: 22px
+      fill: #96E2E3
+      opacity: 0.5
     .widget
       &-title
         font-family: 'Roboto Slab', sans-serif
@@ -100,8 +106,8 @@ body
     align-items: center
     justify-content: flex-start
     flex-wrap: wrap
-    padding: 5% 10%
-    padding-top: 10%
+    padding: 25px
+    padding-bottom: 35px
   .tag-cloud-link
     margin-right: 4%
     margin-bottom: 7%
@@ -123,8 +129,7 @@ body
       border: none
       text-transform: none
     &-link
-      padding-top: 15px
-      padding-bottom: 50px
+      padding-bottom: 45px
       text-align: center
       a
         display: inline-flex

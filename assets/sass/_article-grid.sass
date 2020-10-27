@@ -87,6 +87,8 @@
             .comments
               display: flex
               align-items: center
+              &-icon
+                fill: #BCBFC2
               &-counter
                 color: #939699
                 font-size: 12px
@@ -169,8 +171,10 @@
           align-items: center
           &:not(:last-child)
             margin-right: 7px
-            &-counter
-              margin-left: 5px
+          &-counter
+            margin-left: 5px
+          &-icon
+            fill: #ffffff
       &-3
         grid-area: 2 / 1 / 4 / 2
         .article-grid
@@ -212,4 +216,8 @@
             margin-top: 0
             margin-bottom: auto
         .date
+          position: absolute
+          right: 0
+          left: 25px
+          bottom: 30px
           color: #939699

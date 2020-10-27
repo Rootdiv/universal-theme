@@ -21,7 +21,7 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
-	 ========================================================================== */
+  ========================================================================== */
 
 /**
  * 1. Correct the line height in all browsers.
@@ -33,7 +33,7 @@ html {
 }
 
 /* Sections
-	 ========================================================================== */
+  ========================================================================== */
 
 /**
  * Remove the margin in all browsers.
@@ -59,7 +59,7 @@ h1 {
 }
 
 /* Grouping content
-	 ========================================================================== */
+  ========================================================================== */
 
 /**
  * 1. Add the correct box sizing in Firefox.
@@ -81,7 +81,7 @@ pre {
 }
 
 /* Text-level semantics
-	 ========================================================================== */
+  ========================================================================== */
 
 /**
  * Remove the gray background on active links in IE 10.
@@ -147,7 +147,7 @@ sup {
 }
 
 /* Embedded content
-	 ========================================================================== */
+  ========================================================================== */
 
 /**
  * Remove the border on images inside links in IE 10.
@@ -157,7 +157,7 @@ img {
 }
 
 /* Forms
-	 ========================================================================== */
+  ========================================================================== */
 
 /**
  * 1. Change the font styles in all browsers.
@@ -234,7 +234,7 @@ fieldset {
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
- *		`fieldset` elements in all browsers.
+ *  `fieldset` elements in all browsers.
  */
 legend {
     box-sizing: border-box;
@@ -303,7 +303,7 @@ textarea {
 }
 
 /* Interactive
-	 ========================================================================== */
+  ========================================================================== */
 
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
@@ -320,7 +320,7 @@ summary {
 }
 
 /* Misc
-	 ========================================================================== */
+  ========================================================================== */
 
 /**
  * Add the correct display in IE 10+.

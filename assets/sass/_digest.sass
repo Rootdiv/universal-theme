@@ -1,0 +1,99 @@
+.main-post-list
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-start
+.digest
+  max-width: 850px
+  width: 100%
+  margin: 60px 0
+  padding: 0
+  list-style: none
+  border-radius: 10px
+  background-color: #ffffff
+  overflow: hidden
+  &-item
+    position: relative
+    width: 100%
+    border-bottom: 1px solid #D9DADB
+    padding: 25px
+    &-permalink
+      text-decoration: none
+      color: #262D33
+      &:hover
+        color: #262D33
+      &:visited
+        color: #262D33
+  &-item:last-child
+    border: none
+  &-thumb
+    width: 42%
+    object-fit: cover
+  &-info
+    position: absolute
+    right: 0
+    top: 0
+    width: 55%
+    height: 100%
+    padding: 25px
+    padding-left: 5px
+    .bookmark
+      padding: 0
+      border: none
+      float: right
+      background: none
+      &-icon
+        fill: #BCBFC2
+    .category-link
+      font-family: 'Lato Black', sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      text-transform: uppercase
+      &.news
+        color: #4592FF
+        &:visited
+          color: #4592FF
+      &.opinions
+        color: #3BBDC4
+        &:visited
+          color: #3BBDC4
+      &.hot
+        color: #FF4F52
+        &:visited
+          color: #FF4F52
+      &.collections
+        color: #AC8EE3
+        &:visited
+          color: #AC8EE3
+  &-title
+    font-family: 'Roboto Slab'
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 25px
+    margin-top: 15px
+    margin-bottom: 10px
+  &-excerpt
+    font-size: 14px
+    line-height: 20px
+    margin-bottom: 22px
+  .article-info
+    position: absolute
+    bottom: 25px
+    right: 0
+    left: 0
+    display: flex
+    align-items: center
+    color: #939699
+  .date, .comments, .likes
+    display: flex
+    align-items: center
+    &:not(:last-child)
+      margin-right: 12px
+    &-counter
+      margin-left: 5px
+      margin-bottom: -2px
+    &-icon
+      fill: #BCBFC2

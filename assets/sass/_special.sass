@@ -1,0 +1,150 @@
+.special
+  background-color: #262D33
+  padding: 60px 0
+  color: #ffffff
+  &-grid
+    display: flex
+    justify-content: space-between
+.photo-report
+  min-height: 570px
+  width: 49%
+  overflow: hidden
+  border-radius: 10px
+  position: relative
+  .category-link
+    color: #FFFFFF
+    border-radius: 3px
+    background: #3DC47E
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    align-self: start
+    text-transform: none
+    padding: 5px 12px
+    position: absolute
+    left: 18px
+    top: 18px
+  .author
+    text-decoration: none
+    &-name
+      display: block
+      font-size: 14px
+      line-height: 20px
+      color: #ffffff
+    &-rank
+      font-size: 12px
+      line-height: 15px
+      color: rgba(#ffffff, 0.4)
+    &-avatar
+      border-radius: 50%
+      width: 45px
+      height: 45px
+      margin-bottom: 8px
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35))
+    z-index: 1
+  &-button
+    color: #ffffff
+    background: #4592FF
+    border-radius: 20px
+    padding: 10px 20px
+    text-decoration: none
+    display: flex
+    align-items: center
+    fill: #ffffff
+    margin-bottom: 20px
+    &:hover
+      color: #ffffff
+  &-counter
+    margin-left: 8px
+  &-icon
+    margin-right: 8px
+  &-content
+    position: relative
+    z-index: 2
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    padding: 18px
+    height: 100%
+    text-align: center
+  &-slider
+    position: absolute
+    z-index: 0
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    .swiper-slide
+      height: 100%
+      img
+        width: 100%
+        height: inherit
+        object-fit: cover
+  &-title
+    font-family: 'Roboto Slab'
+    font-size: 40px
+    line-height: 50px
+.other
+  width: 49%
+  border-radius: 10px
+  .career
+    padding: 35px
+    padding-bottom: 60px
+    border-radius: 10px
+    height: 370px
+    background: #B4D1E0 url('../images/career.png') no-repeat
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-bottom: 30px
+    &-post
+      width: 48%
+      &-title
+        font-family: 'Roboto Slab'
+        font-style: normal
+        font-weight: bold
+        font-size: 25px
+        line-height: 30px
+        color: #262D33
+      &-excerpt
+        font-size: 14px
+        line-height: 20px
+        color: #4B5157
+        margin-bottom: 45px
+  .category-link
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+  &-posts
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-permalink
+      text-decoration: none
+    &-content
+      width: 48%
+      border-radius: 10px
+      background-color: #ffffff
+      padding: 25px
+    &-title
+      margin: 0
+      font-family: 'Roboto Slab'
+      font-style: normal
+      font-weight: bold
+      font-size: 16px
+      line-height: 25px
+      color: #262D33
+    &-excerpt
+      font-size: 14px
+      line-height: 20px
+      color: #4B5157
+    .date
+      color: #939699
