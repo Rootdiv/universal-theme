@@ -43,8 +43,8 @@ function universal_theme_widgets_init() {
     )
   );
 
-    register_sidebar(
-      array(
+  register_sidebar(
+    array(
       'name'          => esc_html__( 'Последние статьи', 'universal-theme' ),
       'id'            => 'article-sidebar',
       'description'   => esc_html__( 'Добавьте виджеты сюда.', 'universal-theme' ),
@@ -52,6 +52,30 @@ function universal_theme_widgets_init() {
       'after_widget'  => '</section>',
       'before_title'  => '<h2 class="widget-title">',
       'after_title'   => '</h2>',
+    )
+  );
+
+  register_sidebar(
+    array(
+      'name'          => esc_html__( 'Меню в подвале', 'universal-theme' ),
+      'id'            => 'sidebar-footer',
+      'description'   => esc_html__( 'Добавьте меню сюда.', 'universal-theme' ),
+      'before_widget' => '<section id="%1$s" class="footer-menu %2$s">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h2 class="footer-menu-title">',
+      'after_title'   => '</h2>',
+    )
+  );
+
+  register_sidebar(
+    array(
+      'name'          => esc_html__( 'Текст в подвале', 'universal-theme' ),
+      'id'            => 'sidebar-footer-text',
+      'description'   => esc_html__( 'Добавьте текст сюда.', 'universal-theme' ),
+      'before_widget' => '<section id="%1$s" class="footer-text %2$s">',
+      'after_widget'  => '</section>',
+      'before_title'  => '',
+      'after_title'   => '',
     )
   );
 }
@@ -67,7 +91,7 @@ class Downloader_Widget extends WP_Widget {
   // вызов конструктора выглядит так:
   // __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
   parent::__construct(
-    'downloader_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: foo_widget
+    'downloader_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: downloader_widget
     'Полезные файлы',
     array( 'description' => 'Файлы для скачивания.', 'classname' => 'widget-downloader', )
   );
