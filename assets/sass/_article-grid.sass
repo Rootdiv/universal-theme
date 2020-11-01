@@ -2,15 +2,19 @@
   display: flex
   justify-content: space-between
   align-items: flex-start
+  padding-top: 30px
+  padding-bottom: 30px
+  flex-wrap: wrap
 .article
   &-grid
-    max-width: 850px
-    margin: 30px 0 60px
+    width: 74%
+    margin: 0 0 30px
     padding: 0
     list-style: none
     display: grid
-    grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: minmax(min-content, max-content) repeat(2, 1fr)
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr))
+    grid-template-rows: repeat(3, minmax(200px, max-content))
+    grid-auto-rows: minmax(200px, max-content)
     //grid-column-gap: 30px
     //grid-row-gap: 30px
     grid-gap: 30px
@@ -221,3 +225,39 @@
           left: 25px
           bottom: 30px
           color: #939699
+
+@media screen and (max-width: 1200px)
+  .article
+    &-grid
+      width: 100%
+@media screen and (max-width: 1024px)
+  .article
+    &-grid
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(3, minmax(300px, max-content))
+      &-item
+        grid-area: auto
+        &-1
+          .article-grid
+            &-thumb
+              object-fit: cover
+@media screen and (max-width: 960px)
+  .main
+    &-grid
+      flex-wrap: wrap
+  .article
+    &-grid
+      width: 100%
+@media screen and (max-width: 800px)
+  .article-grid-item-1
+    .article-grid
+      &-info
+        .author
+          &-name
+            width: 100%
+            white-space: pre-line
+@media screen and (max-width: 800px)
+  .article-grid-item-1
+    .article-grid
+      &-info
+        padding: 5px 10px

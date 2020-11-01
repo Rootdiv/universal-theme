@@ -125,10 +125,15 @@
     line-height: 15px
   &-posts
     display: flex
-    align-items: center
     justify-content: space-between
     &-permalink
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
       text-decoration: none
+      .date
+        color: #939699
     &-content
       width: 48%
       border-radius: 10px
@@ -146,5 +151,23 @@
       font-size: 14px
       line-height: 20px
       color: #4B5157
-    .date
-      color: #939699
+
+@media screen and (max-width: 1200px)
+  .special
+    &-grid
+      flex-wrap: wrap
+  .photo-report
+    width: 100% !important
+  .other
+    width: 100%
+    padding-top: 30px
+    .career
+      background-position: center right 65px
+@media screen and (max-width: 768px)
+  .other
+    .career
+      background-position: center
+@media screen and (max-width: 480px)
+  .other
+    .career
+      height: 58%

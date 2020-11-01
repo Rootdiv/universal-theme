@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="fron-page-header">
+<main class="front-page-header">
   <div class="container">
     <div class="hero">
       <div class="left">
@@ -98,6 +98,7 @@
   <!-- /.container -->
 </main>
 <div class="container">
+  <div class="article-space"></div>
   <ul class="article-list">
     <?php
     global $post;

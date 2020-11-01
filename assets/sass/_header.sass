@@ -13,6 +13,8 @@
     list-style: none
     display: flex
     align-items: center
+    &-toggle
+      display: none
 .menu
   &-item
     a
@@ -23,7 +25,7 @@
 .search
   &-form
     position: relative
-    width: 270px
+    width: 25%
     height: 40px
   &-input
     position: absolute
@@ -50,3 +52,75 @@
     padding-top: 3px
   &-icon
     fill: #BCBFC2
+
+@media screen and (max-width: 1200px)
+  .menu
+    &-item
+      a
+        text-decoration: none
+        color: white
+        margin-left: 10px
+        margin-right: 10px
+@media screen and (max-width: 1024px)
+  .header
+    &-wrapper
+      flex-wrap: wrap
+    &-nav
+      order: 5
+      padding-top: 20px
+    &-menu
+      flex-wrap: wrap
+  .search
+    &-form
+      width: 30%
+  .menu
+    &-item
+      a
+        margin-left: 0
+        margin-right: 30px
+@media screen and (max-width: 1024px)
+  .search
+    &-form
+      margin-left: auto
+      width: 40%
+  .header
+    &-wrapper
+      position: relative
+    &-nav
+      display: none
+      position: absolute
+      right: 0
+      top: 55px
+      width: calc(40% + 40px)
+      background-color: #ffffff
+      padding: 30px
+      z-index: 99
+      border-radius: 10px
+      box-shadow: 1px 1px 10px rgba(#262D33, 0.2)
+    &-menu
+      flex-direction: column
+      align-items: flex-start
+      a
+        color: #000
+      &-toggle
+        display: flex
+        width: 30px
+        height: 20px
+        align-items: center
+        justify-content: space-between
+        flex-direction: column
+        margin-left: 10px
+        span
+          width: 100%
+          height: 1px
+          background-color: #ffffff
+    .menu
+      &-item
+        &:not(:last-child)
+          margin-bottom: 15px
+@media screen and (max-width: 400px)
+  .search
+    &-form
+      order: 5
+      width: 100%
+      margin-top: 15px

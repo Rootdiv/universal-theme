@@ -1,9 +1,8 @@
 .home
   background-color: #E5E5E5
-.fron-page-header
+.front-page-header
   padding-top: 30px
   background-color: #262D33
-  position: relative
   height: 475px
 .hero
   background-color: #ffffff
@@ -119,6 +118,7 @@
   background: #4592FF
   text-decoration: none
   position: relative
+  width: 164px
   &-icon
     position: absolute
     top: 7px
@@ -151,3 +151,19 @@
     color: #FFA34D
     &:visited, &:focus
       color: #FFA34D
+
+@media screen and (max-width: 1200px)
+  .hero
+    .right
+      flex-basis: 35%
+@media screen and (max-width: 768px)
+  .hero
+    flex-direction: column
+  .left
+    .post
+      &-text
+        padding-top: 30px
+  .front-page
+    &-header
+      height: auto
+      padding-bottom: 30px
