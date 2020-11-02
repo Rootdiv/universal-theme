@@ -549,5 +549,11 @@ function delete_intermediate_image_sizes( $sizes ){
     '2048x2048',
   ] );
 }
+
 #Отмена `-scaled` размера - ограничение максимального размера картинки 
 add_filter( 'big_image_size_threshold', '__return_zero' );
+
+#Меняем стиль многоточия в отрывках
+add_filter('excerpt_more', function($more) {
+	return '...';
+});

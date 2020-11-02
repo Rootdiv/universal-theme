@@ -367,8 +367,8 @@ body {
 
 .more-icon {
   position: absolute;
-  top: 7px;
-  right: 20px;
+  top: 17px;
+  right: 30px;
   fill: white;
 }
 
@@ -668,6 +668,7 @@ body {
   font-size: 12px;
   line-height: 15px;
   margin-left: 5px;
+  margin-bottom: -2px;
 }
 
 .article-grid-item-2 {
@@ -1457,7 +1458,7 @@ body {
   margin-bottom: 20px;
 }
 
-.photo-report-button:hover {
+.photo-report-button:hover, .photo-report-button:visited {
   color: #ffffff;
 }
 
@@ -1775,4 +1776,94 @@ body {
   .footer-text {
     max-width: 200px;
   }
+}
+
+.post-nav-prev svg {
+  transform: rotate(180deg);
+}
+
+.post-header {
+  padding: 60px 0 72px;
+  color: #ffffff;
+}
+
+.post-header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-header .home-link {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.post-header .home-link svg {
+  fill: #ffffff;
+  margin-right: 6px;
+}
+
+.post-header .nav-links {
+  min-width: 180px;
+}
+
+.post-header .nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.post-header .nav-links svg {
+  fill: #ffffff;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.post-header .navigation {
+  margin: 0;
+}
+
+.post-header p {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 43px;
+  width: 630px;
+  opacity: 0.85;
+}
+
+.post-header-info {
+  display: flex;
+  align-items: center;
+}
+
+.post-header-date, .post-header-comments, .post-header-likes {
+  opacity: 0.85;
+}
+
+.post-header-date:not(:last-child), .post-header-comments:not(:last-child), .post-header-likes:not(:last-child) {
+  margin-right: 22px;
+}
+
+.post-header-date svg, .post-header-comments svg, .post-header-likes svg {
+  margin-right: 6px;
+  fill: #FFFFFF;
+  opacity: 0.5;
+}
+
+.post-title {
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 70px;
+  max-width: 750px;
+  margin-top: 52px;
+  margin-bottom: 30px;
 }
