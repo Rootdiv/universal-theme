@@ -345,6 +345,7 @@ body {
 }
 
 .hero .right .post-title {
+  font-family: 'Lato Regular', sans-serif;
   min-height: 40px;
   font-size: 14px;
   line-height: 20px;
