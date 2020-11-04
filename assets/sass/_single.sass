@@ -4,8 +4,27 @@
       svg
         transform: rotate(180deg)
   &-header
-    padding: 60px 0 72px
+    padding: 60px 0 0
     color: #ffffff
+    &-wrapper
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      padding-bottom: 20px
+    &-title
+      font-family: 'Roboto Slab', sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 55px
+      line-height: 70px
+      max-width: 750px
+      margin: 0
+    .bookmark
+      padding: 15px 10px 0 0
+      border: none
+      background: none
+      &-icon
+        fill: #BCBFC2
     &-nav
       display: flex
       align-items: center
@@ -45,6 +64,7 @@
     &-info
       display: flex
       align-items: center
+      padding-bottom: 72px
     &-date, &-comments, &-likes
       opacity: 0.85
       &:not(:last-child)
@@ -53,12 +73,3 @@
         margin-right: 6px
         fill: #FFFFFF
         opacity: 0.5
-  &-title
-    font-family: 'Roboto Slab', sans-serif
-    font-style: normal
-    font-weight: bold
-    font-size: 55px
-    line-height: 70px
-    max-width: 750px
-    margin-top: 52px
-    margin-bottom: 30px

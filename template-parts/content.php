@@ -38,13 +38,22 @@
         );?>
       </div>
       <!-- /.post-header-nav -->
-      <?php //Проверяем точно ли мы на странице поста
-      if ( is_singular() ) :
-        the_title( '<h1 class="post-title">', '</h1>' );
-      else :
-        the_title( '<h2 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-      endif;
-      the_excerpt() ?>
+      <div class="post-header">
+        <div class="post-header-wrapper">
+          <?php //Проверяем точно ли мы на странице поста
+          if ( is_singular() ) :
+            the_title( '<h1 class="post-header-title">', '</h1>' );
+          else :
+            the_title( '<h2 class="post-header-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+          endif;?>
+          <button class="bookmark">
+            <svg width="21" height="27" class="bookmark-icon">
+              <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#bookmark"></use>
+            </svg>
+          </button>
+        </div>
+        <?php the_excerpt() ?>
+      </div>
       <div class="post-header-info">
         <div class="post-header-date">
           <svg width="14" height="14" class="icon clocks-icon">

@@ -345,7 +345,6 @@ body {
 }
 
 .hero .right .post-title {
-  font-family: 'Lato Regular', sans-serif;
   min-height: 40px;
   font-size: 14px;
   line-height: 20px;
@@ -1784,8 +1783,35 @@ body {
 }
 
 .post-header {
-  padding: 60px 0 72px;
+  padding: 60px 0 0;
   color: #ffffff;
+}
+
+.post-header-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.post-header-title {
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 70px;
+  max-width: 750px;
+  margin: 0;
+}
+
+.post-header .bookmark {
+  padding: 15px 10px 0 0;
+  border: none;
+  background: none;
+}
+
+.post-header .bookmark-icon {
+  fill: #BCBFC2;
 }
 
 .post-header-nav {
@@ -1842,6 +1868,7 @@ body {
 .post-header-info {
   display: flex;
   align-items: center;
+  padding-bottom: 72px;
 }
 
 .post-header-date, .post-header-comments, .post-header-likes {
@@ -1856,15 +1883,4 @@ body {
   margin-right: 6px;
   fill: #FFFFFF;
   opacity: 0.5;
-}
-
-.post-title {
-  font-family: 'Roboto Slab', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 55px;
-  line-height: 70px;
-  max-width: 750px;
-  margin-top: 52px;
-  margin-bottom: 30px;
 }
