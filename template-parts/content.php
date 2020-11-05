@@ -77,37 +77,40 @@
       <!-- /.post-header-info -->
     </div>
 	</header><!-- /Шапка поста -->
-  <!-- Содержимое поста -->
-  <div class="entry-content">
-		<?php //Содержимое поста
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal-theme' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+  <div class="container">
+    <!-- Содержимое поста -->
+    <div class="post-content">
+      <?php //Содержимое поста
+      the_content(
+        sprintf(
+          wp_kses(
+            /* translators: %s: Name of current post. Only visible to screen readers */
+            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal-theme' ),
+            array(
+              'span' => array(
+                'class' => array(),
+              ),
+            )
+          ),
+          wp_kses_post( get_the_title() )
+        )
+      );
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'universal-theme' ),
-				'after'  => '</div>',
-			)
-		);?>
-	</div><!-- /Содержимое поста -->
-  <!-- Подвал поста-->
-  <footer class="entry-footer">
-		<?php $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'universal-theme' ) );
-			if ( $tags_list ) {
-				//Список тегов
-				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universal-theme' ) . '</span>', $tags_list );
-			} ?>
-	</footer><!-- /Подвал поста-->
+      wp_link_pages(
+        array(
+          'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'universal-theme' ),
+          'after'  => '</div>',
+        )
+      );?>
+    </div><!-- /Содержимое поста -->
+    <!-- Подвал поста-->
+    <footer class="entry-footer">
+      <?php $tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universal-theme' ) );
+        if ( $tags_list ) {
+          //Список тегов
+          printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universal-theme' ) . '</span>', $tags_list );
+        } ?>
+    </footer><!-- /Подвал поста-->
+  </div>
+  <!-- /.container -->
 </article>

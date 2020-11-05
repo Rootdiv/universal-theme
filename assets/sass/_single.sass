@@ -73,3 +73,97 @@
         margin-right: 6px
         fill: #FFFFFF
         opacity: 0.5
+  &-content
+    padding-top: 60px
+    max-width: 623px
+    p
+      font-size: 18px
+      line-height: 30px
+      color: #4B5157
+      margin: 30px 0
+    .has-drop-cap
+      &:not(:focus)
+        &:first-letter
+          color: #4592FF
+          font-family: 'Lato Black', sans-serif
+    h1, h2, h3, h4, h5, h6
+      font-family: 'Roboto Slab'
+      font-style: normal
+      font-weight: bold
+      line-height: 30px
+    h1
+      font-size: 30px
+    h2
+      font-size: 25px
+    h3
+      font-size: 22px
+    h4
+      font-size: 18px
+    h5
+      font-size: 16px
+    h6
+      font-size: 14px
+    ul, ol
+      margin-top: 20px
+      padding: 0
+      margin-left: 20px
+      font-size: 18px
+      line-height: 30px
+    blockquote
+      font-family: 'Roboto Slab'
+      font-style: normal
+      font-weight: bold
+      font-size: 25px
+      line-height: 30px
+      color: #262D33
+      margin-left: 0
+      margin-top: 80px
+      margin-bottom: 40px
+      position: relative
+      &::before
+        position: absolute
+        top: -20px
+        left: -20px
+        content: ''
+        background-image: url('../images/quote.svg')
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center
+        width: 70px
+        height: 70px
+        z-index: -1
+      cite
+        font-style: normal
+        font-size: 14px
+        line-height: 15px
+    code, pre
+      font-size: 18px
+      white-space: pre-wrap
+      a
+        text-decoration: none
+        color: inherit
+        &:hover
+          text-decoration: underline
+    table, td, tr
+      border: 1px solid black
+      border-collapse: collapse
+      font-size: 18px
+      line-height: 30px
+      margin-bottom: 5px
+      td
+        padding: 5px
+    .wp-block
+      &-cover, &-media-text
+        margin-bottom: 25px
+      &-pullquote
+        padding: 1em 0
+  .tags-links
+    a
+      text-decoration: none
+      font-size: 14px
+      line-height: 20px
+      padding: 5px 15px
+      color: #262D33
+      border: 1px solid #D9DADB
+      border-radius: 5px
+      margin-right: 10px

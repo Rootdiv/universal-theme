@@ -1884,3 +1884,137 @@ body {
   fill: #FFFFFF;
   opacity: 0.5;
 }
+
+.post-content {
+  padding-top: 60px;
+  max-width: 623px;
+}
+
+.post-content p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #4B5157;
+  margin: 30px 0;
+}
+
+.post-content .has-drop-cap:not(:focus):first-letter {
+  color: #4592FF;
+  font-family: 'Lato Black', sans-serif;
+}
+
+.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.post-content h1 {
+  font-size: 30px;
+}
+
+.post-content h2 {
+  font-size: 25px;
+}
+
+.post-content h3 {
+  font-size: 22px;
+}
+
+.post-content h4 {
+  font-size: 18px;
+}
+
+.post-content h5 {
+  font-size: 16px;
+}
+
+.post-content h6 {
+  font-size: 14px;
+}
+
+.post-content ul, .post-content ol {
+  margin-top: 20px;
+  padding: 0;
+  margin-left: 20px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.post-content blockquote {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: #262D33;
+  margin-left: 0;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.post-content blockquote::before {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  content: '';
+  background-image: url("../images/quote.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 70px;
+  height: 70px;
+  z-index: -1;
+}
+
+.post-content blockquote cite {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.post-content code, .post-content pre {
+  font-size: 18px;
+  white-space: pre-wrap;
+}
+
+.post-content code a, .post-content pre a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-content code a:hover, .post-content pre a:hover {
+  text-decoration: underline;
+}
+
+.post-content table, .post-content td, .post-content tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 5px;
+}
+
+.post-content table td, .post-content td td, .post-content tr td {
+  padding: 5px;
+}
+
+.post-content .wp-block-cover, .post-content .wp-block-media-text {
+  margin-bottom: 25px;
+}
+
+.post-content .wp-block-pullquote {
+  padding: 1em 0;
+}
+
+.post .tags-links a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 5px 15px;
+  color: #262D33;
+  border: 1px solid #D9DADB;
+  border-radius: 5px;
+  margin-right: 10px;
+}
