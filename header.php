@@ -12,9 +12,9 @@
         <div class="header-wrapper">
           <?php
             if(has_custom_logo()){
-              the_custom_logo();
+              echo '<div class="logo">'. get_custom_logo( ).'<span>'. get_bloginfo('name') .'</span></div>';
             }else{
-              echo 'Universal';
+              echo '<div class="logo"><span>'. get_bloginfo('name') .'</span></div>';
             }
 
             wp_nav_menu( [

@@ -7,10 +7,8 @@
     padding: 60px 0 0
     color: #ffffff
     &-wrapper
-      display: flex
-      align-items: flex-start
-      justify-content: space-between
-      padding-bottom: 20px
+      position: relative
+      padding-bottom: 72px
     &-title
       font-family: 'Roboto Slab', sans-serif
       font-style: normal
@@ -19,6 +17,11 @@
       line-height: 70px
       max-width: 750px
       margin: 0
+      &-wrapper
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        padding-bottom: 20px
     .bookmark
       padding: 15px 10px 0 0
       border: none
@@ -64,7 +67,6 @@
     &-info
       display: flex
       align-items: center
-      padding-bottom: 72px
     &-date, &-comments, &-likes
       opacity: 0.85
       &:not(:last-child)
@@ -73,14 +75,68 @@
         margin-right: 6px
         fill: #FFFFFF
         opacity: 0.5
+  &-author
+    position: absolute
+    right: 0
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    background-color: #ffffff
+    border-radius: 10px
+    overflow: hidden
+    border: 1px solid #D9DADB
+    min-width: 263px
+    &-avatar
+      width: 90px
+      height: 90px
+      border-radius: 50%
+      object-fit: cover
+    &-info
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      color: #262D33
+      padding: 35px 25px 20px
+    &-name
+      font-family: 'Roboto Slab'
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 25px
+      margin-top: 15px
+      margin-bottom: 5px
+    &-rank
+      font-size: 14px
+      line-height: 20px
+      color: #4B5157
+      margin-bottom: 15px
+    &-posts
+      font-size: 14px
+      line-height: 20px
+      font-family: 'Lato Black', sans-serif
+    &-link
+      color: #262D33
+      padding: 15px 25px
+      text-decoration: none
+      border-top: 1px solid #D9DADB
+      width: 100%
+      text-align: center
+      font-family: 'Lato Black', sans-serif
+      font-size: 14px
+      line-height: 20px
+      &:visited
+        color: #262D33
   &-content
     padding-top: 60px
-    max-width: 623px
     p
       font-size: 18px
       line-height: 30px
       color: #4B5157
       margin: 30px 0
+    & > p:first-child
+      max-width: 623px
     .has-drop-cap
       &:not(:focus)
         &:first-letter

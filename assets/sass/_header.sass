@@ -3,6 +3,19 @@
   padding-top: 15px
   padding-bottom: 15px
   color: white
+  &-post
+    background-color: #ffffff
+    &-wrapper
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .logo
+        color: #4592FF
+        span
+          margin-left: 11px
+      .search
+        &-input
+          background: #F5F5F5
   &-wrapper
     display: flex
     align-items: center
@@ -15,8 +28,26 @@
     align-items: center
     &-toggle
       display: none
+    &-post
+      .menu
+        &-item
+          a
+            color: #939699
+.logo
+  display: flex
+  align-items: center
+  font-size: 25px
+  font-weight: bold
+  span
+    margin-left: 11px
+.custom
+  &-logo
+    width: 40px
 .menu
   &-item
+    font-family: 'Lato Black', sans-serif
+    font-size: 14px
+    line-height: 20px
     a
       text-decoration: none
       color: white

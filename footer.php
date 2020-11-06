@@ -5,6 +5,11 @@
         </div>
         <!-- /.footer-menu-bar -->
         <div class="footer-info">
+          <?php if(has_custom_logo()){
+            echo '<div class="logo">'. get_custom_logo( ).'</div>';
+          }else{
+            echo '<div class="logo"><span>'. get_bloginfo('name') .'</span></div>';
+          } ?>
         <?php
           wp_nav_menu( [
             'theme_location'  => 'footer_menu',
