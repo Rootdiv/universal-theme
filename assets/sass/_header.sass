@@ -3,19 +3,6 @@
   padding-top: 15px
   padding-bottom: 15px
   color: white
-  &-post
-    background-color: #ffffff
-    &-wrapper
-      display: flex
-      align-items: center
-      justify-content: space-between
-      .logo
-        color: #4592FF
-        span
-          margin-left: 11px
-      .search
-        &-input
-          background: #F5F5F5
   &-wrapper
     display: flex
     align-items: center
@@ -28,21 +15,30 @@
     align-items: center
     &-toggle
       display: none
-    &-post
-      .menu
-        &-item
-          a
-            color: #939699
-.logo
-  display: flex
-  align-items: center
-  font-size: 25px
-  font-weight: bold
-  span
-    margin-left: 11px
+  &-light
+    background-color: #ffffff
+    .logo
+      &-name
+        color: #4592FF
+    .menu
+      &-item
+        a
+          color: #939699
+    .search
+      &-form
+        input
+          background-color: #F5F5F5
 .custom
   &-logo
     width: 40px
+.logo
+  display: flex
+  align-items: center
+  &-name
+    color: #ffffff
+    font-family: 'Roboto Slab', serif
+    font-size: 24px
+    margin-left: 10px
 .menu
   &-item
     font-family: 'Lato Black', sans-serif
