@@ -85,7 +85,7 @@
             <span class="post-author-posts">
               <?php plural_form(count_user_posts($author_id),
                 /* варианты написания для количества 1, 2 и 5 */
-                array('статья','статьи','статей'),);?>
+                array('статья', 'статьи', 'статей'));?>
             </span>
           </div>
           <!-- /.post-author-info -->
