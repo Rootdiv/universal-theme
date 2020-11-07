@@ -11,12 +11,21 @@
       <div class="container">
         <div class="header-wrapper">
           <?php
-            if(has_custom_logo()){
-              echo '<div class="logo">'. get_custom_logo().'<span class="logo-name">'. get_bloginfo('name') .'</span></div>';
-            }else{
-              echo '<span class="logo-name">'. get_bloginfo('name') .'</span>';
+            $logo_img = '';
+            if( $custom_logo_id = get_theme_mod('custom_logo') ){
+              $logo_img = wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+                'class'    => 'custom-logo',
+                'alt'      => get_bloginfo('name'),
+                'itemprop' => 'logo',
+              ) );
             }
-
+            if(!is_front_page()) $home =  ' href="'.home_url('/').'"'; else $home = '';
+            if(has_custom_logo()){
+              echo '<a'.$home.'><div class="logo">'.$logo_img.'<span class="logo-name">'. get_bloginfo('name') .'</span></div></a>';
+            }else{
+              echo '<a'.$home.'><span class="logo-name">'. get_bloginfo('name') .'</span></a>';
+            }
+            
             wp_nav_menu( [
               'theme_location'  => 'header_menu',
               'container'       => 'nav', 
