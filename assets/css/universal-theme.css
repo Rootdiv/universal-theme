@@ -938,15 +938,16 @@ body {
 }
 
 .sidebar-post-page .widget {
+  background: #F5F5F5;
   margin: 0;
 }
 
 .sidebar-post-page .widget-title {
-  display: none;
+  padding: 0 0 20px;
+  border: none;
 }
 
 .sidebar-post-page .widget-posts-wrapper {
-  background: #F5F5F5;
   display: flex;
   align-items: flex-start;
   position: relative;
@@ -972,7 +973,7 @@ body {
 .sidebar-post-page .widget-posts .posts-title {
   margin: 0;
   padding: 10px 0 18px;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 16px;
   line-height: 25px;
   color: #262D33;

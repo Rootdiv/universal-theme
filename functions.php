@@ -81,7 +81,7 @@ function universal_theme_widgets_init() {
 
     register_sidebar(
     array(
-      'name'          => esc_html__( 'Статьи из категории', 'universal-theme' ),
+      'name'          => esc_html__( 'Рекомендуемые статьи', 'universal-theme' ),
       'id'            => 'sidebar-articles',
       'description'   => esc_html__( 'Добавьте виджеты сюда.', 'universal-theme' ),
       'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -535,8 +535,8 @@ class Posts_Widget extends WP_Widget {
   // __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
   parent::__construct(
     'posts_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: foo_widget
-    'Статьи из категории',
-    array( 'description' => 'Статьи из определённой категории.', 'classname' => 'widget-posts', )
+    'Рекомендуемые статьи',
+    array( 'description' => 'Рекомендуемые статьи из определённой категории.', 'classname' => 'widget-posts', )
   );
 
   // скрипты/стили виджета, только если он активен
@@ -557,10 +557,8 @@ class Posts_Widget extends WP_Widget {
     $count = $instance['count'];
     
     echo $args['before_widget'];
+      if (!empty( $title )) echo $args['before_title'] . $title . $args['after_title'];
       if ( ! empty( $count ) ) {
-        if ( ! empty( $title ) ) {
-          echo $args['before_title'] . $title . $args['after_title'];
-        }
         echo '<div class="widget-posts-wrapper">';
           global $post;
           $category = get_the_category();
@@ -610,7 +608,7 @@ class Posts_Widget extends WP_Widget {
   * @param array $instance сохраненные данные из настроек
   */
     function form( $instance ) {
-      $title = @ $instance['title'] ?: 'Рекомендуемое';
+      $title = @ $instance['title'] ?: 'Рекомендуемые статьи';
       $count = @ $instance['count'] ?: '4';
 
     ?>
