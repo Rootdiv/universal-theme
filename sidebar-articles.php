@@ -7,11 +7,11 @@
  * @package universal-theme
  */
 
-if ( ! is_active_sidebar( 'sidebar-recent-article' ) ) {
+if ( ! is_active_sidebar( 'sidebar-articles' ) ) {
  return;
 }
 ?>
 
-<aside class="sidebar-front-page">
-  <?php dynamic_sidebar( 'sidebar-recent-article' ); ?>
+<aside class="sidebar-post-page">
+  <?php dynamic_sidebar( 'sidebar-articles' ); ?>
 </aside>

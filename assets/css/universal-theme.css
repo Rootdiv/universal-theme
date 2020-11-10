@@ -931,6 +931,69 @@ body {
   padding-bottom: 45px;
 }
 
+.sidebar-post {
+  margin-top: 70px;
+  background: #F5F5F5;
+  padding: 60px 0 90px;
+}
+
+.sidebar-post-page .widget {
+  margin: 0;
+}
+
+.sidebar-post-page .widget-title {
+  display: none;
+}
+
+.sidebar-post-page .widget-posts-wrapper {
+  background: #F5F5F5;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.sidebar-post-page .widget-posts .posts-link {
+  width: 263px;
+  text-decoration: none;
+  padding-bottom: 17px;
+}
+
+.sidebar-post-page .widget-posts .posts-link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.sidebar-post-page .widget-posts .posts-thumb {
+  border-radius: 10px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.sidebar-post-page .widget-posts .posts-title {
+  margin: 0;
+  padding: 10px 0 18px;
+  font-family: 'Roboto Slab';
+  font-size: 16px;
+  line-height: 25px;
+  color: #262D33;
+}
+
+.sidebar-post-page .widget-posts .posts-info {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-post-page .widget-posts .posts-info .views, .sidebar-post-page .widget-posts .posts-info .comments {
+  color: #939699;
+  margin-right: 11px;
+}
+
+.sidebar-post-page .widget-posts .posts-info .views-icon, .sidebar-post-page .widget-posts .posts-info .comments-icon {
+  fill: #939699;
+}
+
 .widget {
   background-color: #ffffff;
   border-radius: 10px;
@@ -1242,6 +1305,7 @@ body {
   padding: 0;
   border: none;
   float: right;
+  cursor: pointer;
   background: none;
 }
 
@@ -2000,6 +2064,7 @@ body {
 
 .post-content {
   padding-top: 60px;
+  padding-bottom: 30px;
 }
 
 .post-content p {
@@ -2124,6 +2189,14 @@ body {
   padding: 1em 0;
 }
 
+.post .tags-links {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #D9DADB;
+  max-width: 623px;
+  width: 100%;
+  display: block;
+}
+
 .post .tags-links a {
   text-decoration: none;
   font-size: 14px;
@@ -2133,4 +2206,17 @@ body {
   border: 1px solid #D9DADB;
   border-radius: 5px;
   margin-right: 10px;
+}
+
+.meks_ess {
+  max-width: 623px;
+  margin-top: 0;
+}
+
+.meks_ess_share_label {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 25px;
 }

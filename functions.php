@@ -46,7 +46,7 @@ function universal_theme_widgets_init() {
   register_sidebar(
     array(
       'name'          => esc_html__( 'Последние статьи', 'universal-theme' ),
-      'id'            => 'article-sidebar',
+      'id'            => 'sidebar-recent-article',
       'description'   => esc_html__( 'Добавьте виджеты сюда.', 'universal-theme' ),
       'before_widget' => '<section id="%1$s" class="widget %2$s">',
       'after_widget'  => '</section>',
@@ -76,6 +76,18 @@ function universal_theme_widgets_init() {
       'after_widget'  => '</section>',
       'before_title'  => '',
       'after_title'   => '',
+    )
+  );
+
+    register_sidebar(
+    array(
+      'name'          => esc_html__( 'Статьи из категории', 'universal-theme' ),
+      'id'            => 'sidebar-articles',
+      'description'   => esc_html__( 'Добавьте виджеты сюда.', 'universal-theme' ),
+      'before_widget' => '<section id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
     )
   );
 }
@@ -499,7 +511,7 @@ class Recent_Post_Widget extends WP_Widget {
     return;
     ?>
     <style type="text/css">
-    .recent-post-widget a{ display:inline; }
+      .recent-post-widget a{ display:inline; }
     </style>
     <?php
   }
@@ -511,6 +523,156 @@ function register_recent_post_widget() {
   register_widget( 'Recent_Post_Widget' );
 }
 add_action( 'widgets_init', 'register_recent_post_widget' );
+
+/**
+ * Добавление нового виджета Posts_Widget.
+ */
+class Posts_Widget extends WP_Widget {
+
+  // Регистрация виджета используя основной класс
+  function __construct() {
+  // вызов конструктора выглядит так:
+  // __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
+  parent::__construct(
+    'posts_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: foo_widget
+    'Статьи из категории',
+    array( 'description' => 'Статьи из определённой категории.', 'classname' => 'widget-posts', )
+  );
+
+  // скрипты/стили виджета, только если он активен
+  if ( is_active_widget( false, false, $this->id_base ) || is_customize_preview() ) {
+    //add_action('wp_enqueue_scripts', array( $this, 'add_posts_widget_scripts' ));
+    add_action('wp_head', array( $this, 'add_posts_widget_style' ) );
+    }
+  }
+
+  /**
+  * Вывод виджета во Фронт-энде
+  *
+  * @param array $args     аргументы виджета.
+  * @param array $instance сохраненные данные из настроек
+  */
+  function widget( $args, $instance ) {
+    $title = $instance['title'];
+    $count = $instance['count'];
+    
+    echo $args['before_widget'];
+      if ( ! empty( $count ) ) {
+        if ( ! empty( $title ) ) {
+          echo $args['before_title'] . $title . $args['after_title'];
+        }
+        echo '<div class="widget-posts-wrapper">';
+          global $post;
+          $category = get_the_category();
+          rsort( $category );
+          $category_slug = $category[0]->slug;
+
+          $posts = get_posts( array(
+            'category_name'    => $category_slug,
+            'posts_per_page' => $count,
+            'exclude' => $GLOBALS['post']->ID,
+          ) );
+
+          foreach( $posts as $post ){
+            setup_postdata($post);?>
+          <a href="<?php the_permalink() ?>" class="posts-link">
+          <img class="posts-thumb" src="<?php
+            if( has_post_thumbnail() ) echo get_the_post_thumbnail_url();
+            else echo get_template_directory_uri().'/assets/images/img-default.png';
+          ?>" alt="<?php the_title(); ?>">
+            <h4 class="posts-title"><?=mb_strimwidth(get_the_title(), 0, 60, '...')?></h4>
+            <div class="posts-info">
+              <div class="views">
+                <svg width="15" height="10" class="views-icon">
+                  <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#eye"></use>
+                </svg>
+                <span class="likes-counter"><?php comments_number('0', '1', '%')?></span>
+              </div>
+              <div class="comments">
+                <svg width="14" height="14" class="comments-icon">
+                  <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#comment"></use>
+                </svg>
+                <span class="comments-counter"><?php comments_number('0', '1', '%')?></span>
+              </div>
+            </div>
+          </a>
+          <?php
+          }
+          wp_reset_postdata();
+        echo '</div>';
+      }
+    echo $args['after_widget'];
+  }
+
+  /**
+  * Админ-часть виджета
+  *
+  * @param array $instance сохраненные данные из настроек
+  */
+    function form( $instance ) {
+      $title = @ $instance['title'] ?: 'Рекомендуемое';
+      $count = @ $instance['count'] ?: '4';
+
+    ?>
+    <p>
+      <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:' ); ?></label>
+      <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+    </p>
+    <p>
+      <label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Количество постов:' ); ?></label>
+      <input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" type="text" value="<?php echo esc_attr( $count ); ?>">
+    </p>
+    <?php 
+  }
+
+  /**
+  * Сохранение настроек виджета. Здесь данные должны быть очищены и возвращены для сохранения их в базу данных.
+  *
+  * @see WP_Widget::update()
+  *
+  * @param array $new_instance новые настройки
+  * @param array $old_instance предыдущие настройки
+  *
+  * @return array данные которые будут сохранены
+  */
+  function update( $new_instance, $old_instance ) {
+    $instance = array();
+    $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+    $instance['count'] = ( ! empty( $new_instance['count'] ) ) ? strip_tags( $new_instance['count'] ) : '';
+
+    return $instance;
+  }
+
+  // скрипт виджета
+  function add_posts_widget_scripts() {
+  // фильтр чтобы можно было отключить скрипты
+  if( ! apply_filters( 'show_posts_widget_script', true, $this->id_base ) )
+   return;
+
+  $theme_url = get_stylesheet_directory_uri();
+
+  wp_enqueue_script('posts_widget_script', $theme_url .'/posts_widget_script.js' );
+ }
+
+  // стили виджета
+  function add_posts_widget_style() {
+    // фильтр чтобы можно было отключить стили
+    if( ! apply_filters( 'show_posts_widget_style', true, $this->id_base ) )
+    return;
+    ?>
+    <style type="text/css">
+      .posts-widget a{ display:inline; }
+    </style>
+    <?php
+  }
+}
+// конец класса Posts_Widget
+
+// регистрация Posts_Widget в WordPress
+function register_posts_widget() {
+  register_widget( 'Posts_Widget' );
+}
+add_action( 'widgets_init', 'register_posts_widget' );
 
 //Подключение стилей и скриптов
 function enqueue_universal_style() {

@@ -7,6 +7,50 @@ body
       &-social-link
         padding-top: 25px
         padding-bottom: 45px
+  &-post
+    margin-top: 70px
+    background: #F5F5F5
+    padding: 60px 0 90px
+    &-page
+      .widget
+        margin: 0
+        &-title
+          display: none
+        &-posts
+          &-wrapper
+            background: #F5F5F5
+            display: flex
+            align-items: flex-start
+            position: relative
+          .posts
+            &-link
+              width: 263px
+              text-decoration: none
+              padding-bottom: 17px
+              &:not(:last-child)
+                margin-right: 30px
+            &-thumb
+              border-radius: 10px
+              width: 100%
+              height: 180px
+              object-fit: cover
+            &-title
+              margin: 0
+              padding: 10px 0 18px
+              font-family: 'Roboto Slab'
+              font-size: 16px
+              line-height: 25px
+              color: #262D33
+            &-info
+              position: absolute
+              bottom: 0
+              display: flex
+              align-items: center
+              .views, .comments
+                color: #939699
+                margin-right: 11px
+                &-icon
+                  fill: #939699
 .widget
   background-color: #ffffff
   border-radius: 10px

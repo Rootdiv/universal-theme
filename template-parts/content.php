@@ -128,8 +128,19 @@
         if ( $tags_list ) {
           //Список тегов
           printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universal-theme' ) . '</span>', $tags_list );
-        } ?>
+        } 
+        //Поделится в соцсетях
+        meks_ess_share();
+      ?>
     </footer><!-- /Подвал поста-->
   </div>
   <!-- /.container -->
+  <div class="sidebar-post">
+    <div class="container">
+      <!-- Подключаем сайдбар -->
+      <?php get_sidebar('articles') ?>
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.sidebar-post -->
 </article>
