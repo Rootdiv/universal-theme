@@ -1,0 +1,125 @@
+.comments
+  &-area
+    max-width: 750px
+  &-title
+    font-family: 'Roboto Slab'
+    font-size: 40px
+    line-height: 50px
+  &-count
+    color: #939699
+    font-family: 'Lato Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 40px
+    line-height: 50px
+  &-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-add
+    &-button
+      color: #262D33
+      text-decoration: none
+      display: flex
+      align-items: center
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      padding: 10px 20px
+      border: 1px solid #D9DADB
+      border-radius: 20px
+      &:visited
+        color: #262D33
+    &-icon
+      fill: #BCBFC2
+      margin-right: 10px
+  &-list
+    margin-left: 0
+    padding: 0
+.comment
+  &-content
+    p
+      font-size: 18px
+      line-height: 30px
+      color: #4B5157
+      margin-top: 10px
+  a
+    text-decoration: none
+  &-body
+    display: flex
+    align-items: flex-start
+    border-top: 1px solid #D9DADB
+    padding-top: 20px
+    padding-bottom: 29px
+  &-author
+    &-name
+      font-family: 'Roboto Slab'
+      font-style: normal
+      font-size: 16px
+      line-height: 25px
+      a
+        color: #262D33
+        &:visited
+          color: #262D33
+    &-avatar
+      margin-right: 15px
+      flex-shrink: 0
+      img
+        border-radius: 50%
+  &-meta
+    margin-left: 10px
+    a
+      font-size: 12px
+      line-height: 15px
+      color: #939699
+      &:visited
+        color: #939699
+  &-reply
+    display: flex
+    align-items: center
+    a
+      font-size: 12px
+      line-height: 15px
+      color: #262D33
+  &-form
+    background-color: #F5F5F5
+    border-radius: 10px
+    padding: 30px 40px 35px 30px
+    .avatar
+      border-radius: 50%
+      margin-right: 20px
+  &-label
+    font-family: 'Roboto Slab'
+    color: #262D33
+    font-size: 20px
+    line-height: 25px
+    margin-bottom: 15px
+    display: block
+    padding-left: 95px
+  &-textarea
+    min-height: 130px
+    max-width: 595px
+    resize: none
+    border: 1px solid #D9DADB
+    border-radius: 10px
+    &-wrapper
+      position: relative
+      width: 100%
+      &::before
+        content: ''
+        background-image: url('../images/angle.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 100%
+        width: 12px
+        height: 20px
+        position: absolute
+        left: -10px
+        top: 30px
+  &-wrapper
+    display: flex
+    align-items: flex-start
+  &-submit
+    width: 147px
+    margin-left: 95px
+    margin-top: 15px

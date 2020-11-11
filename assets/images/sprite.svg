@@ -50,4 +50,7 @@
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 11" id="eye">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M15 5.262s-3 5.113-7.5 5.113S0 5.262 0 5.262 3 .625 7.5.625 15 5.262 15 5.262zM7.5 2.875a2.629 2.629 0 012.625 2.626A2.626 2.626 0 117.5 2.875zm-.001 3.938c.724 0 1.31-.591 1.31-1.316 0-.726-.587-1.317-1.31-1.317-.724 0-1.311.59-1.311 1.316 0 .726.587 1.317 1.31 1.317z"></path>
   </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="pencil">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14.2V18h3.8l11-11.1L11 3.1 0 14.2zM17.7 4c.4-.4.4-1 0-1.4L15.4.3c-.4-.4-1-.4-1.4 0l-1.8 1.8L16 5.9 17.7 4z"></path>
+  </symbol>
 </svg>

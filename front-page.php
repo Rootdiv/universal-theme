@@ -40,9 +40,6 @@
                 <h2 class="post-title"><?=mb_strimwidth(get_the_title(), 0, 60, '...')?></h2>
                 <a href="<?=get_the_permalink()?>" class="more">
                   Читать далее
-                  <svg width="15" height="7" class="more-icon">
-                    <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#arrow"></use>
-                  </svg>
                 </a>
               </div>
               <?php }
@@ -276,9 +273,6 @@
           <h2 class="investigation-title"><?php the_title()?></h2>
           <a href="<?=get_the_permalink()?>" class="more">
             Читать статью
-            <svg width="15" height="7" class="more-icon">
-              <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#arrow"></use>
-            </svg>
           </a>
         </div>
       </section>
@@ -456,9 +450,6 @@
                   <p class="career-post-excerpt"><?= mb_strimwidth(get_the_excerpt(), 0, 85, '...')?></p>
                   <a href="<?=get_the_permalink()?>" class="more">
                     Читать далее
-                    <svg width="15" height="7" class="more-icon">
-                      <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#arrow"></use>
-                    </svg>
                   </a>
                 </div>
                 <?php
