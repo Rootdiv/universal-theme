@@ -405,10 +405,6 @@ body {
   cursor: pointer;
 }
 
-.more:hover, .more:visited, .more:focus {
-  color: #ffffff;
-}
-
 .category-link {
   color: #4592FF;
   text-transform: uppercase;
@@ -418,15 +414,7 @@ body {
   text-decoration: none;
 }
 
-.category-link:visited, .category-link:focus {
-  color: #4592FF;
-}
-
 .category-link.javascript {
-  color: #6E99AE;
-}
-
-.category-link.javascript:visited, .category-link.javascript:focus {
   color: #6E99AE;
 }
 
@@ -434,23 +422,11 @@ body {
   color: #3BBDC4;
 }
 
-.category-link.css:visited, .category-link.css:focus {
-  color: #3BBDC4;
-}
-
 .category-link.html {
   color: #AC8EE3;
 }
 
-.category-link.html:visited, .category-link.html:focus {
-  color: #AC8EE3;
-}
-
 .category-link.web-design {
-  color: #FFA34D;
-}
-
-.category-link.web-design:visited, .category-link.web-design:focus {
   color: #FFA34D;
 }
 
@@ -512,14 +488,6 @@ body {
   text-decoration: none;
   color: #ffffff;
   width: 150px;
-}
-
-.article-permalink:hover {
-  color: #ffffff;
-}
-
-.article-permalink:visited {
-  color: #ffffff;
 }
 
 .article-title {
@@ -592,14 +560,6 @@ body {
 
 .article-grid-permalink {
   text-decoration: none;
-  color: #262D33;
-}
-
-.article-grid-permalink:hover {
-  color: #262D33;
-}
-
-.article-grid-permalink:visited {
   color: #262D33;
 }
 
@@ -744,7 +704,7 @@ body {
 }
 
 .article-grid-item-2 .article-grid-title {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab';
   font-weight: bold;
   font-size: 16px;
   line-height: 25px;
@@ -767,7 +727,7 @@ body {
 .article-grid-item-2 .category-name {
   margin-top: auto;
   color: #E7D9FF;
-  font-family: 'Lato Black', sans-serif;
+  font-family: 'Lato Black';
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
@@ -825,7 +785,7 @@ body {
 }
 
 .article-grid-item-3 .article-grid-title {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -851,7 +811,7 @@ body {
 }
 
 .article-grid-item-default .article-grid-title {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -970,7 +930,7 @@ body {
 .sidebar-post-page .widget-posts .posts-title {
   margin: 0;
   padding: 10px 0 18px;
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab';
   font-size: 16px;
   line-height: 25px;
   color: #262D33;
@@ -1004,7 +964,7 @@ body {
   border-bottom: 1px solid #D9DADB;
   font-size: 14px;
   line-height: 20px;
-  font-family: 'Lato Black', sans-serif;
+  font-family: 'Lato Black';
   text-transform: uppercase;
 }
 
@@ -1026,7 +986,7 @@ body {
 }
 
 .widget-downloader .widget-title {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -1046,7 +1006,7 @@ body {
   padding-bottom: 13px;
   border-top: 1px solid rgba(255, 255, 255, 0.75);
   color: #ffffff;
-  font-family: 'Lato Black', sans-serif;
+  font-family: 'Lato Black';
   font-size: 14px;
   line-height: 20px;
   text-decoration: none;
@@ -1093,7 +1053,7 @@ body {
   opacity: 0.08;
   font-size: 70px;
   line-height: 50px;
-  font-family: 'Lato Balck', sans-serif;
+  font-family: 'Lato Black';
   font-style: italic;
   counter-increment: section;
   content: counter(section);
@@ -1144,7 +1104,7 @@ body {
 
 .widget-social .widget-title {
   padding: 30px 25px 25px;
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -1272,14 +1232,6 @@ body {
   color: #262D33;
 }
 
-.digest-item-permalink:hover {
-  color: #262D33;
-}
-
-.digest-item-permalink:visited {
-  color: #262D33;
-}
-
 .digest-item:last-child {
   border: none;
 }
@@ -1312,9 +1264,6 @@ body {
 }
 
 .digest-info .category-link {
-  font-family: 'Lato Black', sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
@@ -1324,15 +1273,7 @@ body {
   color: #4592FF;
 }
 
-.digest-info .category-link.news:visited {
-  color: #4592FF;
-}
-
 .digest-info .category-link.opinions {
-  color: #3BBDC4;
-}
-
-.digest-info .category-link.opinions:visited {
   color: #3BBDC4;
 }
 
@@ -1340,15 +1281,7 @@ body {
   color: #FF4F52;
 }
 
-.digest-info .category-link.hot:visited {
-  color: #FF4F52;
-}
-
 .digest-info .category-link.collections {
-  color: #AC8EE3;
-}
-
-.digest-info .category-link.collections:visited {
   color: #AC8EE3;
 }
 
@@ -1556,10 +1489,6 @@ body {
   margin-bottom: 20px;
 }
 
-.photo-report-button:hover, .photo-report-button:visited {
-  color: #ffffff;
-}
-
 .photo-report-counter {
   margin-left: 8px;
 }
@@ -1758,8 +1687,6 @@ body {
 }
 
 .footer-menu-title {
-  font-family: 'Lato Balck', sans-serif;
-  font-weight: 900;
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 25px;
@@ -1805,7 +1732,7 @@ body {
 .footer-nav {
   display: flex;
   align-items: center;
-  font-family: 'Lato Black', sans-serif;
+  font-family: 'Lato Black';
 }
 
 .footer-nav-wrapper {
@@ -1895,7 +1822,7 @@ body {
 }
 
 .post-header-title {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: bold;
   font-size: 55px;
@@ -2041,7 +1968,7 @@ body {
 .post-author-posts {
   font-size: 14px;
   line-height: 20px;
-  font-family: 'Lato Black', sans-serif;
+  font-family: 'Lato Black';
 }
 
 .post-author-link {
@@ -2051,13 +1978,9 @@ body {
   border-top: 1px solid #D9DADB;
   width: 100%;
   text-align: center;
-  font-family: 'Lato Black', sans-serif;
+  font-family: 'Lato Black';
   font-size: 14px;
   line-height: 20px;
-}
-
-.post-author-link:visited {
-  color: #262D33;
 }
 
 .post-content {
@@ -2078,7 +2001,7 @@ body {
 
 .post-content .has-drop-cap:not(:focus):first-letter {
   color: #4592FF;
-  font-family: 'Lato Black', sans-serif;
+  font-family: 'Lato Black';
 }
 
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
@@ -2212,7 +2135,7 @@ body {
 }
 
 .meks_ess_share_label {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab';
   font-size: 25px;
   line-height: 30px;
   margin-top: 30px;
@@ -2257,10 +2180,6 @@ body {
   border-radius: 20px;
 }
 
-.comments-add-button:visited {
-  color: #262D33;
-}
-
 .comments-add-icon {
   fill: #BCBFC2;
   margin-right: 10px;
@@ -2301,10 +2220,6 @@ body {
   color: #262D33;
 }
 
-.comment-author-name a:visited {
-  color: #262D33;
-}
-
 .comment-author-avatar {
   margin-right: 15px;
   flex-shrink: 0;
@@ -2321,10 +2236,6 @@ body {
 .comment-meta a {
   font-size: 12px;
   line-height: 15px;
-  color: #939699;
-}
-
-.comment-meta a:visited {
   color: #939699;
 }
 
