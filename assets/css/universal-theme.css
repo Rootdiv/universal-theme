@@ -154,15 +154,6 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-  .menu-item a {
-    text-decoration: none;
-    color: white;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
   .header-wrapper {
     flex-wrap: wrap;
   }
@@ -182,7 +173,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .search-form {
     margin-left: auto;
     width: 40%;
@@ -201,6 +192,9 @@ body {
     z-index: 99;
     border-radius: 10px;
     box-shadow: 1px 1px 10px rgba(38, 45, 51, 0.2);
+  }
+  .header-light .header-menu-toggle span {
+    background-color: #000000;
   }
   .header-menu {
     flex-direction: column;
@@ -1767,6 +1761,9 @@ body {
   .footer-text {
     max-width: 550px;
   }
+  .footer-info .logo {
+    margin-right: 15px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -1789,6 +1786,9 @@ body {
   .footer-nav {
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .footer-nav-wrapper {
+    margin-right: unset;
   }
   .footer-info ul li {
     padding-bottom: 15px;
@@ -1895,7 +1895,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 43px;
-  width: 630px;
+  max-width: 630px;
   opacity: 0.85;
 }
 
@@ -2142,6 +2142,62 @@ body {
   margin-bottom: 25px;
 }
 
+@media screen and (max-width: 1200px) {
+  .post-content > p:first-child {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .post-content > p:first-child {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .post-content > p:first-child {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .post-header-info {
+    margin-bottom: 20px;
+  }
+  .post-content > p:first-child {
+    padding-top: 150px;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .post-header-title-wrapper {
+    flex-wrap: wrap;
+  }
+  .post-content blockquote::before {
+    left: -10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .post-header .nav-links {
+    padding-top: 20px;
+  }
+  .post-header-nav {
+    flex-wrap: wrap;
+  }
+  .post-header-nav .category-link {
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .post-header-title {
+    font-size: 40px;
+    line-height: 55px;
+  }
+}
+
 .comments-area {
   max-width: 750px;
 }
@@ -2306,4 +2362,23 @@ body {
   width: 147px;
   margin-left: 95px;
   margin-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .comments-header {
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+  .comments-title {
+    padding-right: 5px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .comments-title {
+    font-size: 35px;
+  }
+  .comment-content p {
+    font-size: 15px;
+  }
 }
