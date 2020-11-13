@@ -69,6 +69,36 @@
       p
         margin-top: 0
         margin-bottom: 25px
+  &-form
+    margin-bottom: 70px
+    &-wrapper
+      max-width: 760px
+      margin: auto
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+    &-title
+      font-family: 'Roboto Slab'
+      font-size: 40px
+      line-height: 50px
+      color: #262D33
+      margin-bottom: 25px
+    input
+      margin-right: 10px
+      padding: 10px 15px
+      border: 1px solid #D9DADB
+      border-radius: 5px
+      min-width: 313px
+    button
+      background: #4592FF
+      border-radius: 20px
+      font-size: 14px
+      line-height: 20px
+      color: #ffffff
+      padding: 10px 25px
+      border: none
+      cursor: pointer
 
 @media screen and (max-width: 1200px)
   .footer
@@ -108,7 +138,17 @@
       margin-top: 10px
     &-text
       max-width: 300px
+@media screen and (max-width: 520px)
+  .footer
+    &-form
+      input
+        margin-bottom: 20px
 @media screen and (max-width: 500px)
   .footer
     &-text
       max-width: 200px
+@media screen and (max-width: 350px)
+  .footer
+    &-form
+      input
+        min-width: 250px
