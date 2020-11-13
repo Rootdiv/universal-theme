@@ -11,7 +11,7 @@ body
     margin-top: 70px
     background: #F5F5F5
     padding: 60px 0 90px
-    &-page
+    &-page //Виджеты на странице поста
       .widget
         background: #F5F5F5
         margin: 0
@@ -210,12 +210,16 @@ body
     .tag-cloud-link
       margin-right: 10px
       margin-bottom: 15px
-@media screen and (max-width: 480px)
-  .widget
-    .tag-cloud-link
-      margin-bottom: 15px
-
 @media screen and (max-width: 960px)
   .sidebar
     &-front-page
       width: 100%
+@media screen and (max-width: 800px)
+  .widget
+    &-posts
+      &-wrapper
+        flex-wrap: wrap
+@media screen and (max-width: 480px)
+  .widget
+    .tag-cloud-link
+      margin-bottom: 15px

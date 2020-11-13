@@ -1160,15 +1160,21 @@ body {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .widget .tag-cloud-link {
-    margin-bottom: 15px;
-  }
-}
-
 @media screen and (max-width: 960px) {
   .sidebar-front-page {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .widget-posts-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .widget .tag-cloud-link {
+    margin-bottom: 15px;
   }
 }
 
