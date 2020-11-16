@@ -1,0 +1,60 @@
+.pagination
+  .nav-links
+    margin-top: 40px
+    margin-bottom: 40px
+    background-color: #ffffff
+    border-radius: 10px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    *
+      padding: 17px
+      text-decoration: none
+      font-size: 14px
+      line-height: 20px
+      font-family: 'Lato Black'
+      color: #262D33
+      text-align: center
+      &:not(:last-child)
+        border-right: 1px solid #D9DADB
+      svg
+        padding: unset
+    .current
+      color: #4592FF
+    .prev
+      padding: 17px 75px
+      flex-grow: 1
+    .next
+      padding: 17px 75px
+      flex-grow: 1
+  &-prev
+    &-icon
+      fill: #BCBFC2
+      margin-right: 8px
+      transform: rotate(180deg)
+  &-next
+    &-icon
+      fill: #BCBFC2
+      margin-left: 8px
+
+@media screen and (max-width: 1200px)
+  .pagination
+    .nav-links
+      margin-bottom: 40px
+@media screen and (max-width: 768px)
+  .pagination
+    .nav-links
+      .prev, .next
+        padding: 17px 10px
+@media screen and (max-width: 460px)
+  .pagination
+    .nav-links
+      *
+        padding: 17px 10px
+@media screen and (max-width: 390px)
+  .pagination
+    .nav-links
+      *
+        padding: 17px 5px
+      .prev, .next
+        padding: 17px 5px

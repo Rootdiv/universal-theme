@@ -41,9 +41,6 @@
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17" id="home">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M2 17h5v-6h4v6h5v-7h2L9 0 0 10h2v7z"></path>
   </symbol>
-  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 7" id="left-arrow">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3v1H4v3L0 3.5 4 0v3h11z"></path>
-  </symbol>
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="clock">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 14.25a6.75 6.75 0 110-13.5 6.75 6.75 0 010 13.5zm.75-6.75v-3a.75.75 0 00-1.5 0v3.75c0 .414.336.75.75.75h2.25a.75.75 0 000-1.5h-1.5z"></path>
   </symbol>

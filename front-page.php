@@ -286,73 +286,76 @@
       wp_reset_postdata(); // Сбрасываем $post
       ?>
       <div class="container">
-        <div class="main-post-list">
-          <ul class="digest">
-            <?php
-            global $post;
-            //Формируем запрос в БД
-            $query = new WP_Query([
-              //Получаем 6 постов
-              'posts_per_page' => 6,
-              'category__not_in' => 49,
-            ]);
-            //Проверяем есть ли посты    
-            if ($query->have_posts()) {
-              //Пока посты есть, выводим их
-              while ($query->have_posts()) {
-                $query->the_post();
-            ?>
-            <li class="digest-item">
-              <a href="<?=get_the_permalink()?>" class="digest-item-permalink">
-                <img src="<?php if( has_post_thumbnail() ) the_post_thumbnail_url();
-                  else echo get_template_directory_uri().'/assets/images/img-default.png';
-                ?>" alt="<?php the_title()?>" class="digest-thumb" />
-              </a>
-              <div class="digest-info">
-                <button class="bookmark">
-                  <svg width="14" height="18" class="bookmark-icon">
-                    <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#bookmark"></use>
-                  </svg>
-                </button>
-                <?php 
-                foreach (get_the_category() as $category) {
-                  printf(
-                    '<a href="%s" class="category-link %s">%s</a>',
-                    esc_url(get_category_link($category)),
-                    esc_html($category->slug),
-                    esc_html($category->name),
-                  );
-                }?>
+        <div class="favorites">
+          <div class="digest-wrapper">
+            <ul class="digest">
+              <?php
+              global $post;
+              //Формируем запрос в БД
+              $query = new WP_Query([
+                //Получаем 6 постов
+                'posts_per_page' => 6,
+                'category__not_in' => 49,
+              ]);
+              //Проверяем есть ли посты    
+              if ($query->have_posts()) {
+                //Пока посты есть, выводим их
+                while ($query->have_posts()) {
+                  $query->the_post();
+              ?>
+              <li class="digest-item">
                 <a href="<?=get_the_permalink()?>" class="digest-item-permalink">
-                  <h3 class="digest-title"><?= mb_strimwidth(get_the_title(), 0, 65, '...')?></h3>
+                  <img src="<?php if( has_post_thumbnail() ) the_post_thumbnail_url();
+                    else echo get_template_directory_uri().'/assets/images/img-default.png';
+                  ?>" alt="<?php the_title()?>" class="digest-thumb" />
                 </a>
-                <p class="digest-excerpt"><?= mb_strimwidth(get_the_excerpt(), 0, 150, '...')?></p>
-                <div class="article-info">
-                  <span class="date"><?php the_time('j F')?></span>
-                  <div class="comments">
-                    <svg width="14" height="14" class="comments-icon">
-                      <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#comment"></use>
+                <div class="digest-info">
+                  <button class="bookmark">
+                    <svg width="14" height="18" class="bookmark-icon">
+                      <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#bookmark"></use>
                     </svg>
-                    <span class="comments-counter"><?php comments_number('0', '1', '%')?></span>
-                  </div>
-                  <div class="likes">
-                    <svg width="14" height="14" class="likes-icon">
-                      <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#like"></use>
-                    </svg>
-                    <span class="likes-counter"><?php comments_number('0', '1', '%')?></span>
+                  </button>
+                  <?php 
+                  foreach (get_the_category() as $category) {
+                    printf(
+                      '<a href="%s" class="category-link %s">%s</a>',
+                      esc_url(get_category_link($category)),
+                      esc_html($category->slug),
+                      esc_html($category->name),
+                    );
+                  }?>
+                  <a href="<?=get_the_permalink()?>" class="digest-item-permalink">
+                    <h3 class="digest-title"><?= mb_strimwidth(get_the_title(), 0, 65, '...')?></h3>
+                  </a>
+                  <p class="digest-excerpt"><?= mb_strimwidth(get_the_excerpt(), 0, 150, '...')?></p>
+                  <div class="article-info">
+                    <span class="date"><?php the_time('j F')?></span>
+                    <div class="comments">
+                      <svg width="14" height="14" class="comments-icon">
+                        <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#comment"></use>
+                      </svg>
+                      <span class="comments-counter"><?php comments_number('0', '1', '%')?></span>
+                    </div>
+                    <div class="likes">
+                      <svg width="14" height="14" class="likes-icon">
+                        <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#like"></use>
+                      </svg>
+                      <span class="likes-counter"><?php comments_number('0', '1', '%')?></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-            <?php
+              </li>
+              <?php
+                }
+              } else {
+                ?> <p>Постов нет</p> <?php
               }
-            } else {
-              ?> <p>Постов нет</p> <?php
-            }
-            wp_reset_postdata(); // Сбрасываем $post
-            ?>
-          </ul>
-          <!-- /.digest -->
+              wp_reset_postdata(); // Сбрасываем $post
+              ?>
+            </ul>
+            <!-- /.digest -->
+          </div>
+          <!-- /.digest-wrapper -->
           <!-- Подключаем нижний сайдбар -->
           <?php get_sidebar('home-bottom')?>
         </div>
