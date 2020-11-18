@@ -1,0 +1,78 @@
+.category
+  &-title
+    font-family: 'Roboto Slab'
+    font-style: normal
+    font-weight: bold
+    font-size: 40px
+    line-height: 50px
+    color: #262D33
+.post
+  &-list
+    display: flex
+    flex-wrap: wrap
+  &-card
+    text-decoration: none
+    background: #FFFFFF
+    border-radius: 10px
+    overflow: hidden
+    width: 23%
+    margin-bottom: 30px
+    position: relative
+    &:not(:last-child)
+      margin-right: 2%
+    &-thumb
+      height: 180px
+      width: 100%
+      object-fit: cover
+    &-text
+      padding: 15px 25px 25px 25px
+      margin-bottom: 50px
+      p
+        font-size: 14px
+        line-height: 20px
+        color: #4B5157
+        margin-bottom: 14px
+    &-title
+      font-family: 'Roboto Slab'
+      font-style: normal
+      font-weight: bold
+      font-size: 16px
+      line-height: 25px
+      color: #262D33
+      margin-top: 0
+      margin-bottom: 5px
+    .author
+      position: absolute
+      bottom: 25px
+      display: flex
+      align-items: center
+      &-avatar
+        width: 45px
+        height: 45px
+        border-radius: 50%
+      &-info
+        display: flex
+        flex-wrap: wrap
+        margin-left: 10px
+        color: #939699
+      &-name
+        width: 100%
+        color: #4B5157
+      .comments, .likes
+        margin-left: 10px
+        font-size: 12px
+        line-height: 15px
+        display: flex
+        align-items: center
+        &-icon
+          fill: #BCBFC2
+          margin-right: 5px
+
+@media screen and (max-width: 1200px)
+  .post
+    &-card
+      width: 48%
+@media screen and (max-width: 615px)
+  .post
+    &-card
+      width: 100%

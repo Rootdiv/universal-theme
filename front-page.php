@@ -78,7 +78,7 @@
                     );
                   }?>
                   <a class="post-permalink" href="<?=get_the_permalink()?>">
-                    <h4 class="post-title"><?= mb_strimwidth(get_the_title(), 0, 60, '...')?></h4>
+                    <h4 class="post-title"><?=mb_strimwidth(get_the_title(), 0, 60, '...')?></h4>
                   </a>
                 </li>
                 <?php }
@@ -218,7 +218,7 @@
                   //Выводим третий пост
                   case '3': ?>
             <li class="article-grid-item article-grid-item-3">
-              <img src="<?php if( has_post_thumbnail() )the_post_thumbnail_url();
+              <img src="<?php if( has_post_thumbnail() ) the_post_thumbnail_url();
                 else echo get_template_directory_uri().'/assets/images/img-default.png';
               ?>" alt="<?php the_title()?>" class="article-grid-thumb" />
               <a href="<?=get_permalink()?>" class="article-grid-permalink">
