@@ -1,3 +1,20 @@
+//Плавная прокрутка страницы вверх
+window.addEventListener('scroll', function () {
+  let scrollHeight = Math.round(window.scrollY);
+  if (scrollHeight < 300) document.querySelector('.go-top').style.opacity = '0'
+  else document.getElementsByClassName('go-top')[0].style.opacity = '1'
+});
+document.querySelector('.go-top').addEventListener('click', function () {
+  backToTop();
+});
+
+function backToTop() {
+  if (window.pageYOffset > 0) {
+    window.scrollBy(0, -10);
+    setTimeout(backToTop, 0);
+  }
+}
+
 var mySwiper = new Swiper('.swiper-container', {
   // Optional parameters
   loop: true,
