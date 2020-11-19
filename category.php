@@ -44,7 +44,7 @@
         <?php } ?>
       </div>
       <!-- /.post-list -->
-      <?php require_once 'pagination.php';?>
+      <?php locate_template('pagination.php', true); ?>
     </div>
     <!-- /.container -->
   </main>

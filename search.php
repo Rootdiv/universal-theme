@@ -49,7 +49,7 @@
           <?php } ?>
         </ul>
         <!-- /.digest -->
-        <?php require_once 'pagination.php';?>
+        <?php locate_template('pagination.php', true); ?>
       </div>
       <!-- /.digest-wrapper -->
       <!-- Подключаем нижний сайдбар -->
