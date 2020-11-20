@@ -546,8 +546,7 @@ input[type="week"],
 input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
-input[type="color"],
-textarea {
+input[type="color"] {
     color: #666;
     border: 1px solid #ccc;
     border-radius: 3px;
