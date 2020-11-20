@@ -34,3 +34,21 @@ menuToggle.on('click', function (event) {
   event.preventDefault();
   $('.header-nav').slideToggle(200);
 });
+
+let contactsForm = $('.contacts-form');
+
+contactsForm.on('submit', function (event) {
+  event.preventDefault();
+  let formData = new FormData(this);
+  formData.append('action', 'contacts_form');
+  $.ajax({
+    type: "POST",
+    url: adminAjax.url,
+    data: formData,
+    contentType: false,
+    processData: false,
+    success: function (response) {
+      console.log('Ответ сервера: ' + response);
+    }
+  });
+})

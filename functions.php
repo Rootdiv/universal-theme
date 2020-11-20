@@ -686,6 +686,29 @@ function enqueue_universal_style() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_universal_style' );
 
+add_action( 'wp_enqueue_scripts', 'adminAjax_data', 99 );
+function adminAjax_data(){
+	wp_localize_script( 'jquery', 'adminAjax',
+		array(
+			'url' => admin_url('admin-ajax.php')
+		)
+	);
+}
+
+add_action('wp_ajax_contacts_form', 'ajax_form');
+add_action('wp_ajax_nopriv_contacts_form', 'ajax_form');
+function ajax_form() {
+  $contact_name = $_POST['contact_name'];
+  $contact_email = $_POST['contact_email'];
+  $contact_comment = $_POST['contact_comment'];
+  $message = 'Пользователь оставил свои данные: ' . $contact_name;
+  $headers = 'From: Владимир <camahor9152@gmail.com>' . "\r\n";
+  $send_message = wp_mail('camahor9152@gmail.com', 'Новая заявка с сайта', $message, $headers);
+  if($send_message) echo 'Всё получилось';
+  else echo 'Где-то есть ошибка';
+	wp_die();
+}
+
 #Изменяем настройки облака тегов
 add_action( 'widget_tag_cloud_args', 'edit_widget_tag_cloud_args' );
 function edit_widget_tag_cloud_args($args){
