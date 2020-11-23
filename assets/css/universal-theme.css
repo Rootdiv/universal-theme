@@ -1779,6 +1779,11 @@ body {
   padding-top: 40px;
 }
 
+.footer-text-wrapper a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .footer-text-wrapper p {
   margin-top: 0;
   margin-bottom: 25px;
@@ -1834,7 +1839,7 @@ body {
     justify-content: center;
   }
   .footer-text {
-    max-width: 550px;
+    max-width: 480px;
   }
   .footer-info .logo {
     margin-right: 15px;
@@ -1853,7 +1858,13 @@ body {
     justify-content: center;
   }
   .footer-text {
-    max-width: 400px;
+    max-width: 100%;
+  }
+  .footer-text-wrapper {
+    flex-direction: column;
+  }
+  .footer-text-wrapper a {
+    padding-bottom: 15px;
   }
 }
 
@@ -1871,26 +1882,11 @@ body {
   .footer-social {
     margin-top: 10px;
   }
-  .footer-text {
-    max-width: 300px;
-  }
 }
 
 @media screen and (max-width: 520px) {
   .footer-form input {
     margin-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .footer-text {
-    max-width: 200px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .footer-form input {
-    min-width: 250px;
   }
 }
 
@@ -2698,14 +2694,29 @@ body {
   margin-bottom: 27px;
 }
 
-.page-test {
+.contacts-title {
   font-size: 18px;
   line-height: 30px;
+  margin-bottom: 28px;
 }
 
 .contacts-wrapper {
   display: flex;
   align-items: flex-start;
+}
+
+.contacts-wrapper .left {
+  margin-right: 80px;
+}
+
+.contacts-wrapper .right a, .contacts-wrapper .right address {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-style: normal;
+  margin-bottom: 15px;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .contacts-form {
@@ -2737,4 +2748,31 @@ body {
 
 .contacts-textarea::placeholder {
   color: #939699;
+}
+
+@media screen and (max-width: 1100px) {
+  .section-dark {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-dark {
+    padding: 50px 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .contacts-wrapper {
+    align-items: unset;
+    flex-direction: column;
+  }
+  .contacts-wrapper .left {
+    margin-right: unset;
+    margin-bottom: 25px;
+  }
+  .contacts-form {
+    max-width: unset;
+    width: 100%;
+  }
 }

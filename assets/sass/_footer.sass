@@ -66,6 +66,9 @@
       align-items: flex-start
       justify-content: space-between
       padding-top: 40px
+      a
+        text-decoration: none
+        color: inherit
       p
         margin-top: 0
         margin-bottom: 25px
@@ -109,7 +112,7 @@
         flex-wrap: wrap
         justify-content: center
     &-text
-      max-width: 550px
+      max-width: 480px
     &-info
       .logo
         margin-right: 15px
@@ -123,7 +126,11 @@
       flex-wrap: wrap
       justify-content: center
     &-text
-      max-width: 400px
+      max-width: 100%
+      &-wrapper
+        flex-direction: column
+        a
+          padding-bottom: 15px
 @media screen and (max-width: 600px)
   .footer
     &-nav
@@ -137,19 +144,8 @@
           padding-bottom: 15px
     &-social
       margin-top: 10px
-    &-text
-      max-width: 300px
 @media screen and (max-width: 520px)
   .footer
     &-form
       input
         margin-bottom: 20px
-@media screen and (max-width: 500px)
-  .footer
-    &-text
-      max-width: 200px
-@media screen and (max-width: 350px)
-  .footer
-    &-form
-      input
-        min-width: 250px

@@ -54,6 +54,10 @@
         <?php if ( ! is_active_sidebar( 'sidebar-footer' ) ) return; ?>
         <div class="footer-text-wrapper">
           <?php dynamic_sidebar( 'sidebar-footer-text' ); ?>
+          <?php 
+            $phone = get_field('phone', 108);
+            if($phone) echo '<a href="tel:'.$phone.'">'.$phone.'</a>';
+          ?>
           <span class="footer-copyright"><?php echo date('Y') . ' &copy; ' . get_bloginfo('name');?></php></span>
         </div>
         <!-- /.footer-text-wrapper -->

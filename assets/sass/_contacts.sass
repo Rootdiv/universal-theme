@@ -12,13 +12,25 @@
     line-height: 50px
     margin-top: 0
     margin-bottom: 27px
-  &-test
+.contacts
+  &-title
     font-size: 18px
     line-height: 30px
-.contacts
+    margin-bottom: 28px
   &-wrapper
     display: flex
     align-items: flex-start
+    .left
+      margin-right: 80px
+    .right
+      a, address
+        text-decoration: none
+        color: rgba(#ffffff, 0.85)
+        font-style: normal
+        margin-bottom: 15px
+        display: block
+        font-size: 14px
+        line-height: 20px
   &-form
     max-width: 460px
   &-input
@@ -40,3 +52,22 @@
     resize: none
     &::placeholder
       color: #939699
+@media screen and (max-width: 1100px)
+  .section
+    &-dark
+      padding: 50px
+@media screen and (max-width: 768px)
+  .section
+    &-dark
+      padding: 50px 20px
+@media screen and (max-width: 640px)
+  .contacts
+    &-wrapper
+      align-items: unset
+      flex-direction: column
+      .left
+        margin-right: unset
+        margin-bottom: 25px
+    &-form
+      max-width: unset
+      width: 100%
