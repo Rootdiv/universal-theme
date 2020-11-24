@@ -39,7 +39,8 @@ let contactsForm = $('.contacts-form');
 
 contactsForm.on('submit', function (event) {
   event.preventDefault();
-  let formData = new FormData(this);
+  //let formData = new FormData(this);
+  let formData = new FormData();
   formData.append('action', 'contacts_form');
   $.ajax({
     type: "POST",
