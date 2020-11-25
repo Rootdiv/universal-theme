@@ -2776,3 +2776,8 @@ body {
     width: 100%;
   }
 }
+
+.lesson-header {
+  padding: 80px 0;
+  color: #ffffff;
+}
