@@ -15,12 +15,12 @@
         </div>
         <div class="video">
           <?php $video = get_field('video_link');
-            if(stristr($video, 'youtu')){
-              $link = explode('/', $video);
+            if(stristr($video, 'youtube')){
+              $link = explode('?v=', $video);
               $video_link = end($link);
               echo '<iframe width="100%" height="450" src="https://www.youtube.com/embed/'.$video_link.'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-            }elseif(stristr($video, 'youtube')){
-              $link = explode('?v=', $video);
+            }elseif(stristr($video, 'youtu')){
+              $link = explode('/', $video);
               $video_link = end($link);
               echo '<iframe width="100%" height="450" src="https://www.youtube.com/embed/'.$video_link.'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
             }elseif(stristr($video, 'vimeo')){

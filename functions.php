@@ -63,6 +63,59 @@ if ( ! function_exists( 'universal_theme_setup' ) ) :
         'query_var'           => true,
       ] );
     }
+
+    //Регистрация новой таксономии (create_lesson_taxonomies)
+    add_action( 'init', 'create_lesson_taxonomies' );
+
+    //Функция, создающая 2 новые таксономии "genres" и "authors" для постов типа "lesson"
+    function create_lesson_taxonomies(){
+
+      //Добавляем древовидную таксономию 'genre' (как категории)
+      register_taxonomy('genre', array('lesson'), array(
+        'hierarchical'  => true,
+        'labels'        => array(
+          'name'              => _x( 'Genres', 'taxonomy general name' ),
+          'singular_name'     => _x( 'Genre', 'taxonomy singular name' ),
+          'search_items'      => __( 'Search Genres' ),
+          'all_items'         => __( 'All Genres' ),
+          'parent_item'       => __( 'Parent Genre' ),
+          'parent_item_colon' => __( 'Parent Genre:' ),
+          'edit_item'         => __( 'Edit Genre' ),
+          'update_item'       => __( 'Update Genre' ),
+          'add_new_item'      => __( 'Add New Genre' ),
+          'new_item_name'     => __( 'New Genre Name' ),
+          'menu_name'         => __( 'Genre' ),
+        ),
+        'show_ui'       => true,
+        'query_var'     => true,
+        'rewrite'       => array( 'slug' => 'the_genre' ), // свой слаг в URL
+      ));
+
+      //Добавляем НЕ древовидную таксономию 'teacher' (как метки)
+      register_taxonomy('teacher', 'lesson',array(
+        'hierarchical'  => false,
+        'labels'        => array(
+          'name'                        => _x( 'Teachers', 'taxonomy general name' ),
+          'singular_name'               => _x( 'Teacher', 'taxonomy singular name' ),
+          'search_items'                => __( 'Search Teachers' ),
+          'popular_items'               => __( 'Popular Teachers' ),
+          'all_items'                   => __( 'All Teachers' ),
+          'parent_item'                 => null,
+          'parent_item_colon'           => null,
+          'edit_item'                   => __( 'Edit Teacher' ),
+          'update_item'                 => __( 'Update Teacher' ),
+          'add_new_item'                => __( 'Add New Teacher' ),
+          'new_item_name'               => __( 'New Teacher Name' ),
+          'separate_items_with_commas'  => __( 'Separate teachers with commas' ),
+          'add_or_remove_items'         => __( 'Add or remove teachers' ),
+          'choose_from_most_used'       => __( 'Choose from the most used teachers' ),
+          'menu_name'                   => __( 'Teachers' ),
+        ),
+        'show_ui'       => true,
+        'query_var'     => true,
+        'rewrite'       => array( 'slug' => 'the_teacher' ), // свой слаг в URL
+      ));
+    }
   }
 endif;
 add_action( 'after_setup_theme', 'universal_theme_setup' );
