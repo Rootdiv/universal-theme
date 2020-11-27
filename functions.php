@@ -774,8 +774,8 @@ function enqueue_universal_style() {
   wp_enqueue_style( 'universal-theme', get_template_directory_uri().'/assets/css/universal-theme.css', 'style', time() );
   wp_enqueue_style( 'Roboto-Slab', 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
   wp_deregister_script( 'jquery-core' );
-	wp_register_script( 'jquery-core', '//code.jquery.com/jquery-3.5.1.min.js');
-	wp_enqueue_script( 'jquery' );
+  wp_register_script( 'jquery-core', '//code.jquery.com/jquery-3.5.1.min.js');
+  wp_enqueue_script( 'jquery' );
   wp_enqueue_script( 'swiper', get_template_directory_uri().'/assets/js/swiper-bundle.min.js', null, time(), true);
   wp_enqueue_script( 'scripts', get_template_directory_uri().'/assets/js/scripts.js', 'swiper', time(), true);
 }
@@ -783,11 +783,11 @@ add_action( 'wp_enqueue_scripts', 'enqueue_universal_style' );
 
 add_action( 'wp_enqueue_scripts', 'adminAjax_data', 99 );
 function adminAjax_data(){
-	wp_localize_script( 'jquery', 'adminAjax',
-		array(
-			'url' => admin_url('admin-ajax.php')
-		)
-	);
+  wp_localize_script( 'jquery', 'adminAjax',
+    array(
+      'url' => admin_url('admin-ajax.php')
+    )
+  );
 }
 
 add_action('wp_ajax_contacts_form', 'ajax_form');
@@ -801,7 +801,7 @@ function ajax_form() {
   $send_message = wp_mail('camahor9152@gmail.com', 'Новая заявка с сайта', $message, $headers);
   if($send_message) echo 'Всё получилось';
   else echo 'Где-то есть ошибка';
-	wp_die();
+  wp_die();
 }
 
 #Изменяем настройки облака тегов
@@ -838,6 +838,6 @@ add_filter('excerpt_more', function($more) {
 
 //Склонение слов после числительных
 function plural_form($number, $after) {
-	$cases = array (2, 0, 1, 1, 1, 2);
-	echo $number.' '.$after[ ($number%100>4 && $number%100<20)? 2: $cases[min($number%10, 5)] ];
+  $cases = array (2, 0, 1, 1, 1, 2);
+  echo $number.' '.$after[ ($number%100>4 && $number%100<20)? 2: $cases[min($number%10, 5)] ];
 }
