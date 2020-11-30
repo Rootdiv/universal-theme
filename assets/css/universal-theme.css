@@ -2781,3 +2781,20 @@ body {
   padding: 80px 0;
   color: #ffffff;
 }
+
+.breadcrumbs {
+  margin-top: 50px;
+  color: #262D33;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.breadcrumbs__separator {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: inherit;
+}
