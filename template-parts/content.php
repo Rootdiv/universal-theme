@@ -20,7 +20,7 @@
             <svg width="18" height="17" class="icon home-icon">
               <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#home"></use>
             </svg>
-            <?php _e('On the main') ?>
+            <?php _e('On the main', 'universal') ?>
           </a>
           <?php //Выводим ссылки на предыдущий и следующий пост
           the_post_navigation(
