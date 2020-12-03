@@ -1,7 +1,7 @@
 <?php get_header();?>
 <main class="search">
   <div class="container">
-    <h1 class="search-title">Результаты поиска по запросу:</h1>
+    <h1 class="search-title"><?php _e('Search results for the query:', 'universal')?></h1>
     <div class="favorites">
       <div class="digest-wrapper">
         <ul class="digest">

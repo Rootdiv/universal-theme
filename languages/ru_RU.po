@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: universal\n"
-"POT-Creation-Date: 2020-12-03 13:25+0300\n"
+"POT-Creation-Date: 2020-12-03 21:52+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: My Best Team\n"
@@ -396,6 +396,10 @@ msgstr "Назад"
 #: pagination.php:8 template-parts/content.php:33
 msgid "Forward"
 msgstr "Вперёд"
+
+#: search.php:4
+msgid "Search results for the query:"
+msgstr "Результаты поиска по запросу:"
 
 #: searchform.php:2
 msgid "Search"
