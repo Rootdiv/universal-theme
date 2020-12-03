@@ -854,15 +854,15 @@ function plural_form($number, $after) {
 function the_breadcrumbs() {
 
   /* === ОПЦИИ === */
-  $text['home']     = __('Main'); // текст ссылки "Главная"
-  $text['tax']      = __('Category'); // текст ссылки "Категории"
+  $text['home']     = __('Main', 'universal'); // текст ссылки "Главная"
+  $text['tax']      = __('Category', 'universal'); // текст ссылки "Категории"
   $text['category'] = '%s'; // текст для страницы рубрики
-  $text['search']   = __('Search results for the query').' "%s"'; // текст для страницы с результатами поиска
-  $text['tag']      = __('Records with tag').' "%s"'; // текст для страницы тега
-  $text['author']   = __('Article author').' %s'; // текст для страницы автора
-  $text['404']      = __('Error 404'); // текст для страницы 404
-  $text['page']     = __('Page').' %s'; // текст 'Страница N'
-  $text['cpage']    = __('Page comments').' %s'; // текст 'Страница комментариев N'
+  $text['search']   = __('Search results for the query', 'universal').' "%s"'; // текст для страницы с результатами поиска
+  $text['tag']      = __('Records with tag', 'universal').' "%s"'; // текст для страницы тега
+  $text['author']   = __('Article author', 'universal').' %s'; // текст для страницы автора
+  $text['404']      = __('Error 404', 'universal'); // текст для страницы 404
+  $text['page']     = __('Page', 'universal').' %s'; // текст 'Страница N'
+  $text['cpage']    = __('Page comments', 'universal').' %s'; // текст 'Страница комментариев N'
 
   $wrap_before    = '<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // открывающий тег обертки
   $wrap_after     = '</div><!-- .breadcrumbs -->'; // закрывающий тег обертки

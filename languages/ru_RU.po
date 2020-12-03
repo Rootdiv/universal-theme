@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: universal\n"
-"POT-Creation-Date: 2020-12-03 21:52+0300\n"
+"POT-Creation-Date: 2020-12-03 22:30+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: My Best Team\n"
@@ -19,9 +19,8 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
-#: category.php:44 front-page.php:47 front-page.php:86 front-page.php:126
-#: front-page.php:244 front-page.php:283 front-page.php:351 front-page.php:426
-#: front-page.php:461 front-page.php:488 search.php:48
+#: category.php:44 front-page.php:47 front-page.php:86 front-page.php:242
+#: front-page.php:419 front-page.php:454 search.php:48
 msgid "Posts not found."
 msgstr "Постов нет."
 
@@ -89,11 +88,11 @@ msgstr "Подпишитесь на нашу рассылку"
 msgid "Subscribe"
 msgstr "Подписаться"
 
-#: front-page.php:28 front-page.php:409 template-parts/content.php:84
+#: front-page.php:28 front-page.php:402 template-parts/content.php:84
 msgid "Rank"
 msgstr "Должность"
 
-#: front-page.php:42 front-page.php:455
+#: front-page.php:42 front-page.php:448
 msgid "Read more"
 msgstr "Читать далее"
 
@@ -101,11 +100,11 @@ msgstr "Читать далее"
 msgid "Recommended"
 msgstr "Рекомендуем"
 
-#: front-page.php:275
+#: front-page.php:273
 msgid "Read article"
 msgstr "Читать статью"
 
-#: front-page.php:417
+#: front-page.php:410
 msgid "See photos"
 msgstr "Смотреть фото"
 

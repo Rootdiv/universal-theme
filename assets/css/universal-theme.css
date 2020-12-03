@@ -512,6 +512,11 @@ body {
   line-height: 20px;
 }
 
+.article-none {
+  padding: 15px;
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1200px) {
   .article-space {
     padding: 118px;
@@ -2588,6 +2593,10 @@ body {
 .post-list {
   display: flex;
   flex-wrap: wrap;
+}
+
+.post-list-none {
+  padding-bottom: 25px;
 }
 
 .post-card {

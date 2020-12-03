@@ -122,8 +122,6 @@
             ?>" alt="<?php the_title()?>">
           </li>
           <?php }
-          } else {
-            _e('Posts not found.', 'universal');
           }
           wp_reset_postdata(); // Сбрасываем $post
           ?>
@@ -279,10 +277,7 @@
       <!-- /.investigation -->
       <?php
         }
-      } else {
-        _e('Posts not found.', 'universal');
       }
-
       wp_reset_postdata(); // Сбрасываем $post
       ?>
       <div class="container">
@@ -347,8 +342,6 @@
               </li>
               <?php
                 }
-              } else {
-                _e('Posts not found.', 'universal');
               }
               wp_reset_postdata(); // Сбрасываем $post
               ?>
@@ -484,8 +477,6 @@
                 </div>
                 <?php
                     }
-                  } else {
-                    _e('Posts not found.', 'universal');
                   }
                   wp_reset_postdata(); // Сбрасываем $post
                 ?>
