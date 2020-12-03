@@ -45,7 +45,7 @@
           </li>
           <?php } ?>
           <?php if ( ! have_posts() ){ ?>
-            Записей нет.
+            <div class="search-none"><?php _e('Posts not found.', 'universal') ?></div>
           <?php } ?>
         </ul>
         <!-- /.digest -->

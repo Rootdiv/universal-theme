@@ -20,7 +20,7 @@
             <svg width="18" height="17" class="icon home-icon">
               <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#home"></use>
             </svg>
-            На главную
+            <?php _e('On the main') ?>
           </a>
           <?php //Выводим ссылки на предыдущий и следующий пост
           the_post_navigation(
@@ -29,8 +29,8 @@
                 <svg width="15" height="7" class="prev-icon">
                   <use xlink:href="'. get_template_directory_uri() .'/assets/images/sprite.svg#arrow"></use>
                 </svg>
-              ' . esc_html__( 'Назад', 'universal-theme' ) . '</span>',
-              'next_text' => '<span class="post-nav-next">' . esc_html__( 'Вперёд', 'universal-theme' ) . '
+              ' . esc_html__( 'Back', 'universal' ) . '</span>',
+              'next_text' => '<span class="post-nav-next">' . esc_html__( 'Forward', 'universal' ) . '
                 <svg width="15" height="7" class="prev-icon">
                   <use xlink:href="'. get_template_directory_uri() .'/assets/images/sprite.svg#arrow"></use>
                 </svg>
@@ -81,7 +81,7 @@
             <?php $author_id = get_the_author_meta('ID'); ?>
             <img src="<?=get_avatar_url($author_id)?>" alt="<?=get_the_author()?>" class="post-author-avatar" />
             <span class="post-author-name"><?=get_the_author()?></span>
-            <span class="post-author-rank">Должность</span>
+            <span class="post-author-rank"><?php _e('Rank', 'universal') ?></span>
             <span class="post-author-posts">
               <?php plural_form(count_user_posts($author_id),
                 /* варианты написания для количества 1, 2 и 5 */
@@ -89,7 +89,7 @@
             </span>
           </div>
           <!-- /.post-author-info -->
-          <a href="<?=get_author_posts_url($author_id)?>" class="post-author-link">Страница автора</a>
+          <a href="<?=get_author_posts_url($author_id)?>" class="post-author-link"><?php _e('Page author', 'universal') ?></a>
         </div>
         <!-- /.post-author -->
       </div>
@@ -104,7 +104,7 @@
         sprintf(
           wp_kses(
             /* translators: %s: Name of current post. Only visible to screen readers */
-            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal-theme' ),
+            __( 'Continue reading <span class="screen-reader-text">"%s"</span>', 'universal' ),
             array(
               'span' => array(
                 'class' => array(),
@@ -117,17 +117,17 @@
 
       wp_link_pages(
         array(
-          'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'universal-theme' ),
+          'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'universal' ),
           'after'  => '</div>',
         )
       );?>
     </div><!-- /Содержимое поста -->
     <!-- Подвал поста-->
     <footer class="entry-footer">
-      <?php $tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universal-theme' ) );
+      <?php $tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universal' ) );
         if ( $tags_list ) {
           //Список тегов
-          printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universal-theme' ) . '</span>', $tags_list );
+          printf( '<span class="tags-links">' . esc_html( '%1$s' ) . '</span>', $tags_list );
         } 
         //Поделится в соцсетях
         meks_ess_share();

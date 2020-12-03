@@ -25,7 +25,7 @@
                 <img src="<?=get_avatar_url($author_id)?>" alt="<?=get_the_author()?>" class="avatar" />
                 <div class="author-bio">
                   <span class="author-name"><?=get_the_author()?></span>
-                  <span class="author-rank">Должность</span>
+                  <span class="author-rank"><?php _e('Rank', 'universal') ?></span>
                 </div>
               </a>
               <div class="post-text">
@@ -39,19 +39,19 @@
                 }?>
                 <h2 class="post-title"><?=mb_strimwidth(get_the_title(), 0, 60, '...')?></h2>
                 <a href="<?=get_the_permalink()?>" class="more">
-                  Читать далее
+                  <?php _e('Read more', 'universal')?>
                 </a>
               </div>
               <?php }
               } else {
-                ?> <p>Постов нет</p> <?php
+                _e('Posts not found.', 'universal');
               }
               wp_reset_postdata(); // Сбрасываем $post
               ?>
             </div>
             <!-- /.left -->
             <div class="right">
-              <h3 class="recommend">Рекомендуем</h3>
+              <h3 class="recommend"><?php _e('Recommended', 'universal')?></h3>
               <ul class="posts-list">
                 <?php
                 global $post;
@@ -83,7 +83,7 @@
                 </li>
                 <?php }
                 } else {
-                  ?> <p>Постов нет</p> <?php
+                  _e('Posts not found.', 'universal');
                 }
                 wp_reset_postdata(); // Сбрасываем $post
                 ?>
@@ -123,7 +123,7 @@
           </li>
           <?php }
           } else {
-            ?> <p>Постов нет</p> <?php
+            _e('Posts not found.', 'universal');
           }
           wp_reset_postdata(); // Сбрасываем $post
           ?>
@@ -241,7 +241,7 @@
                 }
               }
             } else {
-              ?> <p>Постов нет</p> <?php
+              _e('Posts not found.', 'universal');
             }
             wp_reset_postdata(); // Сбрасываем $post
             ?>
@@ -272,7 +272,7 @@
         <div class="container">
           <h2 class="investigation-title"><?php the_title()?></h2>
           <a href="<?=get_the_permalink()?>" class="more">
-            Читать статью
+            <?php _e('Read article', 'universal')?>
           </a>
         </div>
       </section>
@@ -280,7 +280,7 @@
       <?php
         }
       } else {
-        ?> <p>Постов нет</p> <?php
+        _e('Posts not found.', 'universal');
       }
 
       wp_reset_postdata(); // Сбрасываем $post
@@ -348,7 +348,7 @@
               <?php
                 }
               } else {
-                ?> <p>Постов нет</p> <?php
+                _e('Posts not found.', 'universal');
               }
               wp_reset_postdata(); // Сбрасываем $post
               ?>
@@ -406,7 +406,7 @@
                     <img src="<?=get_avatar_url($author_id)?>" alt="<?=get_the_author()?>" class="author-avatar" />
                     <div class="author-bio">
                       <span class="author-name"><?=get_the_author()?></span>
-                      <span class="author-rank">Должность</span>
+                      <span class="author-rank"><?php _e('Rank', 'universal') ?></span>
                     </div>
                   </a>
                   <h3 class="photo-report-title"><?php the_title()?></h3>
@@ -414,7 +414,7 @@
                     <svg width="19" height="15" class="icon photo-report-icon">
                       <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#images"></use>
                     </svg>
-                    Смотреть фото
+                    <?php _e('See photos', 'universal') ?>
                     <span class="photo-report-counter"><?=count($images)?></span>
                   </a>
                 </div>
@@ -423,7 +423,7 @@
               <?php
               }
             } else {
-              ?> <p>Постов нет</p> <?php
+              _e('Posts not found.', 'universal');
             }
             wp_reset_postdata(); // Сбрасываем $post
             ?>
@@ -452,13 +452,13 @@
                   <h2 class="career-post-title"><?php the_title()?></h2>
                   <p class="career-post-excerpt"><?= mb_strimwidth(get_the_excerpt(), 0, 85, '...')?></p>
                   <a href="<?=get_the_permalink()?>" class="more">
-                    Читать далее
+                    <?php _e('Read more', 'universal')?>
                   </a>
                 </div>
                 <?php
                     }
                   } else {
-                    ?> <p>Постов нет</p> <?php
+                    _e('Posts not found.', 'universal');
                   }
                   wp_reset_postdata(); // Сбрасываем $post
                 ?>
@@ -485,7 +485,7 @@
                 <?php
                     }
                   } else {
-                    ?> <p>Постов нет</p> <?php
+                    _e('Posts not found.', 'universal');
                   }
                   wp_reset_postdata(); // Сбрасываем $post
                 ?>

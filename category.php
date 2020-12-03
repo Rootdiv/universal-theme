@@ -40,9 +40,9 @@
           </a>
           <!-- /.post-card -->
         <?php } ?>
-        <?php if ( ! have_posts() ){ ?>
-          Записей нет.
-        <?php } ?>
+        <?php if ( ! have_posts() ){
+          _e('Posts not found.', 'universal');
+        } ?>
       </div>
       <!-- /.post-list -->
       <?php locate_template('pagination.php', true); ?>

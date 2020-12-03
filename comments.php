@@ -46,7 +46,7 @@ function universal_theme_comment( $comment, $args, $depth ) {
         <div class="comment-author vcard">
           <?php
           printf(
-            __( '<cite class="comment-author-name">%s</cite>' ),
+            '<cite class="comment-author-name">%s</cite>',
             get_comment_author_link()
           );
           ?>
@@ -60,13 +60,13 @@ function universal_theme_comment( $comment, $args, $depth ) {
               ); ?>
             </a>
 
-            <?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
+            <?php edit_comment_link( __( '(Edit)', 'universal' ), '  ', '' ); ?>
           </span>
         </div>
 
         <?php if ( $comment->comment_approved == '0' ) { ?>
           <em class="comment-awaiting-moderation">
-            <?php _e( 'Your comment is awaiting moderation.' ); ?>
+            <?php _e( 'Your comment is awaiting moderation.', 'universal' ); ?>
           </em><br/>
         <?php } ?>
 
@@ -109,13 +109,13 @@ if ( post_password_required() ) {
       ?>
       <div class="comments-header">
         <h2 class="comments-title">
-          <?php echo 'Комментарии <span class="comments-count">'. get_comments_number() .'</span> ';?>
+          <?php echo __('Comments', 'universal').' <span class="comments-count">'. get_comments_number() .'</span> ';?>
         </h2><!-- .comments-title -->
         <a href="#" class="comments-add-button">
           <svg width="18" height="18" class="icon comments-add-icon">
             <use xlink:href="<?=get_template_directory_uri()?>/assets/images/sprite.svg#pencil"></use>
           </svg>
-          Добавить комментарий
+          <?php _e('Add comment', 'universal') ?>
         </a>
       </div>
       <!-- /.comments-header -->
@@ -131,7 +131,7 @@ if ( post_password_required() ) {
             'short_ping' => true,
             'avatar_size'=> 75,
             'callback' => 'universal_theme_comment',
-            'login_text' => 'Зарегистрируйтесь, если хотите прокомментировать.',
+            'login_text' => __('Register if you want to comment', 'universal'),
           )
         );
         ?>
@@ -143,7 +143,7 @@ if ( post_password_required() ) {
       // If comments are closed and there are comments, let's leave a little note, shall we?
       if ( ! comments_open() ) :
         ?>
-        <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'universal-theme' ); ?></p>
+        <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'universal' ); ?></p>
         <?php
       endif;
 
@@ -151,7 +151,7 @@ if ( post_password_required() ) {
 
     comment_form(array(
       'comment_field'         => '<div class="comment-form-comment">
-        <label class="comment-label" for="comment">'._x( 'Что вы думаете на этот счет?', 'noun' ) . '</label>
+        <label class="comment-label" for="comment">'._x( 'What do you think?', 'noun', 'universal' ) . '</label>
         <div class="comment-wrapper">
           '. get_avatar(get_current_user_id(), 75) .'
           <div class="comment-textarea-wrapper">
@@ -161,16 +161,16 @@ if ( post_password_required() ) {
         </div>
       </div>',
       'must_log_in'           => '<p class="must-log-in">'.
-        sprintf( __('You must be <a href="%s">logged in</a> to post a comment.'), 
+        sprintf( __('You must be <a href="%s">logged in</a> to post a comment.', 'universal'), 
         wp_login_url( apply_filters('the_permalink', get_permalink()))) .'
       </p>',
       'logged_in_as'          => '',
       'comment_notes_before'  => '<p class="comment-notes">
-        <span id="email-notes">' . __( 'Your email address will not be published.' ) . '</span>'. 
+        <span id="email-notes">' . __( 'Your email address will not be published.', 'universal' ) . '</span>'. 
         ( $req ? $required_text : '' ) . '
       </p>',
       'class_submit'          => 'comment-submit more',
-      'label_submit'          => 'Отправить',
+      'label_submit'          => __('Send', 'universal'),
       'submit_button'         => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s</button>',
       'title_reply'           => '',
     ));

@@ -11,7 +11,7 @@ get_header();?>
       <?php the_title('<h1 class="page-title">', '</h1>', true); ?>
       <div class="contacts-wrapper">
         <div class="left">
-          <h2 class="contacts-title">Через форму обратной связи</h2>
+          <h2 class="contacts-title"><?php _e('Through the feedback form', 'universal') ?></h2>
           <!-- <form action="#" class="contacts-form" method="POST">
             <input name="contact_name" type="text" class="input contacts-input" placeholder="Ваше имя">
             <input name="contact_email" type="email" class="input contacts-input" placeholder="Ваш Email">
@@ -25,7 +25,7 @@ get_header();?>
         </div>
         <!-- /.left -->
         <div class="right">
-          <h2 class="contacts-tile">Или по этим контактам</h2>
+          <h2 class="contacts-tile"><?php _e('Or by these contacts', 'universal')?></h2>
           <?php //Проверяем дополнительные поля
             $email = get_post_meta(get_the_ID(), 'email', true);
             if($email) echo '<a href="mailto:'.$email.'">'.$email.'</a>';

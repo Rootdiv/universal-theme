@@ -62,7 +62,7 @@
         sprintf(
           wp_kses(
             /* translators: %s: Name of current post. Only visible to screen readers */
-            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal-theme' ),
+            __( 'Continue reading <span class="screen-reader-text">"%s"</span>', 'universal' ),
             array(
               'span' => array(
                 'class' => array(),
@@ -75,17 +75,17 @@
 
       wp_link_pages(
         array(
-          'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'universal-theme' ),
+          'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'universal' ),
           'after'  => '</div>',
         )
       );?>
     </div><!-- /Содержимое поста -->
     <!-- Подвал поста-->
     <footer class="entry-footer">
-      <?php $tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universal-theme' ) );
+      <?php $tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universal' ) );
         if ( $tags_list ) {
           //Список тегов
-          printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universal-theme' ) . '</span>', $tags_list );
+          printf( '<span class="tags-links">' . esc_html( '%1$s' ) . '</span>', $tags_list );
         } 
         //Поделится в соцсетях
         meks_ess_share();

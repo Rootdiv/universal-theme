@@ -2485,6 +2485,11 @@ body {
   color: #262D33;
 }
 
+.search-none {
+  padding: 25px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 1200px) {
   .search {
     padding-bottom: 55px;
