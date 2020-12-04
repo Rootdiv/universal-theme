@@ -25,7 +25,15 @@
                 <img src="<?=get_avatar_url($author_id)?>" alt="<?=get_the_author()?>" class="avatar" />
                 <div class="author-bio">
                   <span class="author-name"><?=get_the_author()?></span>
-                  <span class="author-rank"><?php _e('Rank', 'universal') ?></span>
+                  <span class="author-rank"><?php
+                    //Получаем список всех ролей
+                    $roles = wp_roles()->roles;
+                    //Узнаём текущую роль пользователя
+                    $current_role = get_the_author_meta('roles', $author_id)[0];
+                    foreach($roles as $role => $value){
+                      if($role == $current_role) echo $value['name'];
+                    }?>
+                  </span>
                 </div>
               </a>
               <div class="post-text">
@@ -399,7 +407,15 @@
                     <img src="<?=get_avatar_url($author_id)?>" alt="<?=get_the_author()?>" class="author-avatar" />
                     <div class="author-bio">
                       <span class="author-name"><?=get_the_author()?></span>
-                      <span class="author-rank"><?php _e('Rank', 'universal') ?></span>
+                      <span class="author-rank"><?php
+                        //Получаем список всех ролей
+                        $roles = wp_roles()->roles;
+                        //Узнаём текущую роль пользователя
+                        $current_role = get_the_author_meta('roles', $author_id)[0];
+                        foreach($roles as $role => $value){
+                          if($role == $current_role) echo $value['name'];
+                        }?>
+                      </span>
                     </div>
                   </a>
                   <h3 class="photo-report-title"><?php the_title()?></h3>

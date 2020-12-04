@@ -1,7 +1,27 @@
 <?php
 //Добавление расширенных возможностей
 if ( ! function_exists( 'universal_theme_setup' ) ) :
+
   function universal_theme_setup() {
+    // Удаляем роль при деактивации нашей темы
+    add_action( 'switch_theme', 'deactivate_universal_theme' );
+    function deactivate_universal_theme() {
+      remove_role( 'developer' );
+      remove_role( 'designer' );
+      remove_role( 'freelancer' );
+      remove_role( 'photographer' );
+    }
+    
+    // Добавляем роль при активации нашей темы
+    add_action( 'after_switch_theme', 'activate_universal_theme' );
+    function activate_universal_theme() {
+      $author = get_role( 'author' );
+      add_role( 'developer', 'Разработчик', $author->capabilities );
+      add_role( 'designer', 'Дизайнер', $author->capabilities );
+      add_role( 'freelancer', 'Фрилансер', $author->capabilities );
+      add_role( 'photographer', 'Фотограф', $author->capabilities );
+    }
+
     //Подключение файлов перевода
     load_theme_textdomain( 'universal', get_template_directory() . '/languages' );
 
@@ -45,12 +65,12 @@ if ( ! function_exists( 'universal_theme_setup' ) ) :
         ],
         'description'         => __('Section with video tutorials', 'universal'),
         'public'              => true,
-        // 'publicly_queryable'  => null, // зависит от public
-        // 'exclude_from_search' => null, // зависит от public
-        // 'show_ui'             => null, // зависит от public
-        // 'show_in_nav_menus'   => null, // зависит от public
+        //'publicly_queryable'  => null, // зависит от public
+        //'exclude_from_search' => null, // зависит от public
+        //'show_ui'             => null, // зависит от public
+        //'show_in_nav_menus'   => null, // зависит от public
         'show_in_menu'        => true, // показывать ли в меню адмнки
-        // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+        //'show_in_admin_bar'   => null, // зависит от show_in_menu
         'show_in_rest'        => true, // добавить в REST API. C WP 4.7
         'rest_base'           => null, // $post_type. C WP 4.7
         'menu_position'       => 5,
@@ -143,7 +163,7 @@ function universal_theme_widgets_init() {
 
   register_sidebar(
     array(
-      'name'          => esc_html__( 'Latest articles', 'universal' ),
+      'name'          => esc_html__( 'Recently articles', 'universal' ),
       'id'            => 'sidebar-recent-article',
       'description'   => esc_html__( 'Add widgets here.', 'universal' ),
       'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -328,8 +348,8 @@ class Social_Widget extends WP_Widget {
     // __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
     parent::__construct(
       'social_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: foo_widget
-      'Социальные сети',
-      array( 'description' => 'Ссылки на социальные сети.', 'classname' => 'widget-social', )
+      __('Social networks', 'universal'),
+      array( 'description' => __('Links to social networks.'), 'classname' => 'widget-social', )
     );
 
     // скрипты/стили виджета, только если он активен
@@ -501,7 +521,7 @@ class Recent_Post_Widget extends WP_Widget {
   parent::__construct(
     'recent_post_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: foo_widget
     __('Recently posted', 'universal'),
-    array( 'description' => __('Latest posts.', 'universal'), 'classname' => 'widget-recent-posts', )
+    array( 'description' => __('Recently posts.', 'universal'), 'classname' => 'widget-recent-posts', )
   );
 
   // скрипты/стили виджета, только если он активен
@@ -633,7 +653,7 @@ class Posts_Widget extends WP_Widget {
   // __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
   parent::__construct(
     'posts_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: foo_widget
-    __('Recommended articles'),
+    __('Recommended articles', 'universal'),
     array( 'description' => __('Recommended articles from a specific category.', 'universal'), 'classname' => 'widget-posts', )
   );
 

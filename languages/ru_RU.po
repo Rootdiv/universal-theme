@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: universal\n"
-"POT-Creation-Date: 2020-12-03 22:30+0300\n"
+"POT-Creation-Date: 2020-12-04 18:22+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: My Best Team\n"
@@ -19,8 +19,8 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
-#: category.php:44 front-page.php:47 front-page.php:86 front-page.php:242
-#: front-page.php:419 front-page.php:454 search.php:48
+#: category.php:44 front-page.php:55 front-page.php:94 front-page.php:250
+#: front-page.php:435 front-page.php:470 search.php:48
 msgid "Posts not found."
 msgstr "Постов нет."
 
@@ -88,303 +88,307 @@ msgstr "Подпишитесь на нашу рассылку"
 msgid "Subscribe"
 msgstr "Подписаться"
 
-#: front-page.php:28 front-page.php:402 template-parts/content.php:84
-msgid "Rank"
-msgstr "Должность"
-
-#: front-page.php:42 front-page.php:448
+#: front-page.php:50 front-page.php:464
 msgid "Read more"
 msgstr "Читать далее"
 
-#: front-page.php:54
+#: front-page.php:62
 msgid "Recommended"
 msgstr "Рекомендуем"
 
-#: front-page.php:273
+#: front-page.php:281
 msgid "Read article"
 msgstr "Читать статью"
 
-#: front-page.php:410
+#: front-page.php:426
 msgid "See photos"
 msgstr "Смотреть фото"
 
-#: functions.php:24
+#: functions.php:44
 msgid "Menu in header"
 msgstr "Меню в хедере"
 
-#: functions.php:25 functions.php:158
+#: functions.php:45 functions.php:178
 msgid "Menu in footer"
 msgstr "Меню в футере"
 
-#: functions.php:33
+#: functions.php:53
 msgid "Lessons"
 msgstr "Уроки"
 
-#: functions.php:34 functions.php:44
+#: functions.php:54 functions.php:64
 msgid "Lesson"
 msgstr "Урок"
 
-#: functions.php:35
+#: functions.php:55
 msgid "Add lesson"
 msgstr "Добавить урок"
 
-#: functions.php:36
+#: functions.php:56
 msgid "Added lesson"
 msgstr "Добавление урока"
 
-#: functions.php:37
+#: functions.php:57
 msgid "Edit lesson"
 msgstr "Редактирование урока"
 
-#: functions.php:38
+#: functions.php:58
 msgid "New lesson"
 msgstr "Новый урок"
 
-#: functions.php:39
+#: functions.php:59
 msgid "View lessons"
 msgstr "Смотреть уроки"
 
-#: functions.php:40
+#: functions.php:60
 msgid "Search lessons"
 msgstr "Искать уроки"
 
-#: functions.php:41
+#: functions.php:61
 msgid "Not found"
 msgstr "Не найдено"
 
-#: functions.php:42
+#: functions.php:62
 msgid "Not found in trash"
 msgstr "Не найдено в корзине"
 
-#: functions.php:46
+#: functions.php:66
 msgid "Section with video tutorials"
 msgstr "Раздел с видеоуроками"
 
-#: functions.php:80
+#: functions.php:100
 msgctxt "taxonomy general name"
 msgid "Genres"
 msgstr "Жанры"
 
-#: functions.php:81
+#: functions.php:101
 msgctxt "taxonomy singular name"
 msgid "Genre"
 msgstr "Жанр"
 
-#: functions.php:82
+#: functions.php:102
 msgid "Search Genres"
 msgstr "Искать жанры"
 
-#: functions.php:83
+#: functions.php:103
 msgid "All Genres"
 msgstr "Все жанры"
 
-#: functions.php:84
+#: functions.php:104
 msgid "Parent Genre"
 msgstr "Родительский жанр"
 
-#: functions.php:85
+#: functions.php:105
 msgid "Parent Genre:"
 msgstr "Родительский жанр:"
 
-#: functions.php:86
+#: functions.php:106
 msgid "Edit Genre"
 msgstr "Редактировать жанр"
 
-#: functions.php:87
+#: functions.php:107
 msgid "Update Genre"
 msgstr "Обновить жанр"
 
-#: functions.php:88
+#: functions.php:108
 msgid "Add New Genre"
 msgstr "Добавить новый жанр"
 
-#: functions.php:89
+#: functions.php:109
 msgid "New Genre Name"
 msgstr "Название нового жанра"
 
-#: functions.php:90
+#: functions.php:110
 msgid "Genre"
 msgstr "Жанр"
 
-#: functions.php:101
+#: functions.php:121
 msgctxt "taxonomy general name"
 msgid "Teachers"
 msgstr "Учителя"
 
-#: functions.php:102
+#: functions.php:122
 msgctxt "taxonomy singular name"
 msgid "Teacher"
 msgstr "Учитель"
 
-#: functions.php:103
+#: functions.php:123
 msgid "Search Teachers"
 msgstr "Искать учителей"
 
-#: functions.php:104
+#: functions.php:124
 msgid "Popular Teachers"
 msgstr "Популярные учителя"
 
-#: functions.php:105
+#: functions.php:125
 msgid "All Teachers"
 msgstr "Все учителя"
 
-#: functions.php:108
+#: functions.php:128
 msgid "Edit Teacher"
 msgstr "Редактировать учителя"
 
-#: functions.php:109
+#: functions.php:129
 msgid "Update Teacher"
 msgstr "Обновить учителя"
 
-#: functions.php:110
+#: functions.php:130
 msgid "Add New Teacher"
 msgstr "Добавить нового учителя"
 
-#: functions.php:111
+#: functions.php:131
 msgid "New Teacher Name"
 msgstr "Имя нового учителя"
 
-#: functions.php:112
+#: functions.php:132
 msgid "Separate teachers with commas"
 msgstr "Разделяйте учителей запятыми"
 
-#: functions.php:113
+#: functions.php:133
 msgid "Add or remove teachers"
 msgstr "Добавить или удалить учителей"
 
-#: functions.php:114
+#: functions.php:134
 msgid "Choose from the most used teachers"
 msgstr "Выбирайте из наиболее популярных учителей"
 
-#: functions.php:115
+#: functions.php:135
 msgid "Teachers"
 msgstr "Учителя"
 
-#: functions.php:134
+#: functions.php:154
 msgid "Sidebar on main"
 msgstr "Сайдбар на главной"
 
-#: functions.php:136 functions.php:148 functions.php:184
+#: functions.php:156 functions.php:168 functions.php:204
 msgid "Add widgets here."
 msgstr "Добавьте виджеты сюда."
 
-#: functions.php:146
-msgid "Latest articles"
-msgstr "Последние статьи"
+#: functions.php:166
+msgid "Recently articles"
+msgstr "Недавние статьи"
 
-#: functions.php:160
+#: functions.php:180
 msgid "Add menu here."
 msgstr "Добавьте меню сюда."
 
-#: functions.php:170
+#: functions.php:190
 msgid "Text in footer"
 msgstr "Текст в футере"
 
-#: functions.php:172
+#: functions.php:192
 msgid "Add text here."
 msgstr "Добавьте текст сюда."
 
-#: functions.php:182 functions.php:636 functions.php:709
+#: functions.php:202 functions.php:656 functions.php:729
 msgid "Recommended articles"
 msgstr "Рекомендуемые статьи"
 
-#: functions.php:205 functions.php:250
+#: functions.php:225 functions.php:270
 msgid "Useful files"
 msgstr "Полезные файлы"
 
-#: functions.php:206
+#: functions.php:226
 msgid "Files for download."
 msgstr "Файлы для скачиванитя."
 
-#: functions.php:239
+#: functions.php:259
 msgid "Download"
 msgstr "Скачать"
 
-#: functions.php:251 functions.php:260
+#: functions.php:271 functions.php:280
 msgid "Description:"
 msgstr "Описание:"
 
-#: functions.php:256 functions.php:413 functions.php:566 functions.php:714
+#: functions.php:276 functions.php:433 functions.php:586 functions.php:734
 msgid "Title:"
 msgstr "Заголовок:"
 
-#: functions.php:264
+#: functions.php:284
 msgid "Link:"
 msgstr "Сылка:"
 
-#: functions.php:404
+#: functions.php:351
+msgid "Social networks"
+msgstr "Социальные сети"
+
+#: functions.php:352
+msgid "Links to social networks."
+msgstr "Ссылки на социальные сети."
+
+#: functions.php:424
 msgid "Our social networks"
 msgstr "Наши соцсети"
 
-#: functions.php:417
+#: functions.php:437
 msgid "Facebook:"
 msgstr "Фейсбук:"
 
-#: functions.php:421
+#: functions.php:441
 msgid "Instagram:"
 msgstr "Инстаграм:"
 
-#: functions.php:425
+#: functions.php:445
 msgid "VKontakte:"
 msgstr "ВКонтакте:"
 
-#: functions.php:429
+#: functions.php:449
 msgid "Twitter:"
 msgstr "Твиттер:"
 
-#: functions.php:433
+#: functions.php:453
 msgid "Youtube:"
 msgstr "Ютуб:"
 
-#: functions.php:503 functions.php:561
+#: functions.php:523 functions.php:581
 msgid "Recently posted"
 msgstr "Недавно опубликовано"
 
-#: functions.php:504
-msgid "Latest posts."
-msgstr "Последние статьи."
+#: functions.php:524
+msgid "Recently posts."
+msgstr "Недавно опубликовано."
 
-#: functions.php:543
+#: functions.php:563
 msgid "back"
 msgstr "назад"
 
-#: functions.php:570 functions.php:718
+#: functions.php:590 functions.php:738
 msgid "Number of posts:"
 msgstr "Количество постов:"
 
-#: functions.php:637
+#: functions.php:657
 msgid "Recommended articles from a specific category."
 msgstr "Рекомендуемые статьи из определённой категории."
 
-#: functions.php:857
+#: functions.php:877
 msgid "Main"
 msgstr "Главная"
 
-#: functions.php:858
+#: functions.php:878
 msgid "Category"
 msgstr "Категории"
 
-#: functions.php:860
+#: functions.php:880
 msgid "Search results for the query"
 msgstr "Результаты поиска по запросу"
 
-#: functions.php:861
+#: functions.php:881
 msgid "Records with tag"
 msgstr "Записи с тегом"
 
-#: functions.php:862
+#: functions.php:882
 msgid "Article author"
 msgstr "Автор статьи"
 
-#: functions.php:863
+#: functions.php:883
 msgid "Error 404"
 msgstr "Ошибка 404"
 
-#: functions.php:864
+#: functions.php:884
 msgid "Page"
 msgstr "Страница"
 
-#: functions.php:865
+#: functions.php:885
 msgid "Page comments"
 msgstr "Страница комментариев"
 
@@ -404,12 +408,12 @@ msgstr "Результаты поиска по запросу:"
 msgid "Search"
 msgstr "Поиск"
 
-#: template-parts/content-lesson.php:65 template-parts/content.php:107
+#: template-parts/content-lesson.php:65 template-parts/content.php:115
 #, php-format
 msgid "Continue reading <span class=\"screen-reader-text\">\"%s\"</span>"
 msgstr "Продолжение чтения <span class=\"screen-reader-text\">\"%s\"</span>"
 
-#: template-parts/content-lesson.php:78 template-parts/content.php:120
+#: template-parts/content-lesson.php:78 template-parts/content.php:128
 msgid "Pages:"
 msgstr "Страницы:"
 
@@ -417,6 +421,15 @@ msgstr "Страницы:"
 msgid "On the main"
 msgstr "На главную"
 
-#: template-parts/content.php:92
+#: template-parts/content.php:100
 msgid "Page author"
 msgstr "Страница автора"
+
+#~ msgid "Latest articles"
+#~ msgstr "Последние статьи"
+
+#~ msgid "Latest posts."
+#~ msgstr "Последние статьи."
+
+#~ msgid "Rank"
+#~ msgstr "Должность"
