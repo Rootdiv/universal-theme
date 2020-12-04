@@ -349,7 +349,7 @@ class Social_Widget extends WP_Widget {
     parent::__construct(
       'social_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: foo_widget
       __('Social networks', 'universal'),
-      array( 'description' => __('Links to social networks.'), 'classname' => 'widget-social', )
+      array( 'description' => __('Links to social networks.', 'universal'), 'classname' => 'widget-social', )
     );
 
     // скрипты/стили виджета, только если он активен
