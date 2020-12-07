@@ -2335,8 +2335,13 @@ body {
 }
 
 .comments-list {
+  list-style: none;
   margin-left: 0;
   padding: 0;
+}
+
+.comments-list ol {
+  list-style: none;
 }
 
 .comment-content p {
