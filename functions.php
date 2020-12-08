@@ -1051,10 +1051,12 @@ function the_breadcrumbs() {
       if ( get_query_var( 'paged' ) ) {
         $position += 1;
         $tagID = get_query_var( 'tag_id' );
+        echo $before . 'Теги' . $after . $sep;
         echo $sep . sprintf( $link, get_tag_link( $tagID ), single_tag_title( '', false ), $position );
         echo $sep . $before . sprintf( $text['page'], get_query_var( 'paged' ) ) . $after;
       } else {
         if ( $show_home_link && $show_current ) echo $sep;
+        echo $before . 'Теги' . $after . $sep;
         if ( $show_current ) echo $before . sprintf( $text['tag'], single_tag_title( '', false ) ) . $after;
         elseif ( $show_home_link && $show_last_sep ) echo $sep;
       }
