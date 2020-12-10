@@ -18,10 +18,8 @@ get_header();?>
             <textarea name="contact_comment" id="" class="textarea contacts-textarea" placeholder="Ваш вопрос"></textarea>
             <button type="submit" class="button more">Отправить</button>
           </form> -->
-          <div class="contacts-form">
-            <?php //echo do_shortcode('[contact-form-7 id="204" title="Контактная форма"]') ?>
-            <?php the_content() ?>
-          </div>
+          <?php //echo do_shortcode('[contact-form-7 id="204" title="Контактная форма" html_class="contacts-form"]') ?>
+          <?php the_content() ?>
         </div>
         <!-- /.left -->
         <div class="right">
