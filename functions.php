@@ -819,7 +819,7 @@ function ajax_form() {
   $contact_name = $_POST['contact_name'];
   $contact_email = $_POST['contact_email'];
   $contact_comment = $_POST['contact_comment'];
-  $message = 'Пользователь оставил свои данные: ' . $contact_name;
+  $message = 'Пользователь отправил сообщение с сайта Universal-dev:'.PHP_EOL.'Имя '.$contact_name.PHP_EOL.'E-mail '.$contact_email.PHP_EOL.'Сообщение '.$contact_comment;
   $headers = 'From: Владимир <camahor9152@gmail.com>' . "\r\n";
   $send_message = wp_mail('camahor9152@gmail.com', 'Новая заявка с сайта', $message, $headers);
   if($send_message) echo 'Всё получилось';
