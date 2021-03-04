@@ -9,7 +9,7 @@
 
               $myposts = get_posts([
                 'numberposts' => 1,
-                'category_name' => 'css, javascript, html, web-design',
+                'category_name' => 'css, javascript, html, web-design'
               ]);
 
               if ($myposts) {
@@ -42,7 +42,7 @@
                   printf(
                     '<a href="%s" class="category-link">%s</a>',
                     esc_url(get_category_link($category)),
-                    esc_html($category->name),
+                    esc_html($category->name)
                   );
                 }?>
                 <h2 class="post-title"><?=mb_strimwidth(get_the_title(), 0, 60, '...')?></h2>
@@ -67,7 +67,7 @@
                 $myposts = get_posts([
                   'numberposts' => 5,
                   'offset' => 1,
-                  'category_name' => 'css, javascript, html, web-design',
+                  'category_name' => 'css, javascript, html, web-design'
                 ]);
 
                 if ($myposts) {
@@ -82,7 +82,7 @@
                       '<a href="%s" class="category-link %s">%s</a>',
                       esc_url(get_category_link($category)),
                       esc_html($category->slug),
-                      esc_html($category->name),
+                      esc_html($category->name)
                     );
                   }?>
                   <a class="post-permalink" href="<?=get_the_permalink()?>">
@@ -112,7 +112,7 @@
 
           $myposts = get_posts([
             'numberposts' => 4,
-            'category_name' => 'articles',
+            'category_name' => 'articles'
           ]);
 
           if ($myposts) {
@@ -263,7 +263,7 @@
       //Пост с большим фоном
       $query = new WP_Query([
         'posts_per_page' => 1,
-        'category_name' => 'investigation',
+        'category_name' => 'investigation'
       ]);
 
       if ($query->have_posts()) {
@@ -370,7 +370,7 @@
             //Формируем запрос в БД
             $query = new WP_Query([
               'posts_per_page' => 1,
-              'category_name' => 'photo-report',
+              'category_name' => 'photo-report'
             ]);
             //Проверяем есть ли посты    
             if ($query->have_posts()) {
@@ -399,7 +399,7 @@
                     printf(
                       '<a href="%s" class="category-link">%s</a>',
                       esc_url(get_category_link($category)),
-                      esc_html($category->name),
+                      esc_html($category->name)
                     );
                   }
                   $author_id = get_the_author_meta('ID'); ?>
@@ -478,7 +478,7 @@
                   global $post;
 
                   $myposts = get_posts([
-                    'numberposts' => 2,
+                    'numberposts' => 2
                   ]);
 
                   if ($myposts) {

@@ -33,7 +33,7 @@
             'container'       => 'nav',
             'container_class' => 'footer-nav-wrapper',
             'menu_class'      => 'footer-nav', 
-            'echo'            => true,
+            'echo'            => true
           ] );
 
           $instance = array(
@@ -42,11 +42,11 @@
             'instagram' => 'https://www.instagram.com',
             'vkontakte' => '',
             'twitter' => 'https://twitter.com',
-            'youtube' => 'https://www.youtube.com',
+            'youtube' => 'https://www.youtube.com'
           );
           $args = array(
             'before_widget' => '<div class="footer-social">',
-            'after_widget' => '</div>',
+            'after_widget' => '</div>'
           );
           the_widget( 'Social_Widget', $instance, $args ); ?>
         </div>

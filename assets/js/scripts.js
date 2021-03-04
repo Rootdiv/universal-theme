@@ -1,11 +1,10 @@
+'use strict';
+
 //Плавная прокрутка страницы вверх
-window.addEventListener('scroll', function () {
-  let scrollHeight = Math.round(window.scrollY);
-  if (scrollHeight < 300) document.querySelector('.go-top').style.opacity = '0'
-  else document.getElementsByClassName('go-top')[0].style.opacity = '1'
-});
-document.querySelector('.go-top').addEventListener('click', function () {
-  backToTop();
+window.addEventListener('scroll', function() {
+  const scrollHeight = Math.round(window.scrollY);
+  if (scrollHeight < 300) document.querySelector('.go-top').style.opacity = '0';
+  else document.getElementsByClassName('go-top')[0].style.opacity = '1';
 });
 
 function backToTop() {
@@ -14,8 +13,11 @@ function backToTop() {
     setTimeout(backToTop, 0);
   }
 }
+document.querySelector('.go-top').addEventListener('click', function() {
+  backToTop();
+});
 
-var mySwiper = new Swiper('.swiper-container', {
+const mySwiper = new Swiper('.swiper-container', { //jshint ignore:line
   // Optional parameters
   loop: true,
 
@@ -27,28 +29,28 @@ var mySwiper = new Swiper('.swiper-container', {
   pagination: {
     el: '.swiper-pagination',
   },
-})
+});
 
-let menuToggle = $('.header-menu-toggle');
-menuToggle.on('click', function (event) {
+const menuToggle = $('.header-menu-toggle');
+menuToggle.on('click', function(event) {
   event.preventDefault();
   $('.header-nav').slideToggle(200);
 });
 
-let contactsForm = $('.contacts-form');
+const contactsForm = $('.contacts-form');
 
-contactsForm.on('submit', function (event) {
+contactsForm.on('submit', function(event) {
   event.preventDefault();
   let formData = new FormData(this);
   formData.append('action', 'contacts_form');
   $.ajax({
     type: "POST",
-    url: adminAjax.url,
+    url: adminAjax.url, //jshint ignore:line
     data: formData,
     contentType: false,
     processData: false,
-    success: function (response) {
+    success: function(response) {
       console.log('Ответ сервера: ' + response);
     }
   });
-})
+});

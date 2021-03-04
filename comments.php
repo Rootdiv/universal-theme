@@ -131,7 +131,7 @@ if ( post_password_required() ) {
             'short_ping' => true,
             'avatar_size'=> 75,
             'callback' => 'universal_theme_comment',
-            'login_text' => __('Register if you want to comment', 'universal'),
+            'login_text' => __('Register if you want to comment', 'universal')
           )
         );
         ?>
@@ -172,7 +172,7 @@ if ( post_password_required() ) {
       'class_submit'          => 'comment-submit more',
       'label_submit'          => __('Send', 'universal'),
       'submit_button'         => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s</button>',
-      'title_reply'           => '',
+      'title_reply'           => ''
     ));
     ?>
 

@@ -8,6 +8,6 @@ $args = array(
   'next_text'  =>  __('Forward', 'universal').'
       <svg width="15" height="7" class="pagination-next-icon">
         <use xlink:href="'. get_template_directory_uri() .'/assets/images/sprite.svg#arrow"></use>
-      </svg>',
+      </svg>'
 );
 the_posts_pagination($args);

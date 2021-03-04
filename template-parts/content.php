@@ -12,7 +12,7 @@
               '<a href="%s" class="category-link %s">%s</a>',
               esc_url(get_category_link($category)),
               esc_html($category->slug),
-              esc_html($category->name),
+              esc_html($category->name)
             );
           }?>
           <!-- Ссылка на главную -->
@@ -34,7 +34,7 @@
                 <svg width="15" height="7" class="prev-icon">
                   <use xlink:href="'. get_template_directory_uri() .'/assets/images/sprite.svg#arrow"></use>
                 </svg>
-              </span>',
+              </span>'
             )
           );?>
         </div>
@@ -126,7 +126,7 @@
       wp_link_pages(
         array(
           'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'universal' ),
-          'after'  => '</div>',
+          'after'  => '</div>'
         )
       );?>
     </div><!-- /Содержимое поста -->

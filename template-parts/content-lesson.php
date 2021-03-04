@@ -9,7 +9,7 @@
               '<a href="%s" class="category-link %s">%s</a>',
               esc_url(get_category_link($category)),
               esc_html($category->slug),
-              esc_html($category->name),
+              esc_html($category->name)
             );
           }?>
         </div>
@@ -76,7 +76,7 @@
       wp_link_pages(
         array(
           'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'universal' ),
-          'after'  => '</div>',
+          'after'  => '</div>'
         )
       );?>
     </div><!-- /Содержимое поста -->

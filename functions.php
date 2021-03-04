@@ -83,7 +83,7 @@ if ( ! function_exists( 'universal_theme_setup' ) ) :
         'taxonomies'          => [],
         'has_archive'         => true,
         'rewrite'             => true,
-        'query_var'           => true,
+        'query_var'           => true
       ] );
     }
 
@@ -111,7 +111,7 @@ if ( ! function_exists( 'universal_theme_setup' ) ) :
         ),
         'show_ui'       => true,
         'query_var'     => true,
-        'rewrite'       => array( 'slug' => 'the_genre' ), // свой слаг в URL
+        'rewrite'       => array( 'slug' => 'the_genre' ) // свой слаг в URL
       ));
 
       //Добавляем НЕ древовидную таксономию 'teacher' (как метки)
@@ -136,7 +136,7 @@ if ( ! function_exists( 'universal_theme_setup' ) ) :
         ),
         'show_ui'       => true,
         'query_var'     => true,
-        'rewrite'       => array( 'slug' => 'the_teacher' ), // свой слаг в URL
+        'rewrite'       => array( 'slug' => 'the_teacher' ) // свой слаг в URL
       ));
     }
   }
@@ -157,7 +157,7 @@ function universal_theme_widgets_init() {
       'before_widget' => '<section id="%1$s" class="widget %2$s">',
       'after_widget'  => '</section>',
       'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
+      'after_title'   => '</h2>'
     )
   );
 
@@ -169,7 +169,7 @@ function universal_theme_widgets_init() {
       'before_widget' => '<section id="%1$s" class="widget %2$s">',
       'after_widget'  => '</section>',
       'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
+      'after_title'   => '</h2>'
     )
   );
 
@@ -181,7 +181,7 @@ function universal_theme_widgets_init() {
       'before_widget' => '<section id="%1$s" class="footer-menu %2$s">',
       'after_widget'  => '</section>',
       'before_title'  => '<h2 class="footer-menu-title">',
-      'after_title'   => '</h2>',
+      'after_title'   => '</h2>'
     )
   );
 
@@ -193,7 +193,7 @@ function universal_theme_widgets_init() {
       'before_widget' => '<section id="%1$s" class="footer-text %2$s">',
       'after_widget'  => '</section>',
       'before_title'  => '',
-      'after_title'   => '',
+      'after_title'   => ''
     )
   );
 
@@ -205,7 +205,7 @@ function universal_theme_widgets_init() {
       'before_widget' => '<section id="%1$s" class="widget %2$s">',
       'after_widget'  => '</section>',
       'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
+      'after_title'   => '</h2>'
     )
   );
 }
@@ -858,6 +858,21 @@ add_filter( 'big_image_size_threshold', '__return_zero' );
 add_filter('excerpt_more', function($more) {
 	return '...';
 });
+
+//Disable auto-update email notifications for plugins.
+add_filter( 'auto_plugin_update_send_email', '__return_false' );
+
+//Disable auto-update email notifications for themes.
+add_filter( 'auto_theme_update_send_email', '__return_false' );
+
+//Отключение email-уведомления при обновлении
+function wpplus_disable_update_emails( $send, $type, $core_update, $result ) {
+  if ( !empty ($type) && $type == 'success' ) {
+    return false;
+  }
+  return true;
+}
+add_filter ( 'auto_core_update_send_email', 'wpplus_disable_update_emails', 10, 4 );
 
 //Склонение слов после числительных
 function plural_form($number, $after) {

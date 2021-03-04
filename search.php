@@ -19,7 +19,7 @@
                   '<a href="%s" class="category-link %s">%s</a>',
                   esc_url(get_category_link($category)),
                   esc_html($category->slug),
-                  esc_html($category->name),
+                  esc_html($category->name)
                 );
               }?>
               <a href="<?=get_the_permalink()?>" class="digest-item-permalink">
