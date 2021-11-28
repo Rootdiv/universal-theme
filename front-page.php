@@ -125,7 +125,7 @@
               <h4 class="article-title"><?= mb_strimwidth(get_the_title(), 0, 50, '...')?></h4>
             </a>
             <img width="65" height="65" src="<?php
-              if( has_post_thumbnail() ) echo get_the_post_thumbnail_url(null, 'thumbnail');
+              if( has_post_thumbnail() ) echo get_the_post_thumbnail_url(null, 'homepage-thumb');
               else echo get_template_directory_uri().'/assets/images/img-default.png';
             ?>" alt="<?php the_title()?>">
           </li>
@@ -308,7 +308,7 @@
               ?>
               <li class="digest-item">
                 <a href="<?=get_the_permalink()?>" class="digest-item-permalink">
-                  <img src="<?php if( has_post_thumbnail() ) the_post_thumbnail_url();
+                  <img src="<?php if( has_post_thumbnail() ) echo get_the_post_thumbnail_url(null, 'article-thumb');
                     else echo get_template_directory_uri().'/assets/images/img-default.png';
                   ?>" alt="<?php the_title()?>" class="digest-thumb" />
                 </a>
