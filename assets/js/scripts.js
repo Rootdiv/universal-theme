@@ -31,26 +31,28 @@ const mySwiper = new Swiper('.swiper-container', { //jshint ignore:line
   },
 });
 
-const menuToggle = $('.header-menu-toggle');
-menuToggle.on('click', function(event) {
-  event.preventDefault();
-  $('.header-nav').slideToggle(200);
-});
+jQuery(function ($) {
+  const menuToggle = $('.header-menu-toggle');
+  menuToggle.on('click', function (event) {
+    event.preventDefault();
+    $('.header-nav').slideToggle(200);
+  });
 
-const contactsForm = $('.contacts-form');
+  const contactsForm = $('.contacts-form');
 
-contactsForm.on('submit', function(event) {
-  event.preventDefault();
-  let formData = new FormData(this);
-  formData.append('action', 'contacts_form');
-  $.ajax({
-    type: "POST",
-    url: adminAjax.url, //jshint ignore:line
-    data: formData,
-    contentType: false,
-    processData: false,
-    success: function(response) {
-      console.log('Ответ сервера: ' + response);
-    }
+  contactsForm.on('submit', function (event) {
+    event.preventDefault();
+    let formData = new FormData(this);
+    formData.append('action', 'contacts_form');
+    $.ajax({
+      type: "POST",
+      url: adminAjax.url, //jshint ignore:line
+      data: formData,
+      contentType: false,
+      processData: false,
+      success: function (response) {
+        console.log('Ответ сервера: ' + response);
+      }
+    });
   });
 });

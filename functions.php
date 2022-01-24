@@ -680,12 +680,12 @@ class Posts_Widget extends WP_Widget {
           global $post;
           $category = get_the_category();
           rsort( $category );
-          $category_slug = $category[0]->slug;
-
+          @$category_slug = $category[0]->slug;
+          //Ошибки заглушены для админки, для проверки ошибок на целевой странице убрать глушилку,
           $posts = get_posts( array(
             'category_name'    => $category_slug,
             'posts_per_page' => $count,
-            'exclude' => $GLOBALS['post']->ID,
+            'exclude' => @$GLOBALS['post']->ID,
           ) );
 
           foreach( $posts as $post ){
